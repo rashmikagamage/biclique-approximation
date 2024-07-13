@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcolorPath.a CMakeFiles/colorPath.dir/colorPath.cpp.o CMakeFiles/colorPath.dir/colorPathAV5.cpp.o
+/usr/bin/ranlib libcolorPath.a

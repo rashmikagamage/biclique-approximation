@@ -1,0 +1,2 @@
+/usr/bin/ar qc libBK.a CMakeFiles/BK.dir/BK.cpp.o
+/usr/bin/ranlib libBK.a

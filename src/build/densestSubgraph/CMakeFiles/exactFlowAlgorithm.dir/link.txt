@@ -1,0 +1,2 @@
+/usr/bin/ar qc libexactFlowAlgorithm.a CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o
+/usr/bin/ranlib libexactFlowAlgorithm.a

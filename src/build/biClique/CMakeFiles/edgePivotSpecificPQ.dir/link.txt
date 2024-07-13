@@ -1,0 +1,2 @@
+/usr/bin/ar qc libedgePivotSpecificPQ.a CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o
+/usr/bin/ranlib libedgePivotSpecificPQ.a

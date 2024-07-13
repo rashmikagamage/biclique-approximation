@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbcAndPath.a CMakeFiles/bcAndPath.dir/bcAndPath.cpp.o CMakeFiles/bcAndPath.dir/bcAndPathV5.cpp.o
+/usr/bin/ranlib libbcAndPath.a

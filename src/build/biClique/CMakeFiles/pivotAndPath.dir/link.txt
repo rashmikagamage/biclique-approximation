@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpivotAndPath.a CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o
+/usr/bin/ranlib libpivotAndPath.a

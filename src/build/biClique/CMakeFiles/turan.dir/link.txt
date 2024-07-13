@@ -1,0 +1,2 @@
+/usr/bin/ar qc libturan.a CMakeFiles/turan.dir/turan.cpp.o
+/usr/bin/ranlib libturan.a

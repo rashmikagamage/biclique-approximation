@@ -1,0 +1,1 @@
+g++  -std=c++11 -march=native -mavx -O3 CMakeFiles/run.dir/main.cpp.o -o run  libBCListPlusPlus.a 

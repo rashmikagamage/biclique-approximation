@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpqBicliqeDensest.a CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o
+/usr/bin/ranlib libpqBicliqeDensest.a

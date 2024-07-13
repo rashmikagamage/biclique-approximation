@@ -1,0 +1,2 @@
+/usr/bin/ar qc librawEdgePivot.a CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o
+/usr/bin/ranlib librawEdgePivot.a

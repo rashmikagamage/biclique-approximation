@@ -1,0 +1,12 @@
+# add_library(fastIO fastIO.hpp filesystem.hpp)
+# add_library(getArgs getArgs.hpp)
+# add_library(hopstotchHash hopstotchHash.hpp)
+# add_library(linearSet linearSet.hpp)
+# add_library(listLinearHeap listLinearHeap.hpp)
+
+add_library(fastIO INTERFACE)
+add_library(getArgs  INTERFACE)
+add_library(hopstotchHash INTERFACE)
+add_library(linearSet INTERFACE)
+add_library(listLinearHeap  INTERFACE)
+add_library(lazyQueue  INTERFACE)
