@@ -14,8 +14,8 @@ private:
 
     double** C, * bf3;
     void computeC() {
-
-        int maxPQ = minPQ + 1;
+        printf("minPQ: %d\n", minPQ);
+        int maxPQ = std::max(minPQ, q-p) + 2;
         int maxD = std::max(g->maxDu, g->maxDv) + 1;
         C = new double* [maxD];
         bf3 = new double[maxD * maxPQ];
@@ -55,10 +55,11 @@ public:
     void testSubgraphSize();
     void approximateCountingAllVersion2(uint32_t T);
     void shadowBuilder1(int p, int q, double e);
+    void shadowBuilderZStar(int p, int q, double e);
     void buildDP(int pL, int pR);
     void sampleOne(int length);
     void shadowBuilderAlias(int p, int q, double e);
     int getIndexAlias(std::mt19937& gen, std::vector<double>& Prob, std::vector<uint32_t>& Alias);
     void initializeAliasMethod(std::vector<double>& probabilities, std::vector<double>& Prob, std::vector<uint32_t>& Alias);
-
+    std::vector<uint32_t> reservoirSample(std::vector<uint32_t>& vec, int n);
 };

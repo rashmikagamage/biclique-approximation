@@ -45,7 +45,7 @@ public:
         delete [] bf3;
     }
     colorPath(const std::string & filePath, const std::string & outFilePath, 
-        int H=13, int p_=0, int q_=0) {
+        int H=1, int p_=0, int q_=0) {
         p = p_;
         q = q_;
         minPQ = H;

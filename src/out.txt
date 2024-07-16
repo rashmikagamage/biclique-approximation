@@ -1,27 +1,14 @@
-./datas/fjwiki.txt 
-graph size:n1: 612 n2:1898, m 5959
+./data/dense.txt 
+graph size:n1: 5 n2:5, m 25
 load graph
+minPQ: 3
 gamma: 4451.420533
-tTotal: 3707243.000000
-auxTotalSamples: 1689000.000000
-totalZinShadow: 10049538933.000000
-Biclique Density: 0.135172
-pqBicluqeEstAux: 1358418070.342000
-shadow size before the second refinement : 1688 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 72282.425273
-shadowDuration: 3766901.000000
-shadowDuration: 3766901.000000
----------------------
-shadow size: 1687
-pqBicluqeEstAux: 1358418070.342000
-totalZinShadow: 10049538830.000000
-roughPQEstDens: 0.135172
-shadow.size(): 1687
-totalZinShadow: 10049538830.000000
-sum: 1.000000
-batchSize: 32931
-pqBicluqeContainZ: 4451
-t: 33208
-totalZinShadow: 10049538830.000000
-density of biclique: 0.134034
-biclique count: 1346979563.127259
+tTotal: 646.000000
+auxTotalSamples: 1060.000000
+totalZinShadow: 10.000000
+Biclique Density: 1.100000
+pqBicluqeEstAux: 11.000000
+shadow size before the second refinement : 3 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 2466.224412
+shadowDuration: 704.000000
+totalZinShadowTest: 9.000000
