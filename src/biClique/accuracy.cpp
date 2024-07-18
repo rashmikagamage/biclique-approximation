@@ -305,11 +305,13 @@ void accuracy::shadowBuilder1(int p, int q, double e) {
 				double temp = 0.0;
 				uint32_t preU = 0, preV = 0, preE = 0;
 				bool selectedLEmpty = true;
-
+				printf("zInSubSpace: %f\n", zInSubSpace);
+				int in = 0;
 				for (int u = 0; u < candLSize; u++) {
 					for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
 						temp += dpU[minPQ - 1][mapUtoV[i]];
 						if (temp + 1e-8 >= point * zInSubSpace) {
+							in = i;
 							selectedR.push_back(e1[i]);
 							selectedL.push_back(u);
 							preU = u;
@@ -323,7 +325,7 @@ void accuracy::shadowBuilder1(int p, int q, double e) {
 						break;
 					}
 				}
-
+				
 				assert(selectedR.size() > 0);
 				assert(selectedL.size() > 0);
 				// selecting the rest of the edge
@@ -1077,7 +1079,8 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 	auto buildDP = [&](int lSize, int rSize, int p, int q) -> int {
 		int minPQ = min(p, q);
 
-		
+
+
 		std::fill(pV.begin(), pV.begin() + rSize + 1, 0);
 
 		for (int j = 0; j < lSize; j++) {
@@ -1131,6 +1134,22 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 			pV[v] = pV[v - 1];
 		}
 		pV[0] = 0;
+
+		if (minPQ == 1) {
+			for (int u = 0; u < lSize; u++) {
+				for (int i = pU[u]; i < pU[u + 1]; i++) {
+					// 2 paths for vu
+					if (p == q) {
+						dpV[1][i] = pU[u + 1] - i - 1;
+					}
+					else {
+						dpV[1][i] = C[pU[u + 1] - i - 1][q - p];
+					}
+				}
+			}
+			return 2;
+		}
+
 		for (int u = 0; u < lSize; u++) {
 			for (int i = pU[u]; i < pU[u + 1]; i++) {
 				// 2 paths for vu
@@ -1187,14 +1206,14 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 		}
 		// for(int i=0; i<k; i++){
 		// 	printf("--------------------------------\n");
-		// 	for(int j=0; j<pU[lSize]; j++){
-		// 		printf("dpU[%d][%d]: %f\n", i, j, dpU[i][j]);
+		// 	for(int j=0; j<pV[rSize]; j++){
+		// 		printf("dpV[%d][%d]: %f\n", i, j, dpV[i][j]);
 		// 	}
 		// }
 		// printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
 		// printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
 		return k;
-	};
+		};
 
 	for (uint32_t u = 0; u < g->n1; u++) {
 
@@ -1211,7 +1230,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 		}
 
 		candLtemp.clear();
-
+		
 		for (uint32_t i = g->pU[u]; i < g->pU[u + 1]; i++) {
 
 			uint32_t v = g->e1[i];
@@ -1273,32 +1292,40 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 			// candRSize, p, q); sampling inside shadow to calcule mu
 
 			int maxPossibleLength = buildDP(candLSize, candRSize, p - 1, q - 1);
+			
 			if (maxPossibleLength < minPQ)
 				continue;
 
 			double zInSubSpace = 0;
 			double zInSubSpaceTest = 0;
 			double z2 = 0;
-			for (uint32_t i = 0; i < pU[candLSize]; i++) {
-				zInSubSpace += dpU[minPQ - 1][i];
-			}
-			for (uint32_t i = 0; i < pV[candRSize]; i++) {
-				zInSubSpaceTest += dpV[1][i];
+
+			if (minPQ - 1 == 1) {
+				for (uint32_t i = 0; i < pV[candRSize]; i++) {
+					zInSubSpace += dpV[minPQ - 1][i];
+				}
+				
 			}
 			
+			else {
+				for (uint32_t i = 0; i < pU[candLSize]; i++) {
+					zInSubSpace += dpU[minPQ - 1][i];
+				}
+			}
+
 			totalZinShadow += zInSubSpace;
 			totalZinShadowTest += zInSubSpaceTest;
 
 			// TODO check zInSubspace size larger than 0 and take action accordingly
-			if (zInSubSpace == 0)
+			if (zInSubSpace < 1)
 				continue;
 			double pqBicluqeContainZ = 0;
-			double auxSampleSize = 20;
+			double auxSampleSize = 100;
 			int auxSampleSize_temp = auxSampleSize;
 			double t_sample = 0;
 
 			auto auxSamplingStart = chrono::high_resolution_clock::now();
-
+			
 			while (auxSampleSize_temp--) {
 
 				// selecting the first edge
@@ -1316,26 +1343,66 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 				uint32_t preU = 0, preV = 0, preE = 0;
 				bool selectedLEmpty = true;
 
-				for (int u = 0; u < candLSize; u++) {
-					for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
-						temp += dpU[minPQ - 1][mapUtoV[i]];
-						if (temp + 1e-8 >= point * zInSubSpace) {
-							selectedR.push_back(e1[i]);
-							selectedL.push_back(u);
-							preU = u;
-							preV = e1[i];
-							preE = i;
-							selectedLEmpty = false;
+				// if (minPQ - 1 == 1) {
+				// 	for (int u = 0; u < candLSize; u++) {
+				// 		for (int i = pU[u]; i < pU[u + 1]; i++) {
+				// 			temp += dpV[minPQ - 1][mapVtoU[i]];
+				// 			if (temp + 1e-8 >= point * zInSubSpace) {
+				// 				selectedR.push_back(e1[i]);
+				// 				selectedL.push_back(u);
+				// 				preU = u;
+				// 				preV = e1[i];
+				// 				preE = i;
+				// 				selectedLEmpty = false;
+				// 				break;
+				// 			}
+				// 		}
+				// 		if(!selectedLEmpty){
+				// 			break;
+				// 		}
+				// 	}
+				// }
+		
+				if (minPQ - 1 == 1) {
+					for (int v = 0; v < candRSize; v++) {
+						for (int i = pV[v]; i < pV[v + 1]; i++) {
+							temp += dpV[minPQ - 1][mapVtoU[i]];
+							if (temp + 1e-8 >= point * zInSubSpace) {
+								selectedR.push_back(v);
+								selectedL.push_back(e2[i]);
+								preU = e2[i];
+								preV = v;
+								preE = i;
+								selectedLEmpty = false;
+								break;
+							}
+						}
+						if(!selectedLEmpty){
 							break;
 						}
 					}
-					if (!selectedLEmpty) {
-						break;
+				}
+				else {
+					double temp = 0.0;
+					for (int u = 0; u < candLSize; u++) {
+						for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
+							temp += dpU[minPQ - 1][mapUtoV[i]];
+							if (temp + 1e-8 >= point * zInSubSpace) {
+								selectedR.push_back(e1[i]);
+								selectedL.push_back(u);
+								preU = u;
+								preV = e1[i];
+								preE = i;
+								selectedLEmpty = false;
+								break;
+							}
+						}
+						if (!selectedLEmpty) {
+							break;
+						}
 					}
 				}
-
 				
-
 				assert(selectedR.size() > 0);
 				assert(selectedL.size() > 0);
 				// selecting the rest of the edge
@@ -1365,7 +1432,6 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 							if (e1[j] > preV) {
 								temp += dpU[minPQ - i - 1][mapUtoV[j]];
 								if (temp + 1e-8 >= point * dpV[minPQ - i - 1][mapVtoU[preE]]) {
-
 									uint32_t v = e1[j];
 									selectedR.push_back(v);
 									preV = v;
@@ -1376,21 +1442,29 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
 						}
 					}
 				}
-				std::vector<uint32_t> vs(g->maxDu + 1);
-				vs.clear();
-				for (int i = pU[preU]; i < pU[preU + 1]; i++) {
-					vs.push_back(e1[i]);
-				}
 				int vCount = q - p + 1;
 				if (minPQ - 1 == 1) {
 					vCount = q - p;
 				}
-				std::vector<uint32_t> selectedRStar = reservoirSample(vs, vCount);
-				selectedR.insert(selectedR.end(), selectedRStar.begin(), selectedRStar.end());
-				if (selectedR.size() != q - 1 || selectedL.size() != minPQ - 1) {
-					printf("selectedR size: %d\n", selectedR.size());
-					printf("selectedL size: %d\n", selectedL.size());
+
+				//fixme 
+				uint32_t index=0;
+				if(minPQ == 2){
+					index = pU[preU];
+				}else{
+					auto it = std::find(e1.begin() + pU[preU], e1.begin() + pU[preU + 1], preV);
+					index = std::distance(e1.begin(), it);
 				}
+			
+				assert(index >= pU[preU] && index < pU[preU + 1]);
+			
+				std::vector<uint32_t> selectedRStar = sampeleRest(vCount, preU, pU,index);
+				
+				
+				for(int i = 0; i < selectedRStar.size(); i++){
+					selectedR.push_back(e1[selectedRStar[i]]);
+				}
+			
 				assert(selectedR.size() == q - 1);
 				assert(selectedL.size() == minPQ - 1);
 
@@ -2116,4 +2190,26 @@ std::vector<uint32_t> accuracy::reservoirSample(std::vector<uint32_t>& vec, int 
 	}
 
 	return reservoir;
+}
+
+std::vector<uint32_t> accuracy::sampeleRest(int r,int preU, std::vector<uint32_t>& pU, uint32_t outIndex) {
+
+	std::unordered_set<uint32_t> selectedIndices;
+	std::vector<uint32_t> result;
+	result.reserve(r);
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<> dis(outIndex+1, pU[preU + 1]-1);
+	uint32_t selectedIndicesSize = 0;
+
+	while (selectedIndicesSize < r) {
+		uint32_t index = dis(gen);
+		if (selectedIndices.find(index) == selectedIndices.end()) {
+			selectedIndices.insert(index);
+			result.push_back(index);
+			selectedIndicesSize++;
+		}
+	}
+	
+	return result;
 }

@@ -1746,6 +1746,8 @@ void colorPath::approximateCountingAllVersion2(uint64_t T) {
 
 						if (stackL.size() > 0) break;
 					}
+				
+					printf("\n");
 					assert(stackL.size() > 0);
 
 					for (int i = 1; i < len - 1; i++) {

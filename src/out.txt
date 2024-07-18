@@ -1,14 +1,14 @@
-./data/dense.txt 
-graph size:n1: 5 n2:5, m 25
+./data/fjwiki.txt 
+graph size:n1: 612 n2:1898, m 5959
 load graph
-minPQ: 3
+minPQ: 2
 gamma: 4451.420533
-tTotal: 646.000000
-auxTotalSamples: 1060.000000
-totalZinShadow: 10.000000
-Biclique Density: 1.100000
-pqBicluqeEstAux: 11.000000
-shadow size before the second refinement : 3 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 2466.224412
-shadowDuration: 704.000000
-totalZinShadowTest: 9.000000
+tTotal: 1138148.000000
+auxTotalSamples: 310200.000000
+totalZinShadow: 9283041895.000000
+Biclique Density: 1.000000
+pqBicluqeEstAux: 9283041896.000000
+shadow size before the second refinement : 3092 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 16332.609208
+shadowDuration: 1216637.000000
+totalZinShadowTest: 0.000000

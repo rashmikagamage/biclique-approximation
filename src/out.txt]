@@ -1,0 +1,22 @@
+./data/dense.txt 
+graph size:n1: 5 n2:5, m 25
+load graph
+minPQ: 2
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+gamma: 4451.420533
+tTotal: 0.000000
+auxTotalSamples: 1000.000000
+totalZinShadow: 0.000000
+Biclique Density: inf
+pqBicluqeEstAux: 1.000000
+shadow size before the second refinement : 0 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 0.000000
+shadowDuration: 17.000000
+totalZinShadowTest: 0.000000

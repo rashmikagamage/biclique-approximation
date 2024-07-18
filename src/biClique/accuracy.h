@@ -62,4 +62,5 @@ public:
     int getIndexAlias(std::mt19937& gen, std::vector<double>& Prob, std::vector<uint32_t>& Alias);
     void initializeAliasMethod(std::vector<double>& probabilities, std::vector<double>& Prob, std::vector<uint32_t>& Alias);
     std::vector<uint32_t> reservoirSample(std::vector<uint32_t>& vec, int n);
+    std::vector<uint32_t> sampeleRest( int r, int preU, std::vector<uint32_t>& pU, uint32_t outIndex);
 };
