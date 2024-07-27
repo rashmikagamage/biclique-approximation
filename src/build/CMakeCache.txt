@@ -14,12 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Dependencies for the target
-BCListPlusPlus_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-BK_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -214,35 +208,14 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Dependencies for the target
-accuracy_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
+//Value Computed by CMake
+biClique_BINARY_DIR:STATIC=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique
 
-//Dependencies for the target
-bcAndPath_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
+//Value Computed by CMake
+biClique_IS_TOP_LEVEL:STATIC=OFF
 
-//Dependencies for the target
-colorPathPequalsQ_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-colorPathSpecificPQ_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-colorPath_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-edgePivotSpecificPQ_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-fastEdgePivot_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-pivotAndPathPequalsQ_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-pivotAndPath_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
-
-//Dependencies for the target
-rawEdgePivot_LIB_DEPENDS:STATIC=general;biGraph;general;linearSet;
+//Value Computed by CMake
+biClique_SOURCE_DIR:STATIC=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique
 
 //Value Computed by CMake
 run_BINARY_DIR:STATIC=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build
@@ -252,9 +225,6 @@ run_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 run_SOURCE_DIR:STATIC=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
-
-//Dependencies for the target
-turan_LIB_DEPENDS:STATIC=general;biGraph;
 
 
 ########################

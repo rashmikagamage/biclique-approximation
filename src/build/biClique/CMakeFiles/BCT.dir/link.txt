@@ -1,0 +1,2 @@
+/usr/bin/ar qc libBCT.a CMakeFiles/BCT.dir/BCT.cpp.o
+/usr/bin/ranlib libBCT.a

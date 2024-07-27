@@ -13,10 +13,11 @@
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/pivotAndPath.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/colorPath.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/fastEdgePivot.dir
+/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/BCT.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/turan.dir
-/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/BK.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/BCListPlusPlus.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/edgePivotSpecificPQ.dir
+/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/BK.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique/CMakeFiles/rawEdgePivot.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biGraph/CMakeFiles/rebuild_cache.dir
 /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biGraph/CMakeFiles/edit_cache.dir

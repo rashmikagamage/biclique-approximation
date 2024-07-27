@@ -229,6 +229,20 @@ fastEdgePivot/fast:
 .PHONY : fastEdgePivot/fast
 
 # Convenience name for target.
+biClique/CMakeFiles/BCT.dir/rule:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BCT.dir/rule
+.PHONY : biClique/CMakeFiles/BCT.dir/rule
+
+# Convenience name for target.
+BCT: biClique/CMakeFiles/BCT.dir/rule
+.PHONY : BCT
+
+# fast build rule for target.
+BCT/fast:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/build
+.PHONY : BCT/fast
+
+# Convenience name for target.
 biClique/CMakeFiles/turan.dir/rule:
 	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/turan.dir/rule
 .PHONY : biClique/CMakeFiles/turan.dir/rule
@@ -241,20 +255,6 @@ turan: biClique/CMakeFiles/turan.dir/rule
 turan/fast:
 	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/turan.dir/build.make biClique/CMakeFiles/turan.dir/build
 .PHONY : turan/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/BK.dir/rule:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BK.dir/rule
-.PHONY : biClique/CMakeFiles/BK.dir/rule
-
-# Convenience name for target.
-BK: biClique/CMakeFiles/BK.dir/rule
-.PHONY : BK
-
-# fast build rule for target.
-BK/fast:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
-.PHONY : BK/fast
 
 # Convenience name for target.
 biClique/CMakeFiles/BCListPlusPlus.dir/rule:
@@ -283,6 +283,20 @@ edgePivotSpecificPQ: biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
 edgePivotSpecificPQ/fast:
 	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/edgePivotSpecificPQ.dir/build.make biClique/CMakeFiles/edgePivotSpecificPQ.dir/build
 .PHONY : edgePivotSpecificPQ/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/BK.dir/rule:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BK.dir/rule
+.PHONY : biClique/CMakeFiles/BK.dir/rule
+
+# Convenience name for target.
+BK: biClique/CMakeFiles/BK.dir/rule
+.PHONY : BK
+
+# fast build rule for target.
+BK/fast:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
+.PHONY : BK/fast
 
 # Convenience name for target.
 biClique/CMakeFiles/rawEdgePivot.dir/rule:
@@ -321,6 +335,30 @@ BCListPlusPlus.s: BCListPlusPlus.cpp.s
 BCListPlusPlus.cpp.s:
 	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCListPlusPlus.dir/build.make biClique/CMakeFiles/BCListPlusPlus.dir/BCListPlusPlus.cpp.s
 .PHONY : BCListPlusPlus.cpp.s
+
+BCT.o: BCT.cpp.o
+.PHONY : BCT.o
+
+# target to build an object file
+BCT.cpp.o:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/BCT.cpp.o
+.PHONY : BCT.cpp.o
+
+BCT.i: BCT.cpp.i
+.PHONY : BCT.i
+
+# target to preprocess a source file
+BCT.cpp.i:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/BCT.cpp.i
+.PHONY : BCT.cpp.i
+
+BCT.s: BCT.cpp.s
+.PHONY : BCT.s
+
+# target to generate assembly for a file
+BCT.cpp.s:
+	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/BCT.cpp.s
+.PHONY : BCT.cpp.s
 
 BK.o: BK.cpp.o
 .PHONY : BK.o
@@ -739,6 +777,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... BCListPlusPlus"
+	@echo "... BCT"
 	@echo "... BK"
 	@echo "... accuracy"
 	@echo "... bcAndPath"
@@ -754,6 +793,9 @@ help:
 	@echo "... BCListPlusPlus.o"
 	@echo "... BCListPlusPlus.i"
 	@echo "... BCListPlusPlus.s"
+	@echo "... BCT.o"
+	@echo "... BCT.i"
+	@echo "... BCT.s"
 	@echo "... BK.o"
 	@echo "... BK.i"
 	@echo "... BK.s"

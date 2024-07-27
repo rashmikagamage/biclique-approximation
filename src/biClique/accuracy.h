@@ -1,23 +1,22 @@
 
-#include "../biGraph/biGraph.hpp"
-#include "../tools/linearSet.hpp"
-#include "../biGraph/biGraph.hpp"
-#include "../tools/linearSet.hpp"
 #include <random>
+
+#include "../biGraph/biGraph.hpp"
+#include "../tools/linearSet.hpp"
 class accuracy {
-private:
+   private:
     biGraph* g;
     int p, q;
     LinearSet candL, candR;
     std::vector<std::vector<double> > ansAll;
     int minPQ;
 
-    double** C, * bf3;
+    double **C, *bf3;
     void computeC() {
         printf("minPQ: %d\n", minPQ);
-        int maxPQ = std::max(minPQ, q-p) + 2;
+        int maxPQ = std::max(minPQ, q - p) + 2;
         int maxD = std::max(g->maxDu, g->maxDv) + 1;
-        C = new double* [maxD];
+        C = new double*[maxD];
         bf3 = new double[maxD * maxPQ];
         for (int i = 0; i < maxD; i++) {
             C[i] = bf3 + i * maxPQ;
@@ -32,10 +31,9 @@ private:
                 C[i][j] = C[i - 1][j - 1] + C[i - 1][j];
             }
         }
-
     }
 
-public:
+   public:
     ~accuracy() {
         delete g;
         delete[] C;
@@ -46,11 +44,11 @@ public:
         q = q_;
         minPQ = std::min(p, q);
         g = new biGraph(filePath);
-        std::printf("load graph\n");fflush(stdout);
+        std::printf("load graph\n");
+        fflush(stdout);
 
         computeC();
     }
-
 
     void testSubgraphSize();
     void approximateCountingAllVersion2(uint32_t T);
@@ -62,5 +60,6 @@ public:
     int getIndexAlias(std::mt19937& gen, std::vector<double>& Prob, std::vector<uint32_t>& Alias);
     void initializeAliasMethod(std::vector<double>& probabilities, std::vector<double>& Prob, std::vector<uint32_t>& Alias);
     std::vector<uint32_t> reservoirSample(std::vector<uint32_t>& vec, int n);
-    std::vector<uint32_t> sampeleRest( int r, int preU, std::vector<uint32_t>& pU, uint32_t outIndex);
+    std::vector<uint32_t> sampeleRest(int r, int preU, std::vector<uint32_t>& pU, uint32_t outIndex);
+    std::vector<uint32_t> sampeleRest2(int r, int preU, std::vector<uint32_t>& pU, uint32_t outIndex);
 };

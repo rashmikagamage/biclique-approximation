@@ -260,6 +260,19 @@ fastEdgePivot/fast:
 .PHONY : fastEdgePivot/fast
 
 #=============================================================================
+# Target rules for targets named BCT
+
+# Build rule for target.
+BCT: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BCT
+.PHONY : BCT
+
+# fast build rule for target.
+BCT/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/build
+.PHONY : BCT/fast
+
+#=============================================================================
 # Target rules for targets named turan
 
 # Build rule for target.
@@ -271,19 +284,6 @@ turan: cmake_check_build_system
 turan/fast:
 	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/turan.dir/build.make biClique/CMakeFiles/turan.dir/build
 .PHONY : turan/fast
-
-#=============================================================================
-# Target rules for targets named BK
-
-# Build rule for target.
-BK: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BK
-.PHONY : BK
-
-# fast build rule for target.
-BK/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
-.PHONY : BK/fast
 
 #=============================================================================
 # Target rules for targets named BCListPlusPlus
@@ -310,6 +310,19 @@ edgePivotSpecificPQ: cmake_check_build_system
 edgePivotSpecificPQ/fast:
 	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/edgePivotSpecificPQ.dir/build.make biClique/CMakeFiles/edgePivotSpecificPQ.dir/build
 .PHONY : edgePivotSpecificPQ/fast
+
+#=============================================================================
+# Target rules for targets named BK
+
+# Build rule for target.
+BK: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BK
+.PHONY : BK
+
+# fast build rule for target.
+BK/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
+.PHONY : BK/fast
 
 #=============================================================================
 # Target rules for targets named rawEdgePivot
@@ -431,6 +444,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... BCListPlusPlus"
+	@echo "... BCT"
 	@echo "... BK"
 	@echo "... accuracy"
 	@echo "... bcAndPath"

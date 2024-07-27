@@ -16,92 +16,97 @@
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/colorPathSpecificPQ.dir/colorPathSpecificPQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathSpecificPQ.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/colorPathSpecificPQ.dir/colorPathSpecificPQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathSpecificPQ.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathSpecificPQ.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathPequalsQ.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathPequalsQ.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathPequalsQ.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5PequalsQ.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5PequalsQ.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5PequalsQ.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/accuracy.dir/accuracy.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/accuracy.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/accuracy.dir/accuracy.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/accuracy.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/accuracy.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/pivotAndPathPequalsQ.dir/pivotAndPathPequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathPequalsQ.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/pivotAndPathPequalsQ.dir/pivotAndPathPequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathPequalsQ.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathPequalsQ.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/pivotAndPathPequalsQ.dir/pivotAndPathSamplev5PequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5PequalsQ.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/pivotAndPathPequalsQ.dir/pivotAndPathSamplev5PequalsQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5PequalsQ.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5PequalsQ.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/bcAndPath.dir/bcAndPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/bcAndPath.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/bcAndPath.dir/bcAndPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/bcAndPath.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/bcAndPath.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/bcAndPath.dir/bcAndPathV5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/bcAndPathV5.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/bcAndPath.dir/bcAndPathV5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/bcAndPathV5.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/bcAndPathV5.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/colorPath.dir/colorPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/colorPath.dir/colorPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/colorPath.dir/colorPathAV5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/colorPath.dir/colorPathAV5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/fastEdgePivot.dir/fastEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/fastEdgePivot.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/fastEdgePivot.dir/fastEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/fastEdgePivot.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/fastEdgePivot.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/turan.dir/turan.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/turan.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/BCT.dir/BCT.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BCT.cpp",
+  "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BCT.cpp"
+},
+{
+  "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/turan.dir/turan.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/turan.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/turan.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/BK.dir/BK.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BK.cpp",
-  "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BK.cpp"
-},
-{
-  "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/BCListPlusPlus.dir/BCListPlusPlus.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BCListPlusPlus.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/BCListPlusPlus.dir/BCListPlusPlus.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BCListPlusPlus.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BCListPlusPlus.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/edgePivotSpecificPQ.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/edgePivotSpecificPQ.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/edgePivotSpecificPQ.cpp"
 },
 {
   "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
-  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -g -o CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/rawEdgePivot.cpp",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/BK.dir/BK.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BK.cpp",
+  "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BK.cpp"
+},
+{
+  "directory": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build/biClique",
+  "command": "g++  -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11 -o CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/rawEdgePivot.cpp",
   "file": "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/rawEdgePivot.cpp"
 },
 {

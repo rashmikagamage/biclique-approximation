@@ -844,4 +844,4 @@ R side 1898maxD:360
 33-2:34
 34-2:1
 total count : 841 
-time:325ms
+time:342ms

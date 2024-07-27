@@ -92,6 +92,7 @@ run_EXTERNAL_OBJECTS =
 
 bin/run: CMakeFiles/run.dir/runner/run.cpp.o
 bin/run: CMakeFiles/run.dir/build.make
+bin/run: biClique/libBCT.a
 bin/run: biClique/libBCListPlusPlus.a
 bin/run: biClique/libBK.a
 bin/run: biClique/librawEdgePivot.a
