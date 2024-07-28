@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph -I/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools
 
-CXX_FLAGS =  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -std=gnu++11
+CXX_FLAGS =  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O3 -g -std=gnu++11
 

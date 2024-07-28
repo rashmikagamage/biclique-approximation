@@ -163,24 +163,29 @@ CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o: runner/exactDensestS
   /usr/include/c++/7/bits/invoke.h \
   densestSubgraph/exactFlowAlgorithm.h \
   biGraph/biGraph.hpp \
-  /usr/include/c++/7/vector \
-  /usr/include/c++/7/bits/stl_construct.h \
-  /usr/include/c++/7/bits/stl_uninitialized.h \
-  /usr/include/c++/7/bits/stl_vector.h \
-  /usr/include/c++/7/bits/stl_bvector.h \
-  /usr/include/c++/7/bits/vector.tcc \
   /usr/include/c++/7/algorithm \
   /usr/include/c++/7/bits/stl_algo.h \
   /usr/include/c++/7/bits/algorithmfwd.h \
   /usr/include/c++/7/bits/stl_heap.h \
   /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_construct.h \
   /usr/include/c++/7/bits/uniform_int_dist.h \
   /usr/include/c++/7/limits \
   /usr/include/c++/7/queue \
   /usr/include/c++/7/deque \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
   /usr/include/c++/7/bits/stl_deque.h \
   /usr/include/c++/7/bits/deque.tcc \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc \
   /usr/include/c++/7/bits/stl_queue.h \
+  /usr/include/c++/7/unordered_map \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/hashtable.h \
+  /usr/include/c++/7/bits/hashtable_policy.h \
+  /usr/include/c++/7/bits/unordered_map.h \
   tools/fastIO.hpp \
   tools/filesystem.hpp \
   /usr/include/c++/7/stdlib.h \
@@ -200,42 +205,6 @@ CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o: runner/exactDensestS
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd.h \
-  tools/listLinearHeap.hpp \
-  /usr/include/c++/7/cmath \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
-  /usr/include/c++/7/iostream \
-  /usr/include/c++/7/ostream \
-  /usr/include/c++/7/ios \
-  /usr/include/c++/7/bits/ios_base.h \
-  /usr/include/c++/7/bits/locale_classes.h \
-  /usr/include/c++/7/bits/locale_classes.tcc \
-  /usr/include/c++/7/system_error \
-  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
-  /usr/include/c++/7/streambuf \
-  /usr/include/c++/7/bits/streambuf.tcc \
-  /usr/include/c++/7/bits/basic_ios.h \
-  /usr/include/c++/7/bits/locale_facets.h \
-  /usr/include/c++/7/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
-  /usr/include/c++/7/bits/streambuf_iterator.h \
-  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
-  /usr/include/c++/7/bits/locale_facets.tcc \
-  /usr/include/c++/7/bits/basic_ios.tcc \
-  /usr/include/c++/7/bits/ostream.tcc \
-  /usr/include/c++/7/istream \
-  /usr/include/c++/7/bits/istream.tcc \
-  /usr/include/c++/7/cassert \
   tools/hopstotchHash.hpp \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/x86intrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/ia32intrin.h \
@@ -295,6 +264,42 @@ CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o: runner/exactDensestS
   /usr/lib/gcc/x86_64-linux-gnu/7/include/mwaitxintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/clzerointrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/pkuintrin.h \
+  /usr/include/c++/7/cassert \
+  tools/listLinearHeap.hpp \
+  /usr/include/c++/7/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/bits/ios_base.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/istream \
+  /usr/include/c++/7/bits/istream.tcc \
   densestSubgraph/rawEdgePivot.h \
   /usr/include/c++/7/random \
   /usr/include/c++/7/bits/random.h \
@@ -303,9 +308,6 @@ CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o: runner/exactDensestS
   /usr/include/c++/7/numeric \
   /usr/include/c++/7/bits/stl_numeric.h \
   /usr/include/c++/7/unordered_set \
-  /usr/include/c++/7/ext/aligned_buffer.h \
-  /usr/include/c++/7/bits/hashtable.h \
-  /usr/include/c++/7/bits/hashtable_policy.h \
   /usr/include/c++/7/bits/unordered_set.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
@@ -318,10 +320,6 @@ CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o: runner/exactDensestS
 densestSubgraph/dinic.h:
 
 /usr/include/c++/7/ratio:
-
-/usr/include/c++/7/bits/hashtable_policy.h:
-
-/usr/include/c++/7/bits/hashtable.h:
 
 /usr/include/c++/7/unordered_set:
 
@@ -337,13 +335,37 @@ densestSubgraph/dinic.h:
 
 densestSubgraph/rawEdgePivot.h:
 
+/usr/include/c++/7/bits/ostream.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/c++/7/bits/locale_classes.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/c++/7/cassert:
+
 /usr/lib/gcc/x86_64-linux-gnu/7/include/xsavesintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/clflushoptintrin.h:
 
+/usr/include/c++/7/iostream:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/xsaveoptintrin.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/7/include/xsaveintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/rdseedintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/tbmintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/prfchwintrin.h:
 
@@ -371,6 +393,10 @@ densestSubgraph/rawEdgePivot.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512dqintrin.h:
 
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/avx512cdintrin.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512pfintrin.h:
 
 /usr/include/c++/7/bits/parse_numbers.h:
@@ -392,36 +418,6 @@ densestSubgraph/rawEdgePivot.h:
 /usr/lib/gcc/x86_64-linux-gnu/7/include/emmintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h:
-
-/usr/include/c++/7/cassert:
-
-/usr/include/c++/7/bits/ostream.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/c++/7/cwctype:
-
-/usr/include/c++/7/bits/locale_classes.tcc:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/xsaveoptintrin.h:
-
-/usr/include/c++/7/iostream:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/tbmintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/avx512cdintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
@@ -455,11 +451,29 @@ tools/filesystem.hpp:
 
 tools/fastIO.hpp:
 
+/usr/include/c++/7/cwctype:
+
+/usr/include/c++/7/bits/unordered_map.h:
+
+/usr/include/c++/7/bits/hashtable_policy.h:
+
+/usr/include/c++/7/bits/hashtable.h:
+
 /usr/include/c++/7/bits/stl_queue.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/avx512ifmavlintrin.h:
+
+/usr/include/c++/7/bits/vector.tcc:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/xopintrin.h:
+
+/usr/include/c++/7/bits/stl_vector.h:
 
 /usr/include/c++/7/bits/deque.tcc:
 
 /usr/include/c++/7/bits/stl_deque.h:
+
+/usr/include/c++/7/bits/stl_uninitialized.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512vbmiintrin.h:
 
@@ -473,15 +487,7 @@ tools/fastIO.hpp:
 
 /usr/include/c++/7/bits/uniform_int_dist.h:
 
-/usr/include/c++/7/bits/algorithmfwd.h:
-
-/usr/include/c++/7/bits/stl_algo.h:
-
-/usr/include/c++/7/algorithm:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/avx512ifmavlintrin.h:
-
-/usr/include/c++/7/bits/vector.tcc:
+/usr/include/c++/7/bits/stl_construct.h:
 
 /usr/include/c++/7/iosfwd:
 
@@ -508,10 +514,6 @@ tools/getArgs.hpp:
 /usr/include/wctype.h:
 
 /usr/include/c++/7/exception:
-
-/usr/include/c++/7/bits/stl_heap.h:
-
-/usr/include/ctype.h:
 
 /usr/include/c++/7/new:
 
@@ -559,6 +561,10 @@ densestSubgraph/exactFlowAlgorithm.h:
 
 /usr/include/c++/7/ext/atomicity.h:
 
+/usr/include/c++/7/algorithm:
+
+/usr/include/c++/7/bits/stl_algo.h:
+
 /usr/include/c++/7/ext/aligned_buffer.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
@@ -567,9 +573,9 @@ densestSubgraph/exactFlowAlgorithm.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/7/include/xopintrin.h:
+/usr/include/ctype.h:
 
-/usr/include/c++/7/bits/stl_vector.h:
+/usr/include/c++/7/bits/stl_heap.h:
 
 /usr/include/c++/7/clocale:
 
@@ -683,9 +689,9 @@ tools/listLinearHeap.hpp:
 
 /usr/include/c++/7/bits/concept_check.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/7/include/sgxintrin.h:
-
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/sgxintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
@@ -700,6 +706,10 @@ tools/listLinearHeap.hpp:
 /usr/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h:
+
+/usr/include/c++/7/vector:
+
+/usr/include/c++/7/bits/predefined_ops.h:
 
 /usr/include/c++/7/bits/ptr_traits.h:
 
@@ -768,6 +778,8 @@ tools/listLinearHeap.hpp:
 /usr/include/x86_64-linux-gnu/bits/_G_config.h:
 
 /usr/include/c++/7/system_error:
+
+/usr/include/c++/7/unordered_map:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h:
 
@@ -881,8 +893,6 @@ tools/listLinearHeap.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/usr/include/c++/7/bits/stl_construct.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512vldqintrin.h:
 
 /usr/include/endian.h:
@@ -919,6 +929,8 @@ biGraph/biGraph.hpp:
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/include/c++/7/bits/algorithmfwd.h:
+
 /usr/include/c++/7/bits/functional_hash.h:
 
 /usr/include/string.h:
@@ -932,9 +944,3 @@ biGraph/biGraph.hpp:
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/7/bits/uses_allocator.h:
-
-/usr/include/c++/7/bits/predefined_ops.h:
-
-/usr/include/c++/7/vector:
-
-/usr/include/c++/7/bits/stl_uninitialized.h:

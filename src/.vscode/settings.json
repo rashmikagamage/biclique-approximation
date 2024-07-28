@@ -50,6 +50,7 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "set": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "queue": "cpp"
     }
 }

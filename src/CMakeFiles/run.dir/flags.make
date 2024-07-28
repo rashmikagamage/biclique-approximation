@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -std=c++11 -march=native -mavx -O3
+CXX_FLAGS =  -std=c++11 -march=native -mavx -O3 -g
 

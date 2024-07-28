@@ -3,6 +3,19 @@
 
 #include "../biGraph/biGraph.hpp"
 #include "../tools/linearSet.hpp"
+
+struct Node {
+    std::vector<uint32_t> SU;
+    std::vector<uint32_t> SV;
+    std::vector<Node> children;
+    int label;
+
+    Node(const std::vector<uint32_t>& su = {},
+         const std::vector<uint32_t>& sv = {},
+         int lbl = 0)
+        : SU(su), SV(sv), label(lbl) {}
+};
+
 class BCT {
    private:
     biGraph* g;
@@ -53,4 +66,7 @@ class BCT {
     std::pair<uint32_t, bool> selectPivot(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV);
 
     biGraph createSubgraph(const std::vector<uint32_t>& SU, const std::vector<uint32_t>& SV);
+    void printPath(const std::vector<int>& path);
+    void dfs(Node& node, std::vector<int>& currentPath);
+    void traversePaths(Node& root);
 };

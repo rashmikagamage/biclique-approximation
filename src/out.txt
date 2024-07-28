@@ -1,0 +1,8 @@
+./data/bct1.txt 
+graph size:n1: 4 n2:4, m 11
+load graph
+minPQ: 3
+0 2 
+0 2 
+0 2 
+0 2 

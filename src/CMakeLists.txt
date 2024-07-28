@@ -9,7 +9,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(exName1 "run")
 set(exName2 "densest")
 set(exName3 "exdensest")
-
+set(CMAKE_BUILD_TYPE Debug)
 add_subdirectory(biClique)
 add_subdirectory(biGraph)
 add_subdirectory(tools)
