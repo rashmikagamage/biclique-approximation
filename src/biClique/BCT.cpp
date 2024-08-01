@@ -3,12 +3,14 @@
 #include <signal.h>
 
 #include <algorithm>
+#include <chrono>
 #include <iostream>
 #include <queue>
 #include <stack>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+
 int current_i = 0;
 
 void segfault_handler(int signal) {
@@ -20,8 +22,9 @@ void BCT::buildTree() {
     signal(SIGSEGV, segfault_handler);
     Node root;
 
-    std::vector<uint32_t> SU(g->n1 + 1);
-    std::vector<uint32_t> SV(g->n2 + 1);
+    auto start = std::chrono::high_resolution_clock::now();
+    std::unordered_set<uint32_t> SU(g->n1 + 1);
+    std::unordered_set<uint32_t> SV(g->n2 + 1);
     std::stack<Node*> Q;
     std::vector<uint32_t> twoHopCount(g->n1 + 1, 0);
     for (uint32_t u = 0; u < g->n1; u++) {
@@ -31,7 +34,7 @@ void BCT::buildTree() {
         std::vector<uint32_t> twoHopCount(g->n1 + 1);
         for (uint32_t i = g->pU[u]; i < g->pU[u + 1]; i++) {
             uint32_t v = g->e1[i];
-            SV.push_back(v);
+            SV.insert(v);
 
             for (uint32_t j = g->pV[v + 1] - 1; j >= g->pV[v]; j--) {
                 uint32_t w = g->e2[j];
@@ -39,13 +42,10 @@ void BCT::buildTree() {
                     break;
                 }
                 if (twoHopCount[w] == 0) {
-                    SU.push_back(w);
+                    SU.insert(w);
                 }
                 twoHopCount[w]++;
             }
-        }
-        if (SU.size() == 0 && SV.size() == 0) {
-            continue;
         }
 
         Node* n = new Node(SU, SV, 2, 1, u);
@@ -61,22 +61,7 @@ void BCT::buildTree() {
         SV.clear();
         SU = node->SU;
         SV = node->SV;
-        // printf("-------------------------------------------------\n");
-        // printf("Q size: %d\n", Q.size());
-        // printf("node->SU size: %d\n", node->SU.size());
-        // printf("node->SV size: %d\n", node->SV.size());
-        // printf("SU: ");
 
-        // for (int i = 0; i < SU.size(); i++) {
-        //     printf("%d ", SU[i]);
-        // }
-
-        // printf("\n");
-        // printf("SV: ");
-        // for (int i = 0; i < SV.size(); i++) {
-        //     printf("%d ", SV[i]);
-        // }
-        // printf("\n");
         if (SU.size() == 0 && SV.size() == 0) {
             continue;
         }
@@ -88,14 +73,14 @@ void BCT::buildTree() {
 
             // pivot from U
             if (pivotPair.second) {
-                std::vector<uint32_t> SVnew;
-                std::vector<uint32_t> SUnew;
+                std::unordered_set<uint32_t> SVnew;
+                std::unordered_set<uint32_t> SUnew;
 
                 std::vector<uint32_t> SVPrime;
 
                 for (uint32_t v : SV) {
                     if (g->connectUV(pivot, v)) {
-                        SVnew.push_back(v);
+                        SVnew.insert(v);
                     } else {
                         SVPrime.push_back(v);
                     }
@@ -104,30 +89,9 @@ void BCT::buildTree() {
                 // Calculate S_u_new as SU \ pivot
                 for (uint32_t u : SU) {
                     if (u != pivot) {
-                        SUnew.push_back(u);
+                        SUnew.insert(u);
                     }
                 }
-
-                // printf("pivot: %d\n", pivot);
-                // printf("SUnew: ");
-                // for (int i = 0; i < SUnew.size(); i++) {
-                //     printf("%d ", SUnew[i]);
-                // }
-                // printf("\n");
-                // printf("SVnew: ");
-                // for (int i = 0; i < SVnew.size(); i++) {
-                //     printf("%d ", SVnew[i]);
-                // }
-                // printf("\n");
-                // printf("SVPrime: ");
-                // for (int i = 0; i < SVPrime.size(); i++) {
-                //     printf("%d ", SVPrime[i]);
-                // }
-                // printf("\n");
-
-                // printf("node.vertex: %d\n", node->vertex);
-                // printf("node.vertexSide: %d\n", node->vertexSide);
-                // printf("node.label: %d\n", node->label);
 
                 Node* newNode = new Node(SUnew, SVnew, 1, 1, pivot);
                 node->children.push_back(newNode);
@@ -139,25 +103,22 @@ void BCT::buildTree() {
                 for (uint32_t i = 0; i < SVPrime.size(); i++) {
                     uint32_t v_i = SVPrime[i];
                     visited.insert(v_i);
-                    std::vector<uint32_t> SVchild;
-                    std::vector<uint32_t> SUchild;
+                    std::unordered_set<uint32_t> SVchild;
+                    std::unordered_set<uint32_t> SUchild;
                     std::vector<uint32_t> twoHopsCount(g->n2 + 1);
 
                     for (uint32_t j = g->pV[v_i]; j < g->pV[v_i + 1]; j++) {
                         uint32_t u = g->e2[j];
-                        // auto it = std::find(SU.begin(), SU.end(), u);
-                        // if (it != SU.end()) {
-                        //     SUchild.push_back(u);
-                        // }
-                        current_i = u;
+
+                        if (SU.count(u) > 0) {
+                            SUchild.insert(u);
+                        }
+
                         for (uint32_t k = g->pU[u]; k < g->pU[u + 1]; k++) {
                             uint32_t v = g->e1[k];
-                            // auto it = std::find(SV.begin(), SV.end(), v);
-                            // if (it != SV.end()) {
-                            //     if (visited.count(v) == 0 && twoHopsCount[v] == 0) {
-                            //         SVchild.push_back(v);
-                            //     }
-                            // }
+                            if (SV.count(v) > 0 && visited.count(v) == 0 && twoHopsCount[v] == 0) {
+                                SVchild.insert(v);
+                            }
                             twoHopsCount[v]++;
                         }
                     }
@@ -165,30 +126,17 @@ void BCT::buildTree() {
                     Node* childNode = new Node(SUchild, SVchild, 2, 2, v_i);
                     node->children.push_back(childNode);
                     Q.push(childNode);
-                    // printf("SUchild: ");
-                    // for (int i = 0; i < SUchild.size(); i++) {
-                    //     printf("%d ", SUchild[i]);
-                    // }
-                    // printf("\n");
-                    // printf("SVchild: ");
-                    // for (int i = 0; i < SVchild.size(); i++) {
-                    //     printf("%d ", SVchild[i]);
-                    // }
-                    // printf("\n");
                 }
             } else {
-                // If pivot is from SV
-                printf("Pivot is from SV\n");
-                fflush(stdout);
-                std::vector<uint32_t> SVnew;
-                std::vector<uint32_t> SUnew;
+                std::unordered_set<uint32_t> SVnew;
+                std::unordered_set<uint32_t> SUnew;
 
                 // Calculate S_u_new as S_u intersect N(rho)
                 std::vector<uint32_t> SUPrime;
 
                 for (uint32_t u : SU) {
                     if (g->connectUV(u, pivot)) {
-                        SUnew.push_back(u);
+                        SUnew.insert(u);
                     } else {
                         SUPrime.push_back(u);
                     }
@@ -197,79 +145,71 @@ void BCT::buildTree() {
                 // Calculate S_v_new as SV \ rho
                 for (uint32_t v : SV) {
                     if (v != pivot) {
-                        SVnew.push_back(v);
+                        SVnew.insert(v);
                     }
                 }
 
-                Node* newNode = new Node(SU, SVnew, 1, 2);
+                Node* newNode = new Node(SUnew, SVnew, 1, 2, pivot);
                 node->children.push_back(newNode);
                 Q.push(newNode);
 
-                biGraph sg = createSubgraph(SUPrime, SVnew);
+                // biGraph sg = createSubgraph(SUPrime, SVnew);
 
                 std::unordered_set<uint32_t> visited;
+
                 for (ui i = 0; i < SUPrime.size(); i++) {
                     uint32_t u_i = SUPrime[i];
                     visited.insert(u_i);
-                    std::vector<uint32_t> SUchild;
-                    std::vector<uint32_t> SVchild;
-                    std::vector<uint32_t> twoHopCount(g->n1 + 1);
-                    ui u_iMap = sg.SUMap[u_i];
-                    for (ui j = sg.pU[u_iMap]; j < sg.pU[u_iMap + 1]; j++) {
-                        uint32_t v = sg.e1[j];
-                        SVchild.push_back(v);
-                        ui vMap = sg.SVMap[v];
-                        for (ui k = sg.pV[vMap]; k < sg.pV[vMap + 1]; k--) {
-                            uint32_t u = sg.e2[k];
-                            if (twoHopCount[u] == 0 && visited.find(u) == visited.end()) {
-                                SUchild.push_back(u);
+                    std::unordered_set<uint32_t> SUchild;
+                    std::unordered_set<uint32_t> SVchild;
+                    std::vector<uint32_t> twoHopsCount(g->n1 + 1);
+
+                    // if (g->pU[u_i + 1] - g->pU[u_i] > SU.size()) {
+                    //     continue;
+                    // }
+
+                    for (ui j = g->pU[u_i]; j < g->pU[u_i + 1]; j++) {
+                        uint32_t v = g->e1[j];
+                        if (SV.count(v) > 0) {
+                            SVchild.insert(v);
+                        }
+                        for (ui k = g->pV[v]; k < g->pV[v + 1]; k++) {
+                            uint32_t u = g->e2[k];
+                            if (SU.count(u) > 0 && visited.count(u) == 0 && twoHopsCount[u] == 0) {
+                                SUchild.insert(u);
                             }
-                            twoHopCount[u]++;
+                            twoHopsCount[u]++;
                         }
                     }
 
-                    Node* childNode = new Node(SUchild, SVchild, 2, 2);
+                    Node* childNode = new Node(SUchild, SVchild, 2, 1, u_i);
                     node->children.push_back(childNode);
                     Q.push(childNode);
                 }
             }
         }
         if (SU.size() == 0 || SV.size() == 0) {
-            std::vector<uint32_t> SVnew;
-            std::vector<uint32_t> SUnew;
+            std::unordered_set<uint32_t> SVnew;
+            std::unordered_set<uint32_t> SUnew;
             int side = 0;
             int vertex = 0;
-            if (SU.size() == 0) {
-                side = 2;
-                vertex = SV[0];
-            } else {
+            int pCount = 0;
+            if (SU.size() != 0) {
                 side = 1;
-                vertex = SU[0];
+                pCount = SU.size();
+            } else {
+                side = 2;
+                pCount = SV.size();
             }
 
-            for (int i = 1; i < SU.size(); i++) {
-                SUnew.push_back(SU[i]);
-            }
-            for (int i = 1; i < SV.size(); i++) {
-                SVnew.push_back(SV[i]);
-            }
-            // printf("one one one\n");
-            // printf("SUnew: ");
-            // for (int i = 0; i < SUnew.size(); i++) {
-            //     printf("%d ", SUnew[i]);
-            // }
-            // printf("\n");
-            // printf("SVnew: ");
-            // for (int i = 0; i < SVnew.size(); i++) {
-            //     printf("%d ", SVnew[i]);
-            // }
-            // printf("\n");
-            Node* newNode = new Node(SUnew, SVnew, 1, side, vertex);
+            Node* newNode = new Node(SUnew, SVnew, 1, side, vertex, pCount);
             node->children.push_back(newNode);
-            Q.push(newNode);
+            // Q.push(newNode);
         }
     }
-    printf("Tree building completed\n");
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    printf("Tree completed in: %ld (ms)\n", duration.count() / 1000);
 
     std::vector<std::vector<double>> result = countBicliques(&root);
     for (int i = 2; i < 6; i++) {
@@ -278,8 +218,7 @@ void BCT::buildTree() {
         }
     }
 }
-
-std::pair<uint32_t, bool> BCT::selectPivot(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV) {
+std::pair<uint32_t, bool> BCT::selectPivot(std::unordered_set<uint32_t>& SU, std::unordered_set<uint32_t>& SV) {
     uint32_t bestVertex = 0;
     bool isFromSU = true;
     uint32_t maxSum = 0;
@@ -300,25 +239,25 @@ std::pair<uint32_t, bool> BCT::selectPivot(std::vector<uint32_t>& SU, std::vecto
         }
     }
 
-    // for (uint32_t v : SV) {
-    //     std::vector<uint32_t> PU, PV;
-    //     for (uint32_t u : SU) {
-    //         if (g->connectUV(u, v)) {
-    //             PU.push_back(u);
-    //         }
-    //     }
-    //     uint32_t sum = PU.size() + SV.size() - 1;
-    //     if (sum >= maxSum) {
-    //         maxSum = sum;
-    //         bestVertex = v;
-    //         isFromSU = false;
-    //     }
-    // }
+    for (uint32_t v : SV) {
+        std::vector<uint32_t> PU, PV;
+        for (uint32_t u : SU) {
+            if (g->connectUV(u, v)) {
+                PU.push_back(u);
+            }
+        }
+        uint32_t sum = PU.size() + SV.size() - 1;
+        if (sum >= maxSum) {
+            maxSum = sum;
+            bestVertex = v;
+            isFromSU = false;
+        }
+    }
 
-    return {SU[SU.size() - 1], true};
+    return {bestVertex, isFromSU};
 }
 
-std::pair<uint32_t, bool> BCT::selectPivoteWithSide(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV, int side) {
+std::pair<uint32_t, bool> BCT::selectPivoteWithSide(std::unordered_set<uint32_t>& SU, std::unordered_set<uint32_t>& SV, int side) {
     uint32_t bestVertex = 0;
     bool isFromSU = true;
     uint32_t maxSum = 0;
@@ -449,13 +388,22 @@ std::vector<std::vector<double>> BCT::countBicliques(Node* root) {
         for (Node* node : path) {
             if (node->vertexSide == 1) {
                 if (node->label == 1) {
-                    up++;
+                    if (node->pCount == 0) {
+                        up++;
+                    } else {
+                        up += node->pCount;
+                    }
+
                 } else if (node->label == 2) {
                     uh++;
                 }
             } else if (node->vertexSide == 2) {
                 if (node->label == 1) {
-                    vp++;
+                    if (node->pCount == 0) {
+                        vp++;
+                    } else {
+                        vp += node->pCount;
+                    }
                 } else if (node->label == 2) {
                     vh++;
                 }

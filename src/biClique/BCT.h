@@ -1,23 +1,29 @@
 
+#include <algorithm>
 #include <random>
+#include <utility>
 
 #include "../biGraph/biGraph.hpp"
 #include "../tools/linearSet.hpp"
+#include "unordered_set"
+#include "vector"
 
 struct Node {
-    std::vector<uint32_t> SU;
-    std::vector<uint32_t> SV;
+    std::unordered_set<uint32_t> SU;
+    std::unordered_set<uint32_t> SV;
     std::vector<Node*> children;
     int vertexSide;  // u is 1 v is 2
     int label;
     int vertex;
+    int pCount;
 
-    Node(const std::vector<uint32_t>& su = {},
-         const std::vector<uint32_t>& sv = {},
+    Node(const std::unordered_set<uint32_t>& su = {},
+         const std::unordered_set<uint32_t>& sv = {},
          int lbl = 0,
          int vertexSide = 0,
-         int vertex = 0)  // u is 1 v is 2
-        : SU(su), SV(sv), label(lbl), vertexSide(vertexSide), vertex(vertex) {}
+         int vertex = 0,
+         int pC = 0)  // u is 1 v is 2
+        : SU(su), SV(sv), label(lbl), vertexSide(vertexSide), vertex(vertex), pCount(pC) {}
 
     ~Node() {
         for (Node* child : children) {
@@ -37,21 +43,21 @@ class BCT {
     double **C, *bf3;
     void computeC() {
         int maxPQ = g->maxDu * g->maxDv + 1;
-        int maxD = g->maxDu * g->maxDv + 1;
-        C = new double*[maxD];
-        bf3 = new double[maxD * maxPQ];
+        int maxC = std::min(maxPQ, 1000);
+        C = new double*[maxC];
+        bf3 = new double[maxC * maxC];
 
-        for (int i = 0; i < maxD; i++) {
-            C[i] = bf3 + i * maxPQ;
+        for (int i = 0; i < maxC; i++) {
+            C[i] = bf3 + i * maxC;
         }
         C[0][0] = 1;
         C[1][0] = 1;
         C[1][1] = 1;
 
-        for (int i = 2; i < maxD; i++) {
+        for (int i = 2; i < maxC; i++) {
             C[i][0] = 1;
-            if (i < maxPQ) C[i][i] = 1;
-            for (int j = 1; j < i && j < maxPQ; j++) {
+            if (i < maxC) C[i][i] = 1;
+            for (int j = 1; j < i && j < maxC; j++) {
                 C[i][j] = C[i - 1][j - 1] + C[i - 1][j];
             }
         }
@@ -74,8 +80,8 @@ class BCT {
     }
 
     void buildTree();
-    std::pair<uint32_t, bool> selectPivot(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV);
-    std::pair<uint32_t, bool> selectPivoteWithSide(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV, int pivotSide);
+    std::pair<uint32_t, bool> selectPivot(std::unordered_set<uint32_t>& SU, std::unordered_set<uint32_t>& SV);
+    std::pair<uint32_t, bool> selectPivoteWithSide(std::unordered_set<uint32_t>& SU, std::unordered_set<uint32_t>& SV, int pivotSide);
     biGraph createSubgraph(const std::vector<uint32_t>& SU, const std::vector<uint32_t>& SV);
     void printPath(const std::vector<int>& path);
     void dfs(Node& node, std::vector<int>& currentPath);
