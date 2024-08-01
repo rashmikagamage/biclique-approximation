@@ -306,11 +306,45 @@ biClique/CMakeFiles/BCT.dir/BCT.cpp.o: biClique/BCT.cpp \
   /usr/include/c++/7/istream \
   /usr/include/c++/7/bits/istream.tcc \
   tools/linearSet.hpp \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/c++/7/stack \
+  /usr/include/c++/7/bits/stl_stack.h \
   /usr/include/c++/7/unordered_set \
   /usr/include/c++/7/bits/unordered_set.h
 
 
 /usr/include/c++/7/unordered_set:
+
+/usr/include/c++/7/bits/stl_stack.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum.h:
 
 /usr/include/c++/7/bits/ostream.tcc:
 
@@ -348,6 +382,8 @@ biClique/CMakeFiles/BCT.dir/BCT.cpp.o: biClique/BCT.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/mm3dnow.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/7/include/rtmintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/f16cintrin.h:
@@ -366,9 +402,13 @@ biClique/CMakeFiles/BCT.dir/BCT.cpp.o: biClique/BCT.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx5124fmapsintrin.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512vbmivlintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512ifmaintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/avx512dqintrin.h:
 
@@ -430,6 +470,8 @@ tools/fastIO.hpp:
 
 /usr/include/c++/7/stdexcept:
 
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
 /usr/include/c++/7/ostream:
 
 /usr/include/c++/7/array:
@@ -461,6 +503,8 @@ tools/fastIO.hpp:
 /usr/include/c++/7/numeric:
 
 /usr/include/c++/7/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h:
 
@@ -636,6 +680,8 @@ biClique/BCT.cpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
 tools/hopstotchHash.hpp:
 
 /usr/include/c++/7/ext/new_allocator.h:
@@ -676,6 +722,8 @@ tools/hopstotchHash.hpp:
 
 /usr/include/c++/7/ext/numeric_traits.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
 /usr/include/c++/7/bits/uses_allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
@@ -687,6 +735,8 @@ tools/hopstotchHash.hpp:
 /usr/include/c++/7/ext/type_traits.h:
 
 /usr/include/c++/7/bits/basic_string.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h:
 
@@ -729,6 +779,8 @@ biGraph/biGraph.hpp:
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/signal.h:
 
 /usr/include/c++/7/ext/aligned_buffer.h:
 
@@ -808,6 +860,8 @@ biClique/BCT.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
 /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -820,9 +874,15 @@ biClique/BCT.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/c++/7/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
 /usr/include/wctype.h:
 
@@ -842,11 +902,15 @@ biClique/BCT.h:
 
 /usr/include/c++/7/bits/hash_bytes.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
 /usr/include/c++/7/ios:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
 
 /usr/include/c++/7/bits/localefwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h:
 
@@ -895,6 +959,8 @@ biClique/BCT.h:
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/c++/7/stack:
 
 /usr/include/c++/7/istream:
 

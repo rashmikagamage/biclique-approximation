@@ -7,13 +7,23 @@
 struct Node {
     std::vector<uint32_t> SU;
     std::vector<uint32_t> SV;
-    std::vector<Node> children;
+    std::vector<Node*> children;
+    int vertexSide;  // u is 1 v is 2
     int label;
+    int vertex;
 
     Node(const std::vector<uint32_t>& su = {},
          const std::vector<uint32_t>& sv = {},
-         int lbl = 0)
-        : SU(su), SV(sv), label(lbl) {}
+         int lbl = 0,
+         int vertexSide = 0,
+         int vertex = 0)  // u is 1 v is 2
+        : SU(su), SV(sv), label(lbl), vertexSide(vertexSide), vertex(vertex) {}
+
+    ~Node() {
+        for (Node* child : children) {
+            delete child;
+        }
+    }
 };
 
 class BCT {
@@ -21,22 +31,23 @@ class BCT {
     biGraph* g;
     int p, q;
     LinearSet candL, candR;
-    std::vector<std::vector<double> > ansAll;
+    std::vector<std::vector<double>> ansAll;
     int minPQ;
 
     double **C, *bf3;
     void computeC() {
-        printf("minPQ: %d\n", minPQ);
-        int maxPQ = std::max(minPQ, q - p) + 2;
-        int maxD = std::max(g->maxDu, g->maxDv) + 1;
+        int maxPQ = g->maxDu * g->maxDv + 1;
+        int maxD = g->maxDu * g->maxDv + 1;
         C = new double*[maxD];
         bf3 = new double[maxD * maxPQ];
+
         for (int i = 0; i < maxD; i++) {
             C[i] = bf3 + i * maxPQ;
         }
         C[0][0] = 1;
         C[1][0] = 1;
         C[1][1] = 1;
+
         for (int i = 2; i < maxD; i++) {
             C[i][0] = 1;
             if (i < maxPQ) C[i][i] = 1;
@@ -64,9 +75,10 @@ class BCT {
 
     void buildTree();
     std::pair<uint32_t, bool> selectPivot(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV);
-
+    std::pair<uint32_t, bool> selectPivoteWithSide(std::vector<uint32_t>& SU, std::vector<uint32_t>& SV, int pivotSide);
     biGraph createSubgraph(const std::vector<uint32_t>& SU, const std::vector<uint32_t>& SV);
     void printPath(const std::vector<int>& path);
     void dfs(Node& node, std::vector<int>& currentPath);
-    void traversePaths(Node& root);
+    void traversePaths(Node* node, std::vector<Node*>& path, std::vector<std::vector<Node*>>& allPaths);
+    std::vector<std::vector<double>> countBicliques(Node* root);
 };

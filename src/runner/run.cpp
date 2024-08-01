@@ -1,3 +1,5 @@
+#include <signal.h>
+
 #include <cassert>
 #include <chrono>
 #include <ctime>

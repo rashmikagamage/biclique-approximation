@@ -53,8 +53,8 @@ struct biGraph {
         // printf("there\n");fflush(stdout);
         // changeToDegreeOrder();
         // printf("there\n");fflush(stdout);
-        changeToCoreOrder();
-        // rawOrder();
+        // changeToCoreOrder();
+        rawOrder();
     }
 
     void coreReductionFast22() {
