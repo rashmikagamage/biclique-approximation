@@ -80,6 +80,7 @@ class BCT {
     }
 
     void buildTree();
+    void buildTreeV2(int p, int q);
     std::pair<uint32_t, bool> selectPivot(std::unordered_set<uint32_t>& SU, std::unordered_set<uint32_t>& SV);
     std::pair<uint32_t, bool> selectPivoteWithSide(std::unordered_set<uint32_t>& SU, std::unordered_set<uint32_t>& SV, int pivotSide);
     biGraph createSubgraph(const std::vector<uint32_t>& SU, const std::vector<uint32_t>& SV);
@@ -87,4 +88,5 @@ class BCT {
     void dfs(Node& node, std::vector<int>& currentPath);
     void traversePaths(Node* node, std::vector<Node*>& path, std::vector<std::vector<Node*>>& allPaths);
     std::vector<std::vector<double>> countBicliques(Node* root);
+    double countBicliquesForPQ(Node* root);
 };

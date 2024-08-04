@@ -270,6 +270,13 @@ int main(int argc, char* argv[]) {
         BCT* counter = new BCT(filePath, outFilePath, p, q);
         counter->buildTree();
 
+    } else if (aC->exist("-bct2")) {
+        double e = 0.01;
+        if (aC->exist("p")) int p = atoi(aC->get("p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("q").c_str());
+        BCT* counter = new BCT(filePath, outFilePath, p, q);
+        counter->buildTreeV2(p, q);
+
     }
 
     else {  // BCList++
