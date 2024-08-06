@@ -156,147 +156,17 @@ densest/fast:
 .PHONY : densest/fast
 
 #=============================================================================
-# Target rules for targets named colorPathSpecificPQ
+# Target rules for targets named BK
 
 # Build rule for target.
-colorPathSpecificPQ: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 colorPathSpecificPQ
-.PHONY : colorPathSpecificPQ
+BK: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BK
+.PHONY : BK
 
 # fast build rule for target.
-colorPathSpecificPQ/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPathSpecificPQ.dir/build.make biClique/CMakeFiles/colorPathSpecificPQ.dir/build
-.PHONY : colorPathSpecificPQ/fast
-
-#=============================================================================
-# Target rules for targets named colorPathPequalsQ
-
-# Build rule for target.
-colorPathPequalsQ: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 colorPathPequalsQ
-.PHONY : colorPathPequalsQ
-
-# fast build rule for target.
-colorPathPequalsQ/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPathPequalsQ.dir/build.make biClique/CMakeFiles/colorPathPequalsQ.dir/build
-.PHONY : colorPathPequalsQ/fast
-
-#=============================================================================
-# Target rules for targets named accuracy
-
-# Build rule for target.
-accuracy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 accuracy
-.PHONY : accuracy
-
-# fast build rule for target.
-accuracy/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/accuracy.dir/build.make biClique/CMakeFiles/accuracy.dir/build
-.PHONY : accuracy/fast
-
-#=============================================================================
-# Target rules for targets named pivotAndPathPequalsQ
-
-# Build rule for target.
-pivotAndPathPequalsQ: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pivotAndPathPequalsQ
-.PHONY : pivotAndPathPequalsQ
-
-# fast build rule for target.
-pivotAndPathPequalsQ/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build.make biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build
-.PHONY : pivotAndPathPequalsQ/fast
-
-#=============================================================================
-# Target rules for targets named bcAndPath
-
-# Build rule for target.
-bcAndPath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bcAndPath
-.PHONY : bcAndPath
-
-# fast build rule for target.
-bcAndPath/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/bcAndPath.dir/build.make biClique/CMakeFiles/bcAndPath.dir/build
-.PHONY : bcAndPath/fast
-
-#=============================================================================
-# Target rules for targets named pivotAndPath
-
-# Build rule for target.
-pivotAndPath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pivotAndPath
-.PHONY : pivotAndPath
-
-# fast build rule for target.
-pivotAndPath/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPath.dir/build.make biClique/CMakeFiles/pivotAndPath.dir/build
-.PHONY : pivotAndPath/fast
-
-#=============================================================================
-# Target rules for targets named colorPath
-
-# Build rule for target.
-colorPath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 colorPath
-.PHONY : colorPath
-
-# fast build rule for target.
-colorPath/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPath.dir/build.make biClique/CMakeFiles/colorPath.dir/build
-.PHONY : colorPath/fast
-
-#=============================================================================
-# Target rules for targets named fastEdgePivot
-
-# Build rule for target.
-fastEdgePivot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fastEdgePivot
-.PHONY : fastEdgePivot
-
-# fast build rule for target.
-fastEdgePivot/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/fastEdgePivot.dir/build.make biClique/CMakeFiles/fastEdgePivot.dir/build
-.PHONY : fastEdgePivot/fast
-
-#=============================================================================
-# Target rules for targets named BCT
-
-# Build rule for target.
-BCT: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BCT
-.PHONY : BCT
-
-# fast build rule for target.
-BCT/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/build
-.PHONY : BCT/fast
-
-#=============================================================================
-# Target rules for targets named turan
-
-# Build rule for target.
-turan: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 turan
-.PHONY : turan
-
-# fast build rule for target.
-turan/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/turan.dir/build.make biClique/CMakeFiles/turan.dir/build
-.PHONY : turan/fast
-
-#=============================================================================
-# Target rules for targets named BCListPlusPlus
-
-# Build rule for target.
-BCListPlusPlus: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BCListPlusPlus
-.PHONY : BCListPlusPlus
-
-# fast build rule for target.
-BCListPlusPlus/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCListPlusPlus.dir/build.make biClique/CMakeFiles/BCListPlusPlus.dir/build
-.PHONY : BCListPlusPlus/fast
+BK/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
+.PHONY : BK/fast
 
 #=============================================================================
 # Target rules for targets named edgePivotSpecificPQ
@@ -312,17 +182,121 @@ edgePivotSpecificPQ/fast:
 .PHONY : edgePivotSpecificPQ/fast
 
 #=============================================================================
-# Target rules for targets named BK
+# Target rules for targets named turan
 
 # Build rule for target.
-BK: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BK
-.PHONY : BK
+turan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 turan
+.PHONY : turan
 
 # fast build rule for target.
-BK/fast:
-	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
-.PHONY : BK/fast
+turan/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/turan.dir/build.make biClique/CMakeFiles/turan.dir/build
+.PHONY : turan/fast
+
+#=============================================================================
+# Target rules for targets named BCT
+
+# Build rule for target.
+BCT: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BCT
+.PHONY : BCT
+
+# fast build rule for target.
+BCT/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/build
+.PHONY : BCT/fast
+
+#=============================================================================
+# Target rules for targets named colorPath
+
+# Build rule for target.
+colorPath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 colorPath
+.PHONY : colorPath
+
+# fast build rule for target.
+colorPath/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPath.dir/build.make biClique/CMakeFiles/colorPath.dir/build
+.PHONY : colorPath/fast
+
+#=============================================================================
+# Target rules for targets named pivotAndPath
+
+# Build rule for target.
+pivotAndPath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pivotAndPath
+.PHONY : pivotAndPath
+
+# fast build rule for target.
+pivotAndPath/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPath.dir/build.make biClique/CMakeFiles/pivotAndPath.dir/build
+.PHONY : pivotAndPath/fast
+
+#=============================================================================
+# Target rules for targets named BCListPlusPlus
+
+# Build rule for target.
+BCListPlusPlus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BCListPlusPlus
+.PHONY : BCListPlusPlus
+
+# fast build rule for target.
+BCListPlusPlus/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCListPlusPlus.dir/build.make biClique/CMakeFiles/BCListPlusPlus.dir/build
+.PHONY : BCListPlusPlus/fast
+
+#=============================================================================
+# Target rules for targets named bcAndPath
+
+# Build rule for target.
+bcAndPath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bcAndPath
+.PHONY : bcAndPath
+
+# fast build rule for target.
+bcAndPath/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/bcAndPath.dir/build.make biClique/CMakeFiles/bcAndPath.dir/build
+.PHONY : bcAndPath/fast
+
+#=============================================================================
+# Target rules for targets named pivotAndPathPequalsQ
+
+# Build rule for target.
+pivotAndPathPequalsQ: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pivotAndPathPequalsQ
+.PHONY : pivotAndPathPequalsQ
+
+# fast build rule for target.
+pivotAndPathPequalsQ/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build.make biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build
+.PHONY : pivotAndPathPequalsQ/fast
+
+#=============================================================================
+# Target rules for targets named accuracy
+
+# Build rule for target.
+accuracy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 accuracy
+.PHONY : accuracy
+
+# fast build rule for target.
+accuracy/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/accuracy.dir/build.make biClique/CMakeFiles/accuracy.dir/build
+.PHONY : accuracy/fast
+
+#=============================================================================
+# Target rules for targets named colorPathPequalsQ
+
+# Build rule for target.
+colorPathPequalsQ: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 colorPathPequalsQ
+.PHONY : colorPathPequalsQ
+
+# fast build rule for target.
+colorPathPequalsQ/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPathPequalsQ.dir/build.make biClique/CMakeFiles/colorPathPequalsQ.dir/build
+.PHONY : colorPathPequalsQ/fast
 
 #=============================================================================
 # Target rules for targets named rawEdgePivot
@@ -336,6 +310,45 @@ rawEdgePivot: cmake_check_build_system
 rawEdgePivot/fast:
 	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/rawEdgePivot.dir/build.make biClique/CMakeFiles/rawEdgePivot.dir/build
 .PHONY : rawEdgePivot/fast
+
+#=============================================================================
+# Target rules for targets named colorPathSpecificPQ
+
+# Build rule for target.
+colorPathSpecificPQ: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 colorPathSpecificPQ
+.PHONY : colorPathSpecificPQ
+
+# fast build rule for target.
+colorPathSpecificPQ/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPathSpecificPQ.dir/build.make biClique/CMakeFiles/colorPathSpecificPQ.dir/build
+.PHONY : colorPathSpecificPQ/fast
+
+#=============================================================================
+# Target rules for targets named fastEdgePivot
+
+# Build rule for target.
+fastEdgePivot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fastEdgePivot
+.PHONY : fastEdgePivot
+
+# fast build rule for target.
+fastEdgePivot/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/fastEdgePivot.dir/build.make biClique/CMakeFiles/fastEdgePivot.dir/build
+.PHONY : fastEdgePivot/fast
+
+#=============================================================================
+# Target rules for targets named BCTV2
+
+# Build rule for target.
+BCTV2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BCTV2
+.PHONY : BCTV2
+
+# fast build rule for target.
+BCTV2/fast:
+	$(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCTV2.dir/build.make biClique/CMakeFiles/BCTV2.dir/build
+.PHONY : BCTV2/fast
 
 #=============================================================================
 # Target rules for targets named pqBicliqeDensest
@@ -445,6 +458,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... BCListPlusPlus"
 	@echo "... BCT"
+	@echo "... BCTV2"
 	@echo "... BK"
 	@echo "... accuracy"
 	@echo "... bcAndPath"

@@ -8,6 +8,7 @@
 
 #include "../biClique/BCListPlusPlus.h"
 #include "../biClique/BCT.h"
+#include "../biClique/BCTV2.h"
 #include "../biClique/BK.h"
 #include "../biClique/accuracy.h"
 #include "../biClique/bcAndPath.h"
@@ -276,6 +277,12 @@ int main(int argc, char* argv[]) {
         if (aC->exist("q")) int q = atoi(aC->get("q").c_str());
         BCT* counter = new BCT(filePath, outFilePath, p, q);
         counter->buildTreeV2(p, q);
+
+    } else if (aC->exist("-bct3")) {
+        double e = 0.01;
+
+        BCTV2* counter = new BCTV2(filePath, outFilePath, p, q);
+        counter->buildTree();
 
     }
 

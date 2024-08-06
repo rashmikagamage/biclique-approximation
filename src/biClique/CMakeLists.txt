@@ -49,3 +49,5 @@ target_link_libraries(colorPathSpecificPQ biGraph linearSet)
 add_library(accuracy accuracy.h accuracy.cpp)
 target_link_libraries(accuracy biGraph linearSet)
 
+add_library(BCTV2 BCTV2.h BCTV2.cpp)
+target_link_libraries(BCTV2 biGraph linearSet)

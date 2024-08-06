@@ -333,6 +333,7 @@ CMakeFiles/run.dir/runner/run.cpp.o: runner/run.cpp \
   tools/listLinearHeap.hpp \
   tools/linearSet.hpp \
   biClique/BCT.h \
+  biClique/BCTV2.h \
   biClique/BK.h \
   biClique/accuracy.h \
   biClique/bcAndPath.h \
@@ -431,6 +432,10 @@ biGraph/biGraph.hpp:
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /usr/include/strings.h:
+
+biClique/colorPath.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/c++/7/cctype:
 
@@ -576,10 +581,6 @@ tools/listLinearHeap.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/popcntintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-biClique/colorPath.h:
-
 /usr/include/c++/7/bits/memoryfwd.h:
 
 /usr/include/c++/7/cstdint:
@@ -591,6 +592,8 @@ biClique/colorPath.h:
 /usr/include/linux/falloc.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
+
+biClique/BCTV2.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 

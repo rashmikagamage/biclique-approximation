@@ -51,9 +51,9 @@ struct biGraph {
             // printf("u %u, v %u\n", edges[i].u, edges[i].v);fflush(stdout);
         }
         // printf("there\n");fflush(stdout);
-        // changeToDegreeOrder();
+        changeToDegreeOrder();
         // printf("there\n");fflush(stdout);
-        changeToCoreOrder();
+        // changeToCoreOrder();
         // rawOrder();
     }
 

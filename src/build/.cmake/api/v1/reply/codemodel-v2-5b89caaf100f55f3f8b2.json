@@ -1,0 +1,292 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						9,
+						12,
+						18
+					]
+				},
+				{
+					"build" : "biClique",
+					"jsonFile" : "directory-biClique-Debug-44a034f9b53ddf5efb6c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "biClique",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						10,
+						13,
+						14,
+						15,
+						17,
+						19
+					]
+				},
+				{
+					"build" : "biGraph",
+					"jsonFile" : "directory-biGraph-Debug-31840c2e83e5da381dae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "biGraph"
+				},
+				{
+					"build" : "tools",
+					"jsonFile" : "directory-tools-Debug-f9645b0170a45a75eff2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tools"
+				},
+				{
+					"build" : "densestSubgraph",
+					"jsonFile" : "directory-densestSubgraph-Debug-b5c9bb0a5c5975732c25.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "densestSubgraph",
+					"targetIndexes" : 
+					[
+						11,
+						16
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "run",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "BCListPlusPlus::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-BCListPlusPlus-Debug-fda1607e07b23b3a32f3.json",
+					"name" : "BCListPlusPlus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "BCT::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-BCT-Debug-34935f1ae2fbd35b3573.json",
+					"name" : "BCT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "BCTV2::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-BCTV2-Debug-40e9d9e3de2c35be355c.json",
+					"name" : "BCTV2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "BK::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-BK-Debug-915eaa0ae3dfdcfedc3d.json",
+					"name" : "BK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "accuracy::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-accuracy-Debug-791b7444a02611880731.json",
+					"name" : "accuracy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "bcAndPath::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-bcAndPath-Debug-774edd2bbd38f8ec0afd.json",
+					"name" : "bcAndPath",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "colorPath::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-colorPath-Debug-bfafccdc939a8c1808c2.json",
+					"name" : "colorPath",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "colorPathPequalsQ::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-colorPathPequalsQ-Debug-345de5873c5528e9708e.json",
+					"name" : "colorPathPequalsQ",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "colorPathSpecificPQ::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-colorPathSpecificPQ-Debug-40fee6303a0e7040a6d3.json",
+					"name" : "colorPathSpecificPQ",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "densest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-densest-Debug-2790cd958c3ea685716d.json",
+					"name" : "densest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "edgePivotSpecificPQ::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-edgePivotSpecificPQ-Debug-492f1016b509407c49ec.json",
+					"name" : "edgePivotSpecificPQ",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "exactFlowAlgorithm::@308b7a89c2585df2933d",
+					"jsonFile" : "target-exactFlowAlgorithm-Debug-559681b05c1385bef649.json",
+					"name" : "exactFlowAlgorithm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exdensest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exdensest-Debug-70580f7922277a5fa7c3.json",
+					"name" : "exdensest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "fastEdgePivot::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-fastEdgePivot-Debug-44396a5ac8c5bcc5919e.json",
+					"name" : "fastEdgePivot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "pivotAndPath::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-pivotAndPath-Debug-59b0ea5332d10326cb54.json",
+					"name" : "pivotAndPath",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "pivotAndPathPequalsQ::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-pivotAndPathPequalsQ-Debug-79865cc97a9970b95ba2.json",
+					"name" : "pivotAndPathPequalsQ",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "pqBicliqeDensest::@308b7a89c2585df2933d",
+					"jsonFile" : "target-pqBicliqeDensest-Debug-7edcf9620511f3741a62.json",
+					"name" : "pqBicliqeDensest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rawEdgePivot::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-rawEdgePivot-Debug-72de6a4a277994024a03.json",
+					"name" : "rawEdgePivot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run-Debug-d15836c4228726e4adcc.json",
+					"name" : "run",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "turan::@9d9301f8aea1181d7e0d",
+					"jsonFile" : "target-turan-Debug-f1e4af59651572877d9b.json",
+					"name" : "turan",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/build",
+		"source" : "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
