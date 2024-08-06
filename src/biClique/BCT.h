@@ -16,6 +16,7 @@ struct Node {
     int label;
     int vertex;
     int pCount;
+    int vh = 0, vp = 0, uh = 0, up = 0;
 
     Node(const std::unordered_set<uint32_t>& su = {},
          const std::unordered_set<uint32_t>& sv = {},
@@ -39,11 +40,11 @@ class BCT {
     LinearSet candL, candR;
     std::vector<std::vector<double>> ansAll;
     int minPQ;
-
+    std::vector<std::vector<double>> count;
     double **C, *bf3;
     void computeC() {
         int maxPQ = g->maxDu * g->maxDv + 1;
-        int maxC = std::min(maxPQ, 1000);
+        int maxC = std::min(maxPQ, 2000);
         C = new double*[maxC];
         bf3 = new double[maxC * maxC];
 
@@ -89,4 +90,5 @@ class BCT {
     void traversePaths(Node* node, std::vector<Node*>& path, std::vector<std::vector<Node*>>& allPaths);
     std::vector<std::vector<double>> countBicliques(Node* root);
     double countBicliquesForPQ(Node* root);
+    void processNode(Node* node);
 };
