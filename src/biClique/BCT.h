@@ -44,7 +44,7 @@ class BCT {
     double **C, *bf3;
     void computeC() {
         int maxPQ = g->maxDu * g->maxDv + 1;
-        int maxC = std::min(maxPQ, 2000);
+        int maxC = 2 * std::max(g->maxDu, g->maxDv);
         C = new double*[maxC];
         bf3 = new double[maxC * maxC];
 

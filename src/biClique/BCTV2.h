@@ -8,22 +8,19 @@
 #include "vector"
 
 struct NodeV {
-    std::vector<uint32_t> SU;
-    std::vector<uint32_t> SV;
-
     int vertexSide;  // u is 1 v is 2
     int label;
     int vertex;
     int pCount;
     int vh = 0, vp = 0, uh = 0, up = 0;
+    int depth = 0;
 
-    NodeV(const std::vector<uint32_t>& su = {},
-          const std::vector<uint32_t>& sv = {},
-          int lbl = 0,
-          int vertexSide = 0,
-          int vertex = 0,
-          int pC = 0)  // u is 1 v is 2
-        : SU(su), SV(sv), label(lbl), vertexSide(vertexSide), vertex(vertex), pCount(pC) {}
+    NodeV(
+        int lbl = 0,
+        int vertexSide = 0,
+        int vertex = 0,
+        int pC = 0)  // u is 1 v is 2
+        : label(lbl), vertexSide(vertexSide), vertex(vertex), pCount(pC) {}
 };
 
 class BCTV2 {
@@ -38,22 +35,24 @@ class BCTV2 {
     ui timePivot = 0;
     int uh = 0, vh = 0, up = 0, vp = 0;
     void computeC() {
-        int maxPQ = g->maxDu * g->maxDv + 1;
-        int maxC = std::min(maxPQ, 2000);
-        C = new double*[maxC];
-        bf3 = new double[maxC * maxC];
+        int maxI = std::max(g->maxDu, g->maxDv);
+        int maxJ = maxI;
 
-        for (int i = 0; i < maxC; i++) {
-            C[i] = bf3 + i * maxC;
+        C = new double*[maxI + 1];
+        for (int i = 0; i <= maxI; i++) {
+            int rowSize = std::min(i, maxJ) + 1;
+            C[i] = new double[rowSize];
         }
-        C[0][0] = 1;
-        C[1][0] = 1;
-        C[1][1] = 1;
 
-        for (int i = 2; i < maxC; i++) {
+        C[0][0] = 1;
+        for (int i = 1; i <= maxI; i++) {
             C[i][0] = 1;
-            if (i < maxC) C[i][i] = 1;
-            for (int j = 1; j < i && j < maxC; j++) {
+            if (i <= maxJ) {
+                C[i][i] = 1;
+            }
+        }
+        for (int i = 2; i <= maxI; i++) {
+            for (int j = 1; j <= std::min(i - 1, maxJ); j++) {
                 C[i][j] = C[i - 1][j - 1] + C[i - 1][j];
             }
         }
@@ -70,6 +69,7 @@ class BCTV2 {
         q = q_;
         minPQ = std::min(p, q);
         g = new biGraph(filePath);
+
         std::printf("load graph\n");
         fflush(stdout);
         computeC();
@@ -86,4 +86,5 @@ class BCTV2 {
     std::vector<std::vector<double>> countBicliques(NodeV* root);
     double countBicliquesForPQ(NodeV* root);
     void processNode(NodeV* node);
+    void destroyVector(std::vector<int>& vec);
 };

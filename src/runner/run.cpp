@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
 
         auto t2 = std::chrono::steady_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
-        std::cout << "time:" << duration.count() << "ms" << std::endl;
+        // std::cout << "time:" << duration.count() << "ms" << std::endl;
         delete counter;
     } else if (aC->exist("-apm")) {  // approximate pm
         rawEdgePivot* counter = new rawEdgePivot(filePath, outFilePath);
