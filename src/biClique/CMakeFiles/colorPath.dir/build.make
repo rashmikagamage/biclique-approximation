@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # Include any dependencies generated for this target.
 include biClique/CMakeFiles/colorPath.dir/depend.make
@@ -72,30 +72,30 @@ include biClique/CMakeFiles/colorPath.dir/flags.make
 biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: biClique/CMakeFiles/colorPath.dir/flags.make
 biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: biClique/colorPath.cpp
 biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: biClique/CMakeFiles/colorPath.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o -MF CMakeFiles/colorPath.dir/colorPath.cpp.o.d -o CMakeFiles/colorPath.dir/colorPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o -MF CMakeFiles/colorPath.dir/colorPath.cpp.o.d -o CMakeFiles/colorPath.dir/colorPath.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPath.cpp
 
 biClique/CMakeFiles/colorPath.dir/colorPath.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/colorPath.dir/colorPath.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp > CMakeFiles/colorPath.dir/colorPath.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPath.cpp > CMakeFiles/colorPath.dir/colorPath.cpp.i
 
 biClique/CMakeFiles/colorPath.dir/colorPath.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/colorPath.dir/colorPath.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp -o CMakeFiles/colorPath.dir/colorPath.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPath.cpp -o CMakeFiles/colorPath.dir/colorPath.cpp.s
 
 biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o: biClique/CMakeFiles/colorPath.dir/flags.make
 biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o: biClique/colorPathAV5.cpp
 biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o: biClique/CMakeFiles/colorPath.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o -MF CMakeFiles/colorPath.dir/colorPathAV5.cpp.o.d -o CMakeFiles/colorPath.dir/colorPathAV5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o -MF CMakeFiles/colorPath.dir/colorPathAV5.cpp.o.d -o CMakeFiles/colorPath.dir/colorPathAV5.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPathAV5.cpp
 
 biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/colorPath.dir/colorPathAV5.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5.cpp > CMakeFiles/colorPath.dir/colorPathAV5.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPathAV5.cpp > CMakeFiles/colorPath.dir/colorPathAV5.cpp.i
 
 biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/colorPath.dir/colorPathAV5.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5.cpp -o CMakeFiles/colorPath.dir/colorPathAV5.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPathAV5.cpp -o CMakeFiles/colorPath.dir/colorPathAV5.cpp.s
 
 # Object files for target colorPath
 colorPath_OBJECTS = \
@@ -109,19 +109,19 @@ biClique/libcolorPath.a: biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o
 biClique/libcolorPath.a: biClique/CMakeFiles/colorPath.dir/colorPathAV5.cpp.o
 biClique/libcolorPath.a: biClique/CMakeFiles/colorPath.dir/build.make
 biClique/libcolorPath.a: biClique/CMakeFiles/colorPath.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcolorPath.a"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/colorPath.dir/cmake_clean_target.cmake
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/colorPath.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcolorPath.a"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/colorPath.dir/cmake_clean_target.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/colorPath.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 biClique/CMakeFiles/colorPath.dir/build: biClique/libcolorPath.a
 .PHONY : biClique/CMakeFiles/colorPath.dir/build
 
 biClique/CMakeFiles/colorPath.dir/clean:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/colorPath.dir/cmake_clean.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/colorPath.dir/cmake_clean.cmake
 .PHONY : biClique/CMakeFiles/colorPath.dir/clean
 
 biClique/CMakeFiles/colorPath.dir/depend:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles/colorPath.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/colorPath.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : biClique/CMakeFiles/colorPath.dir/depend
 

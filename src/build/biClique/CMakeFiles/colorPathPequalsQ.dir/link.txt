@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcolorPathPequalsQ.a CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o
-/usr/bin/ranlib libcolorPathPequalsQ.a

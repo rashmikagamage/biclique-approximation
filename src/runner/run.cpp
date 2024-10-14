@@ -256,18 +256,19 @@ int main(int argc, char* argv[]) {
         if (aC->exist("q")) int q = atoi(aC->get("q").c_str());
         accuracy* counter = new accuracy(filePath, outFilePath, p, q);
 
-        counter->shadowBuilder1(p, q, e);
+        // counter->shadowBuilder1(p, q, e);
     } else if (aC->exist("-zstar")) {
         double e = 0.01;
-        if (aC->exist("e")) e = atof(aC->get("e").c_str());
-        if (aC->exist("p")) int p = atoi(aC->get("p").c_str());
-        if (aC->exist("q")) int q = atoi(aC->get("q").c_str());
+        if (aC->exist("-e")) {
+            e = atof(aC->get("-e").c_str());
+        }
+        if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
         accuracy* counter = new accuracy(filePath, outFilePath, p, q);
-
         counter->shadowBuilderZStar(p, q, e);
+
     } else if (aC->exist("-bct")) {
         double e = 0.01;
-
         BCT* counter = new BCT(filePath, outFilePath, p, q);
         counter->buildTree();
 

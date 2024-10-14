@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfastEdgePivot.a CMakeFiles/fastEdgePivot.dir/fastEdgePivot.cpp.o
-/usr/bin/ranlib libfastEdgePivot.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libBCListPlusPlus.a CMakeFiles/BCListPlusPlus.dir/BCListPlusPlus.cpp.o
-/usr/bin/ranlib libBCListPlusPlus.a

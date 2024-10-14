@@ -1,8 +1,8 @@
 biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.cpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPath.cpp \
  /usr/include/stdc-predef.h \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPath.h \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph/biGraph.hpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPath.h \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../biGraph/biGraph.hpp \
  /usr/include/c++/7/algorithm /usr/include/c++/7/utility \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
@@ -55,16 +55,12 @@ biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/7/bits/std_abs.h /usr/include/c++/7/bits/algorithmfwd.h \
  /usr/include/c++/7/bits/stl_heap.h /usr/include/c++/7/bits/stl_tempbuf.h \
  /usr/include/c++/7/bits/stl_construct.h /usr/include/c++/7/new \
@@ -104,7 +100,7 @@ biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h /usr/include/c++/7/cstdint \
+ /usr/include/c++/7/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/7/bits/localefwd.h \
@@ -132,32 +128,30 @@ biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/7/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/7/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/7/bits/basic_string.tcc \
  /usr/include/c++/7/bits/invoke.h /usr/include/c++/7/ext/aligned_buffer.h \
  /usr/include/c++/7/bits/hashtable.h \
  /usr/include/c++/7/bits/hashtable_policy.h \
  /usr/include/c++/7/bits/unordered_map.h \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph/../tools/fastIO.hpp \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph/../tools/filesystem.hpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../biGraph/../tools/fastIO.hpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../biGraph/../tools/filesystem.hpp \
  /usr/include/c++/7/stdlib.h /usr/include/assert.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/linux/falloc.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph/../tools/hopstotchHash.hpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../biGraph/../tools/hopstotchHash.hpp \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/x86intrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/ia32intrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h \
@@ -217,10 +211,8 @@ biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/clzerointrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/pkuintrin.h \
  /usr/include/c++/7/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/c++/7/cassert \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../biGraph/../tools/listLinearHeap.hpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../biGraph/../tools/listLinearHeap.hpp \
  /usr/include/c++/7/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -230,7 +222,6 @@ biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h \
  /usr/include/c++/7/iostream /usr/include/c++/7/ostream \
  /usr/include/c++/7/ios /usr/include/c++/7/bits/ios_base.h \
  /usr/include/c++/7/bits/locale_classes.h \
@@ -248,7 +239,7 @@ biClique/CMakeFiles/colorPath.dir/colorPath.cpp.o: \
  /usr/include/c++/7/bits/basic_ios.tcc \
  /usr/include/c++/7/bits/ostream.tcc /usr/include/c++/7/istream \
  /usr/include/c++/7/bits/istream.tcc \
- /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/../tools/linearSet.hpp \
+ /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../tools/linearSet.hpp \
  /usr/include/c++/7/chrono /usr/include/c++/7/ratio \
  /usr/include/c++/7/ctime /usr/include/c++/7/bits/parse_numbers.h \
  /usr/include/c++/7/random /usr/include/c++/7/bits/random.h \

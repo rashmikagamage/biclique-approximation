@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles /home/rashmika/biclique/sigmod_new/biclique-approximation/src//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

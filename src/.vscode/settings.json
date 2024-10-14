@@ -51,6 +51,7 @@
         "typeinfo": "cpp",
         "set": "cpp",
         "cassert": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "cfloat": "cpp"
     }
 }

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o" "gcc" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o.d"
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o" "gcc" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPath.cpp" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o" "gcc" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPathSamplev5.cpp" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o" "gcc" "biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -31,6 +31,7 @@ struct biGraph {
     std::vector<uint32_t> pU, e1, pV, e2;
 
     biGraph() {}
+
     biGraph(const std::string& filePath) {
         fastIO in(filePath, "r");
 
@@ -53,11 +54,11 @@ struct biGraph {
             // printf("u %u, v %u\n", edges[i].u, edges[i].v);fflush(stdout);
         }
         // printf("there\n");fflush(stdout);
-        // changeToDegreeOrder();
+        changeToDegreeOrder();
         // printf("there\n");fflush(stdout);
         // changeToCoreOrder();
         // rawOrder();
-        changeToCoreOrder2();
+        // changeToCoreOrder2();
     }
 
     void coreReductionFast22() {

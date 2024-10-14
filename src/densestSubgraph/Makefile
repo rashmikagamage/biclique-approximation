@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph//CMakeFiles/progress.marks
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles 0
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph//CMakeFiles/progress.marks
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/clean
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/preinstall
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/preinstall
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rule:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rule
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rule
 .PHONY : densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rule
 
 # Convenience name for target.
@@ -127,12 +127,12 @@ pqBicliqeDensest: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rule
 
 # fast build rule for target.
 pqBicliqeDensest/fast:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build
 .PHONY : pqBicliqeDensest/fast
 
 # Convenience name for target.
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rule:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rule
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rule
 .PHONY : densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rule
 
 # Convenience name for target.
@@ -141,7 +141,7 @@ exactFlowAlgorithm: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rule
 
 # fast build rule for target.
 exactFlowAlgorithm/fast:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build
 .PHONY : exactFlowAlgorithm/fast
 
 exactFlowAlgorithm.o: exactFlowAlgorithm.cpp.o
@@ -149,7 +149,7 @@ exactFlowAlgorithm.o: exactFlowAlgorithm.cpp.o
 
 # target to build an object file
 exactFlowAlgorithm.cpp.o:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o
 .PHONY : exactFlowAlgorithm.cpp.o
 
 exactFlowAlgorithm.i: exactFlowAlgorithm.cpp.i
@@ -157,7 +157,7 @@ exactFlowAlgorithm.i: exactFlowAlgorithm.cpp.i
 
 # target to preprocess a source file
 exactFlowAlgorithm.cpp.i:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.i
 .PHONY : exactFlowAlgorithm.cpp.i
 
 exactFlowAlgorithm.s: exactFlowAlgorithm.cpp.s
@@ -165,7 +165,7 @@ exactFlowAlgorithm.s: exactFlowAlgorithm.cpp.s
 
 # target to generate assembly for a file
 exactFlowAlgorithm.cpp.s:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.s
 .PHONY : exactFlowAlgorithm.cpp.s
 
 pqBicliqeDensest.o: pqBicliqeDensest.cpp.o
@@ -173,7 +173,7 @@ pqBicliqeDensest.o: pqBicliqeDensest.cpp.o
 
 # target to build an object file
 pqBicliqeDensest.cpp.o:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o
 .PHONY : pqBicliqeDensest.cpp.o
 
 pqBicliqeDensest.i: pqBicliqeDensest.cpp.i
@@ -181,7 +181,7 @@ pqBicliqeDensest.i: pqBicliqeDensest.cpp.i
 
 # target to preprocess a source file
 pqBicliqeDensest.cpp.i:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.i
 .PHONY : pqBicliqeDensest.cpp.i
 
 pqBicliqeDensest.s: pqBicliqeDensest.cpp.s
@@ -189,7 +189,7 @@ pqBicliqeDensest.s: pqBicliqeDensest.cpp.s
 
 # target to generate assembly for a file
 pqBicliqeDensest.cpp.s:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.s
 .PHONY : pqBicliqeDensest.cpp.s
 
 rawEdgePivot.o: rawEdgePivot.cpp.o
@@ -197,8 +197,8 @@ rawEdgePivot.o: rawEdgePivot.cpp.o
 
 # target to build an object file
 rawEdgePivot.cpp.o:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o
 .PHONY : rawEdgePivot.cpp.o
 
 rawEdgePivot.i: rawEdgePivot.cpp.i
@@ -206,8 +206,8 @@ rawEdgePivot.i: rawEdgePivot.cpp.i
 
 # target to preprocess a source file
 rawEdgePivot.cpp.i:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.i
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.i
 .PHONY : rawEdgePivot.cpp.i
 
 rawEdgePivot.s: rawEdgePivot.cpp.s
@@ -215,8 +215,8 @@ rawEdgePivot.s: rawEdgePivot.cpp.s
 
 # target to generate assembly for a file
 rawEdgePivot.cpp.s:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.s
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.s
 .PHONY : rawEdgePivot.cpp.s
 
 # Help Target
@@ -249,6 +249,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

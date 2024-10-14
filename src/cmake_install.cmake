@@ -1,4 +1,4 @@
-# Install script for directory: /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+# Install script for directory: /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,10 +44,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/cmake_install.cmake")
-  include("/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biGraph/cmake_install.cmake")
-  include("/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/tools/cmake_install.cmake")
-  include("/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/cmake_install.cmake")
+  include("/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/cmake_install.cmake")
+  include("/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biGraph/cmake_install.cmake")
+  include("/home/rashmika/biclique/sigmod_new/biclique-approximation/src/tools/cmake_install.cmake")
+  include("/home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/cmake_install.cmake")
 
 endif()
 
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

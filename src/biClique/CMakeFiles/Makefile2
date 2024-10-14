@@ -54,29 +54,30 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/colorPathSpecificPQ.dir/all
-all: CMakeFiles/colorPathPequalsQ.dir/all
-all: CMakeFiles/accuracy.dir/all
-all: CMakeFiles/pivotAndPathPequalsQ.dir/all
-all: CMakeFiles/bcAndPath.dir/all
-all: CMakeFiles/pivotAndPath.dir/all
-all: CMakeFiles/colorPath.dir/all
-all: CMakeFiles/fastEdgePivot.dir/all
-all: CMakeFiles/BCT.dir/all
-all: CMakeFiles/turan.dir/all
-all: CMakeFiles/BCListPlusPlus.dir/all
-all: CMakeFiles/edgePivotSpecificPQ.dir/all
 all: CMakeFiles/BK.dir/all
+all: CMakeFiles/edgePivotSpecificPQ.dir/all
+all: CMakeFiles/turan.dir/all
+all: CMakeFiles/BCT.dir/all
+all: CMakeFiles/colorPath.dir/all
+all: CMakeFiles/pivotAndPath.dir/all
+all: CMakeFiles/BCListPlusPlus.dir/all
+all: CMakeFiles/bcAndPath.dir/all
+all: CMakeFiles/pivotAndPathPequalsQ.dir/all
+all: CMakeFiles/accuracy.dir/all
+all: CMakeFiles/colorPathPequalsQ.dir/all
 all: CMakeFiles/rawEdgePivot.dir/all
+all: CMakeFiles/colorPathSpecificPQ.dir/all
+all: CMakeFiles/fastEdgePivot.dir/all
+all: CMakeFiles/BCTV2.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -84,333 +85,22 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/colorPathSpecificPQ.dir/clean
-clean: CMakeFiles/colorPathPequalsQ.dir/clean
-clean: CMakeFiles/accuracy.dir/clean
-clean: CMakeFiles/pivotAndPathPequalsQ.dir/clean
-clean: CMakeFiles/bcAndPath.dir/clean
-clean: CMakeFiles/pivotAndPath.dir/clean
-clean: CMakeFiles/colorPath.dir/clean
-clean: CMakeFiles/fastEdgePivot.dir/clean
-clean: CMakeFiles/BCT.dir/clean
-clean: CMakeFiles/turan.dir/clean
-clean: CMakeFiles/BCListPlusPlus.dir/clean
-clean: CMakeFiles/edgePivotSpecificPQ.dir/clean
 clean: CMakeFiles/BK.dir/clean
+clean: CMakeFiles/edgePivotSpecificPQ.dir/clean
+clean: CMakeFiles/turan.dir/clean
+clean: CMakeFiles/BCT.dir/clean
+clean: CMakeFiles/colorPath.dir/clean
+clean: CMakeFiles/pivotAndPath.dir/clean
+clean: CMakeFiles/BCListPlusPlus.dir/clean
+clean: CMakeFiles/bcAndPath.dir/clean
+clean: CMakeFiles/pivotAndPathPequalsQ.dir/clean
+clean: CMakeFiles/accuracy.dir/clean
+clean: CMakeFiles/colorPathPequalsQ.dir/clean
 clean: CMakeFiles/rawEdgePivot.dir/clean
+clean: CMakeFiles/colorPathSpecificPQ.dir/clean
+clean: CMakeFiles/fastEdgePivot.dir/clean
+clean: CMakeFiles/BCTV2.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/colorPathSpecificPQ.dir
-
-# All Build rule for target.
-CMakeFiles/colorPathSpecificPQ.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathSpecificPQ.dir/build.make CMakeFiles/colorPathSpecificPQ.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathSpecificPQ.dir/build.make CMakeFiles/colorPathSpecificPQ.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=18,19 "Built target colorPathSpecificPQ"
-.PHONY : CMakeFiles/colorPathSpecificPQ.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/colorPathSpecificPQ.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/colorPathSpecificPQ.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/colorPathSpecificPQ.dir/rule
-
-# Convenience name for target.
-colorPathSpecificPQ: CMakeFiles/colorPathSpecificPQ.dir/rule
-.PHONY : colorPathSpecificPQ
-
-# clean rule for target.
-CMakeFiles/colorPathSpecificPQ.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathSpecificPQ.dir/build.make CMakeFiles/colorPathSpecificPQ.dir/clean
-.PHONY : CMakeFiles/colorPathSpecificPQ.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/colorPathPequalsQ.dir
-
-# All Build rule for target.
-CMakeFiles/colorPathPequalsQ.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathPequalsQ.dir/build.make CMakeFiles/colorPathPequalsQ.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathPequalsQ.dir/build.make CMakeFiles/colorPathPequalsQ.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=15,16,17 "Built target colorPathPequalsQ"
-.PHONY : CMakeFiles/colorPathPequalsQ.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/colorPathPequalsQ.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/colorPathPequalsQ.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/colorPathPequalsQ.dir/rule
-
-# Convenience name for target.
-colorPathPequalsQ: CMakeFiles/colorPathPequalsQ.dir/rule
-.PHONY : colorPathPequalsQ
-
-# clean rule for target.
-CMakeFiles/colorPathPequalsQ.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathPequalsQ.dir/build.make CMakeFiles/colorPathPequalsQ.dir/clean
-.PHONY : CMakeFiles/colorPathPequalsQ.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/accuracy.dir
-
-# All Build rule for target.
-CMakeFiles/accuracy.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/accuracy.dir/build.make CMakeFiles/accuracy.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/accuracy.dir/build.make CMakeFiles/accuracy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=7,8 "Built target accuracy"
-.PHONY : CMakeFiles/accuracy.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/accuracy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/accuracy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/accuracy.dir/rule
-
-# Convenience name for target.
-accuracy: CMakeFiles/accuracy.dir/rule
-.PHONY : accuracy
-
-# clean rule for target.
-CMakeFiles/accuracy.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/accuracy.dir/build.make CMakeFiles/accuracy.dir/clean
-.PHONY : CMakeFiles/accuracy.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pivotAndPathPequalsQ.dir
-
-# All Build rule for target.
-CMakeFiles/pivotAndPathPequalsQ.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPathPequalsQ.dir/build.make CMakeFiles/pivotAndPathPequalsQ.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPathPequalsQ.dir/build.make CMakeFiles/pivotAndPathPequalsQ.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=27,28,29 "Built target pivotAndPathPequalsQ"
-.PHONY : CMakeFiles/pivotAndPathPequalsQ.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pivotAndPathPequalsQ.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pivotAndPathPequalsQ.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/pivotAndPathPequalsQ.dir/rule
-
-# Convenience name for target.
-pivotAndPathPequalsQ: CMakeFiles/pivotAndPathPequalsQ.dir/rule
-.PHONY : pivotAndPathPequalsQ
-
-# clean rule for target.
-CMakeFiles/pivotAndPathPequalsQ.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPathPequalsQ.dir/build.make CMakeFiles/pivotAndPathPequalsQ.dir/clean
-.PHONY : CMakeFiles/pivotAndPathPequalsQ.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/bcAndPath.dir
-
-# All Build rule for target.
-CMakeFiles/bcAndPath.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bcAndPath.dir/build.make CMakeFiles/bcAndPath.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bcAndPath.dir/build.make CMakeFiles/bcAndPath.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=9,10,11 "Built target bcAndPath"
-.PHONY : CMakeFiles/bcAndPath.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/bcAndPath.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bcAndPath.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/bcAndPath.dir/rule
-
-# Convenience name for target.
-bcAndPath: CMakeFiles/bcAndPath.dir/rule
-.PHONY : bcAndPath
-
-# clean rule for target.
-CMakeFiles/bcAndPath.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bcAndPath.dir/build.make CMakeFiles/bcAndPath.dir/clean
-.PHONY : CMakeFiles/bcAndPath.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pivotAndPath.dir
-
-# All Build rule for target.
-CMakeFiles/pivotAndPath.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPath.dir/build.make CMakeFiles/pivotAndPath.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPath.dir/build.make CMakeFiles/pivotAndPath.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=24,25,26 "Built target pivotAndPath"
-.PHONY : CMakeFiles/pivotAndPath.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pivotAndPath.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pivotAndPath.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/pivotAndPath.dir/rule
-
-# Convenience name for target.
-pivotAndPath: CMakeFiles/pivotAndPath.dir/rule
-.PHONY : pivotAndPath
-
-# clean rule for target.
-CMakeFiles/pivotAndPath.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPath.dir/build.make CMakeFiles/pivotAndPath.dir/clean
-.PHONY : CMakeFiles/pivotAndPath.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/colorPath.dir
-
-# All Build rule for target.
-CMakeFiles/colorPath.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPath.dir/build.make CMakeFiles/colorPath.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPath.dir/build.make CMakeFiles/colorPath.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=12,13,14 "Built target colorPath"
-.PHONY : CMakeFiles/colorPath.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/colorPath.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/colorPath.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/colorPath.dir/rule
-
-# Convenience name for target.
-colorPath: CMakeFiles/colorPath.dir/rule
-.PHONY : colorPath
-
-# clean rule for target.
-CMakeFiles/colorPath.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPath.dir/build.make CMakeFiles/colorPath.dir/clean
-.PHONY : CMakeFiles/colorPath.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/fastEdgePivot.dir
-
-# All Build rule for target.
-CMakeFiles/fastEdgePivot.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastEdgePivot.dir/build.make CMakeFiles/fastEdgePivot.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastEdgePivot.dir/build.make CMakeFiles/fastEdgePivot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=22,23 "Built target fastEdgePivot"
-.PHONY : CMakeFiles/fastEdgePivot.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/fastEdgePivot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fastEdgePivot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/fastEdgePivot.dir/rule
-
-# Convenience name for target.
-fastEdgePivot: CMakeFiles/fastEdgePivot.dir/rule
-.PHONY : fastEdgePivot
-
-# clean rule for target.
-CMakeFiles/fastEdgePivot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastEdgePivot.dir/build.make CMakeFiles/fastEdgePivot.dir/clean
-.PHONY : CMakeFiles/fastEdgePivot.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/BCT.dir
-
-# All Build rule for target.
-CMakeFiles/BCT.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCT.dir/build.make CMakeFiles/BCT.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCT.dir/build.make CMakeFiles/BCT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=3,4 "Built target BCT"
-.PHONY : CMakeFiles/BCT.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/BCT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BCT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/BCT.dir/rule
-
-# Convenience name for target.
-BCT: CMakeFiles/BCT.dir/rule
-.PHONY : BCT
-
-# clean rule for target.
-CMakeFiles/BCT.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCT.dir/build.make CMakeFiles/BCT.dir/clean
-.PHONY : CMakeFiles/BCT.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/turan.dir
-
-# All Build rule for target.
-CMakeFiles/turan.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/turan.dir/build.make CMakeFiles/turan.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/turan.dir/build.make CMakeFiles/turan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=32,33 "Built target turan"
-.PHONY : CMakeFiles/turan.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/turan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/turan.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/turan.dir/rule
-
-# Convenience name for target.
-turan: CMakeFiles/turan.dir/rule
-.PHONY : turan
-
-# clean rule for target.
-CMakeFiles/turan.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/turan.dir/build.make CMakeFiles/turan.dir/clean
-.PHONY : CMakeFiles/turan.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/BCListPlusPlus.dir
-
-# All Build rule for target.
-CMakeFiles/BCListPlusPlus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCListPlusPlus.dir/build.make CMakeFiles/BCListPlusPlus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCListPlusPlus.dir/build.make CMakeFiles/BCListPlusPlus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=1,2 "Built target BCListPlusPlus"
-.PHONY : CMakeFiles/BCListPlusPlus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/BCListPlusPlus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BCListPlusPlus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/BCListPlusPlus.dir/rule
-
-# Convenience name for target.
-BCListPlusPlus: CMakeFiles/BCListPlusPlus.dir/rule
-.PHONY : BCListPlusPlus
-
-# clean rule for target.
-CMakeFiles/BCListPlusPlus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCListPlusPlus.dir/build.make CMakeFiles/BCListPlusPlus.dir/clean
-.PHONY : CMakeFiles/BCListPlusPlus.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/edgePivotSpecificPQ.dir
-
-# All Build rule for target.
-CMakeFiles/edgePivotSpecificPQ.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edgePivotSpecificPQ.dir/build.make CMakeFiles/edgePivotSpecificPQ.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edgePivotSpecificPQ.dir/build.make CMakeFiles/edgePivotSpecificPQ.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=20,21 "Built target edgePivotSpecificPQ"
-.PHONY : CMakeFiles/edgePivotSpecificPQ.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/edgePivotSpecificPQ.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/edgePivotSpecificPQ.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
-.PHONY : CMakeFiles/edgePivotSpecificPQ.dir/rule
-
-# Convenience name for target.
-edgePivotSpecificPQ: CMakeFiles/edgePivotSpecificPQ.dir/rule
-.PHONY : edgePivotSpecificPQ
-
-# clean rule for target.
-CMakeFiles/edgePivotSpecificPQ.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edgePivotSpecificPQ.dir/build.make CMakeFiles/edgePivotSpecificPQ.dir/clean
-.PHONY : CMakeFiles/edgePivotSpecificPQ.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/BK.dir
@@ -419,14 +109,14 @@ CMakeFiles/edgePivotSpecificPQ.dir/clean:
 CMakeFiles/BK.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BK.dir/build.make CMakeFiles/BK.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BK.dir/build.make CMakeFiles/BK.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=5,6 "Built target BK"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=7,8 "Built target BK"
 .PHONY : CMakeFiles/BK.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BK.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BK.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
 .PHONY : CMakeFiles/BK.dir/rule
 
 # Convenience name for target.
@@ -439,20 +129,280 @@ CMakeFiles/BK.dir/clean:
 .PHONY : CMakeFiles/BK.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/edgePivotSpecificPQ.dir
+
+# All Build rule for target.
+CMakeFiles/edgePivotSpecificPQ.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/edgePivotSpecificPQ.dir/build.make CMakeFiles/edgePivotSpecificPQ.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/edgePivotSpecificPQ.dir/build.make CMakeFiles/edgePivotSpecificPQ.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=22,23 "Built target edgePivotSpecificPQ"
+.PHONY : CMakeFiles/edgePivotSpecificPQ.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/edgePivotSpecificPQ.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/edgePivotSpecificPQ.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/edgePivotSpecificPQ.dir/rule
+
+# Convenience name for target.
+edgePivotSpecificPQ: CMakeFiles/edgePivotSpecificPQ.dir/rule
+.PHONY : edgePivotSpecificPQ
+
+# clean rule for target.
+CMakeFiles/edgePivotSpecificPQ.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/edgePivotSpecificPQ.dir/build.make CMakeFiles/edgePivotSpecificPQ.dir/clean
+.PHONY : CMakeFiles/edgePivotSpecificPQ.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/turan.dir
+
+# All Build rule for target.
+CMakeFiles/turan.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turan.dir/build.make CMakeFiles/turan.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turan.dir/build.make CMakeFiles/turan.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=34,35 "Built target turan"
+.PHONY : CMakeFiles/turan.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/turan.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/turan.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/turan.dir/rule
+
+# Convenience name for target.
+turan: CMakeFiles/turan.dir/rule
+.PHONY : turan
+
+# clean rule for target.
+CMakeFiles/turan.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turan.dir/build.make CMakeFiles/turan.dir/clean
+.PHONY : CMakeFiles/turan.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/BCT.dir
+
+# All Build rule for target.
+CMakeFiles/BCT.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCT.dir/build.make CMakeFiles/BCT.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCT.dir/build.make CMakeFiles/BCT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=3,4 "Built target BCT"
+.PHONY : CMakeFiles/BCT.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BCT.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BCT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/BCT.dir/rule
+
+# Convenience name for target.
+BCT: CMakeFiles/BCT.dir/rule
+.PHONY : BCT
+
+# clean rule for target.
+CMakeFiles/BCT.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCT.dir/build.make CMakeFiles/BCT.dir/clean
+.PHONY : CMakeFiles/BCT.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/colorPath.dir
+
+# All Build rule for target.
+CMakeFiles/colorPath.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPath.dir/build.make CMakeFiles/colorPath.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPath.dir/build.make CMakeFiles/colorPath.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=14,15,16 "Built target colorPath"
+.PHONY : CMakeFiles/colorPath.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/colorPath.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/colorPath.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/colorPath.dir/rule
+
+# Convenience name for target.
+colorPath: CMakeFiles/colorPath.dir/rule
+.PHONY : colorPath
+
+# clean rule for target.
+CMakeFiles/colorPath.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPath.dir/build.make CMakeFiles/colorPath.dir/clean
+.PHONY : CMakeFiles/colorPath.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pivotAndPath.dir
+
+# All Build rule for target.
+CMakeFiles/pivotAndPath.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPath.dir/build.make CMakeFiles/pivotAndPath.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPath.dir/build.make CMakeFiles/pivotAndPath.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=26,27,28 "Built target pivotAndPath"
+.PHONY : CMakeFiles/pivotAndPath.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pivotAndPath.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pivotAndPath.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/pivotAndPath.dir/rule
+
+# Convenience name for target.
+pivotAndPath: CMakeFiles/pivotAndPath.dir/rule
+.PHONY : pivotAndPath
+
+# clean rule for target.
+CMakeFiles/pivotAndPath.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPath.dir/build.make CMakeFiles/pivotAndPath.dir/clean
+.PHONY : CMakeFiles/pivotAndPath.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/BCListPlusPlus.dir
+
+# All Build rule for target.
+CMakeFiles/BCListPlusPlus.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCListPlusPlus.dir/build.make CMakeFiles/BCListPlusPlus.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCListPlusPlus.dir/build.make CMakeFiles/BCListPlusPlus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=1,2 "Built target BCListPlusPlus"
+.PHONY : CMakeFiles/BCListPlusPlus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BCListPlusPlus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BCListPlusPlus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/BCListPlusPlus.dir/rule
+
+# Convenience name for target.
+BCListPlusPlus: CMakeFiles/BCListPlusPlus.dir/rule
+.PHONY : BCListPlusPlus
+
+# clean rule for target.
+CMakeFiles/BCListPlusPlus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCListPlusPlus.dir/build.make CMakeFiles/BCListPlusPlus.dir/clean
+.PHONY : CMakeFiles/BCListPlusPlus.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/bcAndPath.dir
+
+# All Build rule for target.
+CMakeFiles/bcAndPath.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bcAndPath.dir/build.make CMakeFiles/bcAndPath.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bcAndPath.dir/build.make CMakeFiles/bcAndPath.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=11,12,13 "Built target bcAndPath"
+.PHONY : CMakeFiles/bcAndPath.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bcAndPath.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bcAndPath.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/bcAndPath.dir/rule
+
+# Convenience name for target.
+bcAndPath: CMakeFiles/bcAndPath.dir/rule
+.PHONY : bcAndPath
+
+# clean rule for target.
+CMakeFiles/bcAndPath.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bcAndPath.dir/build.make CMakeFiles/bcAndPath.dir/clean
+.PHONY : CMakeFiles/bcAndPath.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pivotAndPathPequalsQ.dir
+
+# All Build rule for target.
+CMakeFiles/pivotAndPathPequalsQ.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPathPequalsQ.dir/build.make CMakeFiles/pivotAndPathPequalsQ.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPathPequalsQ.dir/build.make CMakeFiles/pivotAndPathPequalsQ.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=29,30,31 "Built target pivotAndPathPequalsQ"
+.PHONY : CMakeFiles/pivotAndPathPequalsQ.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pivotAndPathPequalsQ.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pivotAndPathPequalsQ.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/pivotAndPathPequalsQ.dir/rule
+
+# Convenience name for target.
+pivotAndPathPequalsQ: CMakeFiles/pivotAndPathPequalsQ.dir/rule
+.PHONY : pivotAndPathPequalsQ
+
+# clean rule for target.
+CMakeFiles/pivotAndPathPequalsQ.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pivotAndPathPequalsQ.dir/build.make CMakeFiles/pivotAndPathPequalsQ.dir/clean
+.PHONY : CMakeFiles/pivotAndPathPequalsQ.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/accuracy.dir
+
+# All Build rule for target.
+CMakeFiles/accuracy.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/accuracy.dir/build.make CMakeFiles/accuracy.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/accuracy.dir/build.make CMakeFiles/accuracy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=9,10 "Built target accuracy"
+.PHONY : CMakeFiles/accuracy.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/accuracy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/accuracy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/accuracy.dir/rule
+
+# Convenience name for target.
+accuracy: CMakeFiles/accuracy.dir/rule
+.PHONY : accuracy
+
+# clean rule for target.
+CMakeFiles/accuracy.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/accuracy.dir/build.make CMakeFiles/accuracy.dir/clean
+.PHONY : CMakeFiles/accuracy.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/colorPathPequalsQ.dir
+
+# All Build rule for target.
+CMakeFiles/colorPathPequalsQ.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathPequalsQ.dir/build.make CMakeFiles/colorPathPequalsQ.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathPequalsQ.dir/build.make CMakeFiles/colorPathPequalsQ.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=17,18,19 "Built target colorPathPequalsQ"
+.PHONY : CMakeFiles/colorPathPequalsQ.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/colorPathPequalsQ.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/colorPathPequalsQ.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/colorPathPequalsQ.dir/rule
+
+# Convenience name for target.
+colorPathPequalsQ: CMakeFiles/colorPathPequalsQ.dir/rule
+.PHONY : colorPathPequalsQ
+
+# clean rule for target.
+CMakeFiles/colorPathPequalsQ.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathPequalsQ.dir/build.make CMakeFiles/colorPathPequalsQ.dir/clean
+.PHONY : CMakeFiles/colorPathPequalsQ.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/rawEdgePivot.dir
 
 # All Build rule for target.
 CMakeFiles/rawEdgePivot.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rawEdgePivot.dir/build.make CMakeFiles/rawEdgePivot.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rawEdgePivot.dir/build.make CMakeFiles/rawEdgePivot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles --progress-num=30,31 "Built target rawEdgePivot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=32,33 "Built target rawEdgePivot"
 .PHONY : CMakeFiles/rawEdgePivot.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rawEdgePivot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rawEdgePivot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
 .PHONY : CMakeFiles/rawEdgePivot.dir/rule
 
 # Convenience name for target.
@@ -463,6 +413,84 @@ rawEdgePivot: CMakeFiles/rawEdgePivot.dir/rule
 CMakeFiles/rawEdgePivot.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rawEdgePivot.dir/build.make CMakeFiles/rawEdgePivot.dir/clean
 .PHONY : CMakeFiles/rawEdgePivot.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/colorPathSpecificPQ.dir
+
+# All Build rule for target.
+CMakeFiles/colorPathSpecificPQ.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathSpecificPQ.dir/build.make CMakeFiles/colorPathSpecificPQ.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathSpecificPQ.dir/build.make CMakeFiles/colorPathSpecificPQ.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=20,21 "Built target colorPathSpecificPQ"
+.PHONY : CMakeFiles/colorPathSpecificPQ.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/colorPathSpecificPQ.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/colorPathSpecificPQ.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/colorPathSpecificPQ.dir/rule
+
+# Convenience name for target.
+colorPathSpecificPQ: CMakeFiles/colorPathSpecificPQ.dir/rule
+.PHONY : colorPathSpecificPQ
+
+# clean rule for target.
+CMakeFiles/colorPathSpecificPQ.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorPathSpecificPQ.dir/build.make CMakeFiles/colorPathSpecificPQ.dir/clean
+.PHONY : CMakeFiles/colorPathSpecificPQ.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/fastEdgePivot.dir
+
+# All Build rule for target.
+CMakeFiles/fastEdgePivot.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastEdgePivot.dir/build.make CMakeFiles/fastEdgePivot.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastEdgePivot.dir/build.make CMakeFiles/fastEdgePivot.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=24,25 "Built target fastEdgePivot"
+.PHONY : CMakeFiles/fastEdgePivot.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/fastEdgePivot.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fastEdgePivot.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/fastEdgePivot.dir/rule
+
+# Convenience name for target.
+fastEdgePivot: CMakeFiles/fastEdgePivot.dir/rule
+.PHONY : fastEdgePivot
+
+# clean rule for target.
+CMakeFiles/fastEdgePivot.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastEdgePivot.dir/build.make CMakeFiles/fastEdgePivot.dir/clean
+.PHONY : CMakeFiles/fastEdgePivot.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/BCTV2.dir
+
+# All Build rule for target.
+CMakeFiles/BCTV2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCTV2.dir/build.make CMakeFiles/BCTV2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCTV2.dir/build.make CMakeFiles/BCTV2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles --progress-num=5,6 "Built target BCTV2"
+.PHONY : CMakeFiles/BCTV2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BCTV2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BCTV2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles 0
+.PHONY : CMakeFiles/BCTV2.dir/rule
+
+# Convenience name for target.
+BCTV2: CMakeFiles/BCTV2.dir/rule
+.PHONY : BCTV2
+
+# clean rule for target.
+CMakeFiles/BCTV2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BCTV2.dir/build.make CMakeFiles/BCTV2.dir/clean
+.PHONY : CMakeFiles/BCTV2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # Include any dependencies generated for this target.
 include biClique/CMakeFiles/pivotAndPath.dir/depend.make
@@ -72,30 +72,30 @@ include biClique/CMakeFiles/pivotAndPath.dir/flags.make
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o: biClique/CMakeFiles/pivotAndPath.dir/flags.make
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o: biClique/pivotAndPath.cpp
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o: biClique/CMakeFiles/pivotAndPath.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o -MF CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o.d -o CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o -MF CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o.d -o CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPath.cpp
 
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp > CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPath.cpp > CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.i
 
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPath.cpp -o CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPath.cpp -o CMakeFiles/pivotAndPath.dir/pivotAndPath.cpp.s
 
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o: biClique/CMakeFiles/pivotAndPath.dir/flags.make
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o: biClique/pivotAndPathSamplev5.cpp
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o: biClique/CMakeFiles/pivotAndPath.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o -MF CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o.d -o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o -MF CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o.d -o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPathSamplev5.cpp
 
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp > CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPathSamplev5.cpp > CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.i
 
 biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/pivotAndPathSamplev5.cpp -o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/pivotAndPathSamplev5.cpp -o CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.s
 
 # Object files for target pivotAndPath
 pivotAndPath_OBJECTS = \
@@ -109,19 +109,19 @@ biClique/libpivotAndPath.a: biClique/CMakeFiles/pivotAndPath.dir/pivotAndPath.cp
 biClique/libpivotAndPath.a: biClique/CMakeFiles/pivotAndPath.dir/pivotAndPathSamplev5.cpp.o
 biClique/libpivotAndPath.a: biClique/CMakeFiles/pivotAndPath.dir/build.make
 biClique/libpivotAndPath.a: biClique/CMakeFiles/pivotAndPath.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libpivotAndPath.a"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/pivotAndPath.dir/cmake_clean_target.cmake
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pivotAndPath.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libpivotAndPath.a"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/pivotAndPath.dir/cmake_clean_target.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pivotAndPath.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 biClique/CMakeFiles/pivotAndPath.dir/build: biClique/libpivotAndPath.a
 .PHONY : biClique/CMakeFiles/pivotAndPath.dir/build
 
 biClique/CMakeFiles/pivotAndPath.dir/clean:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/pivotAndPath.dir/cmake_clean.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/pivotAndPath.dir/cmake_clean.cmake
 .PHONY : biClique/CMakeFiles/pivotAndPath.dir/clean
 
 biClique/CMakeFiles/pivotAndPath.dir/depend:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles/pivotAndPath.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/pivotAndPath.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : biClique/CMakeFiles/pivotAndPath.dir/depend
 

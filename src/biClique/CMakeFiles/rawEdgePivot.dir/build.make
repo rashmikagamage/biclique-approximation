@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # Include any dependencies generated for this target.
 include biClique/CMakeFiles/rawEdgePivot.dir/depend.make
@@ -72,16 +72,16 @@ include biClique/CMakeFiles/rawEdgePivot.dir/flags.make
 biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o: biClique/CMakeFiles/rawEdgePivot.dir/flags.make
 biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o: biClique/rawEdgePivot.cpp
 biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o: biClique/CMakeFiles/rawEdgePivot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o -MF CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o.d -o CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/rawEdgePivot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o -MF CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o.d -o CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/rawEdgePivot.cpp
 
 biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/rawEdgePivot.cpp > CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/rawEdgePivot.cpp > CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.i
 
 biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/rawEdgePivot.cpp -o CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/rawEdgePivot.cpp -o CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.s
 
 # Object files for target rawEdgePivot
 rawEdgePivot_OBJECTS = \
@@ -93,19 +93,19 @@ rawEdgePivot_EXTERNAL_OBJECTS =
 biClique/librawEdgePivot.a: biClique/CMakeFiles/rawEdgePivot.dir/rawEdgePivot.cpp.o
 biClique/librawEdgePivot.a: biClique/CMakeFiles/rawEdgePivot.dir/build.make
 biClique/librawEdgePivot.a: biClique/CMakeFiles/rawEdgePivot.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library librawEdgePivot.a"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/rawEdgePivot.dir/cmake_clean_target.cmake
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rawEdgePivot.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library librawEdgePivot.a"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/rawEdgePivot.dir/cmake_clean_target.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rawEdgePivot.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 biClique/CMakeFiles/rawEdgePivot.dir/build: biClique/librawEdgePivot.a
 .PHONY : biClique/CMakeFiles/rawEdgePivot.dir/build
 
 biClique/CMakeFiles/rawEdgePivot.dir/clean:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/rawEdgePivot.dir/cmake_clean.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique && $(CMAKE_COMMAND) -P CMakeFiles/rawEdgePivot.dir/cmake_clean.cmake
 .PHONY : biClique/CMakeFiles/rawEdgePivot.dir/clean
 
 biClique/CMakeFiles/rawEdgePivot.dir/depend:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/CMakeFiles/rawEdgePivot.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique /home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/rawEdgePivot.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : biClique/CMakeFiles/rawEdgePivot.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # Include any dependencies generated for this target.
 include densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/depend.make
@@ -72,30 +72,30 @@ include densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/flags.make
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/flags.make
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o: densestSubgraph/exactFlowAlgorithm.cpp
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o -MF CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o.d -o CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/exactFlowAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o -MF CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o.d -o CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/exactFlowAlgorithm.cpp
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/exactFlowAlgorithm.cpp > CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/exactFlowAlgorithm.cpp > CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.i
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/exactFlowAlgorithm.cpp -o CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/exactFlowAlgorithm.cpp -o CMakeFiles/exactFlowAlgorithm.dir/exactFlowAlgorithm.cpp.s
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/flags.make
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o: densestSubgraph/rawEdgePivot.cpp
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o -MF CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o.d -o CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o -MF CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o.d -o CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp > CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp > CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.i
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp -o CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp -o CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.s
 
 # Object files for target exactFlowAlgorithm
 exactFlowAlgorithm_OBJECTS = \
@@ -109,19 +109,19 @@ densestSubgraph/libexactFlowAlgorithm.a: densestSubgraph/CMakeFiles/exactFlowAlg
 densestSubgraph/libexactFlowAlgorithm.a: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/rawEdgePivot.cpp.o
 densestSubgraph/libexactFlowAlgorithm.a: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build.make
 densestSubgraph/libexactFlowAlgorithm.a: densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libexactFlowAlgorithm.a"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/exactFlowAlgorithm.dir/cmake_clean_target.cmake
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exactFlowAlgorithm.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libexactFlowAlgorithm.a"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/exactFlowAlgorithm.dir/cmake_clean_target.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exactFlowAlgorithm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build: densestSubgraph/libexactFlowAlgorithm.a
 .PHONY : densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/build
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/clean:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/exactFlowAlgorithm.dir/cmake_clean.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/exactFlowAlgorithm.dir/cmake_clean.cmake
 .PHONY : densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/clean
 
 densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/depend:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : densestSubgraph/CMakeFiles/exactFlowAlgorithm.dir/depend
 
