@@ -1,30 +1,32 @@
-data/IMDB.txt 
-graph size:n1: 428439 n2:896307, m 3782463
+data/ucforum.txt 
+graph size:n1: 899 n2:522, m 7089
 load graph
-minPQ: 3
- Working on p q e: 3 - 8 - 0.01 
+minPQ: 4
+zsar2
+ Working on p q e: 4 - 5 - 0.01 
+totalZinShadow: 80839.000000
 gamma: 4451.420533
-tTotal: 27452706.000000
-auxTotalSamples: 673350.000000
-totalZinShadow: 128026844234255.000000
-Biclique Density: 0.534303
-pqBicluqeEstAux: 68405102620086.914062
-shadow size before the second refinement : 67235 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 339668.646927
-shadowDuration: 83296379.000000
-shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : 0
+tTotal: 304051.000000
+auxTotalSamples: 10420.000000
+totalZinShadow: 80839.000000
+Biclique Density: 0.005412
+pqBicluqeEstAux: 437.500000
+shadow size before the second refinement : 942 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 24000496.002135
+shadowDuration: 373924.000000
+shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : 1
 end the second phrase
-shadow size: 67235
-pqBicluqeEstAux: 68405102620086.914062
-totalZinShadow: 128026844234255.000000
-roughPQEstDens: 0.534303
-shadow.size(): 67235
-totalZinShadow: 128026844234255.000000
-batchSize: 8331
+shadow size: 900
+pqBicluqeEstAux: 3505.660000
+totalZinShadow: 34940.000000
+roughPQEstDens: 0.100334
+shadow.size(): 900
+totalZinShadow: 34940.000000
+batchSize: 44366
 pqBicluqeContainZ: 4451
-t: 569683
-totalZinShadow: 128026844234255.000000
+t: 47833
+totalZinShadow: 34940.000000
 successSamples: 4451
-density of biclique: 0.007813
-biclique count: 1000288728444.887817
-time: 800.917797
+density of biclique: 0.093053
+biclique count: 3251.268789
+time: 2.227830

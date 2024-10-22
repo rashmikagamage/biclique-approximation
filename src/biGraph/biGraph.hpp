@@ -3,7 +3,6 @@
 
 #include <algorithm>
 #include <queue>
-#include <unordered_map>
 #include <vector>
 
 #include "../tools/fastIO.hpp"
@@ -11,10 +10,7 @@
 #include "../tools/listLinearHeap.hpp"
 
 struct biGraph {
-    uint32_t n1, n2, m, maxDu, maxDv, degeneracyofV, degeneracyofU;
-    std::unordered_map<uint64_t, uint64_t> SUMap, SVMap;
-
-    std::vector<uint32_t> degeneracy, side;
+    uint32_t n1, n2, m, maxDu, maxDv;
     uint32_t n[2];
     bool connect(uint32_t u, uint32_t v, int i) {
         if (i == 0)
@@ -31,7 +27,6 @@ struct biGraph {
     std::vector<uint32_t> pU, e1, pV, e2;
 
     biGraph() {}
-
     biGraph(const std::string& filePath) {
         fastIO in(filePath, "r");
 
@@ -51,14 +46,130 @@ struct biGraph {
         for (uint32_t i = 0; i < m; i++) {
             edges[i].u = in.getUInt();
             edges[i].v = in.getUInt();
-            // printf("u %u, v %u\n", edges[i].u, edges[i].v);fflush(stdout);
         }
         // printf("there\n");fflush(stdout);
         changeToDegreeOrder();
-        // printf("there\n");fflush(stdout);
-        // changeToCoreOrder();
-        // rawOrder();
-        // changeToCoreOrder2();
+        // changeDegreeOrderRev();
+        //   printf("there\n");fflush(stdout);
+        //   changeToCoreOrder();
+        //  rawOrder();
+    }
+    // todo
+    void changeDegreeOrderRev() {
+        std::vector<uint32_t> d1, d2;
+        std::vector<uint32_t> label1, label2;
+
+        d1.resize(std::max(n1, n2) + 1);
+        d2.resize(std::max(n1, n2) + 1);
+        label1.resize(n1);
+        label2.resize(n2);
+
+        for (uint32_t i = 0; i < m; i++) {
+            ++d1[edges[i].u];
+            ++d2[edges[i].v];
+        }
+        maxDu = 0;
+        for (uint32_t i = 0; i < n1; i++) {
+            maxDu = std::max(maxDu, d1[i]);
+        }
+
+        maxDv = 0;
+        for (uint32_t i = 0; i < n2; i++) {
+            maxDv = std::max(maxDv, d2[i]);
+        }
+
+        for (uint32_t i = 0; i < n1; i++) {
+            pV[d1[i]]++;
+        }
+
+        int cumulativeSum = 0;
+        for (int i = maxDu; i >= 0; --i) {
+            int temp = pV[i];
+            pV[i] = cumulativeSum;
+            cumulativeSum += temp;
+        }
+
+        for (uint32_t i = 0; i < n1; i++) {
+            label1[i] = pV[d1[i]]++;
+        }
+
+        for (uint32_t i = 0; i < n2; i++) {
+            pU[d2[i]]++;
+        }
+
+        cumulativeSum = 0;
+
+        for (int i = maxDv; i >= 0; --i) {
+            int temp = pU[i];
+            pU[i] = cumulativeSum;
+            cumulativeSum += temp;
+        }
+
+        for (uint32_t i = 0; i < n2; i++) {
+            label2[i] = pU[d2[i]]++;
+        }
+
+        for (uint32_t i = 0; i < m; i++) {
+            edges[i].u = label1[edges[i].u];
+            edges[i].v = label2[edges[i].v];
+        }
+
+        std::fill(d1.begin(), d1.begin() + std::max(n1, n2) + 1, 0);
+        std::fill(d2.begin(), d2.begin() + std::max(n1, n2) + 1, 0);
+        std::fill(pU.begin(), pU.begin() + n1 + 1, 0);
+        std::fill(pV.begin(), pV.begin() + n2 + 1, 0);
+        // memset(buffer, 0, sizeof(uint32_t) * bufferSize);
+        for (uint32_t i = 0; i < m; i++) {
+            // printf("i%u:%u-%u ", i, edges[i].u, edges[i].v);fflush(stdout);
+            ++d1[edges[i].u];
+            ++d2[edges[i].v];
+        }
+        // printf("\n");
+        // printf("there2\n");fflush(stdout);
+        for (uint32_t i = 0; i < n1; i++) {
+            pU[i + 1] = pU[i] + d1[i];
+        }
+        for (uint32_t i = 0; i < n2; i++) {
+            pV[i + 1] = pV[i] + d2[i];
+        }
+
+        for (uint32_t i = 0; i < m; i++) {
+            e1[pU[edges[i].u]++] = edges[i].v;
+        }
+        for (uint32_t i = 0; i < m; i++) {
+            e2[pV[edges[i].v]++] = edges[i].u;
+        }
+        // printf("there3\n");fflush(stdout);
+        pU[0] = pV[0] = 0;
+        for (uint32_t i = 0; i < n1; i++) {
+            pU[i + 1] = pU[i] + d1[i];
+        }
+        for (uint32_t i = 0; i < n2; i++) {
+            pV[i + 1] = pV[i] + d2[i];
+        }
+
+        for (uint32_t i = 0; i < n1; i++) {
+            std::sort(e1.begin() + pU[i], e1.begin() + pU[i + 1]);
+        }
+        for (uint32_t i = 0; i < n2; i++) {
+            std::sort(e2.begin() + pV[i], e2.begin() + pV[i + 1]);
+        }
+        // for (uint32_t i = 0; i < n1; i++) {
+        //     std::sort(e1.begin() + pU[i], e1.begin() + pU[i + 1], std::greater<int>());
+        // }
+
+        // for (uint32_t i = 0; i < n2; i++) {
+        //     std::sort(e2.begin() + pV[i], e2.begin() + pV[i + 1], std::greater<int>());
+        // }
+
+        // for (int i = 0; i < n1; i++) {
+        //     printf("----------------------i:%u \n ", i);
+        //     for (int j = pU[i]; j < pU[i + 1]; j++) {
+        //         printf(" E1 %u \n", e1[j]);
+        //         printf(" DEG %u \n", pV[e1[j] + 1] - pV[e1[j]]);
+        //     }
+        // }
+        // exit(0);
     }
 
     void coreReductionFast22() {
@@ -441,168 +552,6 @@ struct biGraph {
         // fflush(stdout);
     }
 
-    void changeToCoreOrder2() {
-        std::vector<uint32_t> d1, d2;
-
-        d1.resize(n1);
-        d2.resize(n2);
-        side.resize(m + 1);
-        degeneracy.resize(m + 1);
-        int vertexSum = n1 + n2;
-        for (uint32_t i = 0; i < m; i++) {
-            ++d1[edges[i].u];
-            ++d2[edges[i].v];
-        }
-
-        maxDu = 0;
-        for (uint32_t i = 0; i < n1; i++) {
-            maxDu = std::max(maxDu, d1[i]);
-        }
-        maxDv = 0;
-        for (uint32_t i = 0; i < n2; i++) {
-            maxDv = std::max(maxDv, d2[i]);
-        }
-
-        pU[0] = 0;
-        for (uint32_t u = 0; u < n1; u++) {
-            pU[u + 1] = d1[u] + pU[u];
-        }
-        for (uint32_t i = 0; i < m; i++) {
-            e1[pU[edges[i].u]++] = edges[i].v;
-        }
-        pU[0] = 0;
-        for (uint32_t u = 0; u < n1; u++) {
-            pU[u + 1] = d1[u] + pU[u];
-        }
-
-        pV[0] = 0;
-        for (uint32_t v = 0; v < n2; v++) {
-            pV[v + 1] = d2[v] + pV[v];
-        }
-        for (uint32_t i = 0; i < m; i++) {
-            e2[pV[edges[i].v]++] = edges[i].u;
-        }
-        pV[0] = 0;
-        for (uint32_t v = 0; v < n2; v++) {
-            pV[v + 1] = d2[v] + pV[v];
-        }
-
-        ListLinearHeap lheap(n1, maxDu + 1), rheap(n2, maxDv + 1);
-        uint32_t n = std::max(n1, n2);
-        std::vector<uint32_t> ids(n);
-        std::vector<uint32_t> keys(n);
-        std::vector<uint32_t> labelsL(n1);
-        std::vector<uint32_t> labelsR(n2);
-
-        for (uint32_t i = 0; i < n1; i++) {
-            ids[i] = i;
-            keys[i] = d1[i] + 1;
-        }
-        lheap.init(n1, maxDu + 1, ids.data(), keys.data());
-        for (uint32_t i = 0; i < n2; i++) {
-            ids[i] = i;
-            keys[i] = d2[i] + 1;
-        }
-        rheap.init(n2, maxDv + 1, ids.data(), keys.data());
-
-        uint32_t minN = std::min(n1, n2);
-        int uOrV = 0, uIndex = 0, vIndex = 0;
-        for (uint32_t i = 0; i < vertexSum; i++) {
-            uint32_t u, degU;
-            uint32_t v, degV;
-            uint32_t vertex, degVertex;
-            if (uIndex < n1) {
-                if (!lheap.get_min(u, degU)) {
-                    degeneracyofU = std::max(degeneracyofU, degU);
-                    printf("error in getmin lheap\n");
-                    printf("i %u\n", i);
-                    printf("uIndex %u\n", uIndex);
-                    printf("vIndex %u\n", vIndex);
-                }
-            }
-            if (vIndex < n2) {
-                if (!rheap.get_min(v, degV)) {
-                    degeneracyofV = std::max(degeneracyofV, degV);
-                    printf("error in getmin rheap\n");
-                    printf("i %u\n", i);
-                    printf("vIndex %u\n", vIndex);
-                }
-            }
-
-            if (degU <= degV) {
-                vertex = u;
-                degVertex = degU;
-                if (!lheap.pop_min(u, degU)) printf("errorLheap\n");
-
-                labelsL[u] = uIndex;
-                for (uint32_t j = pU[u]; j < pU[u + 1]; j++) {
-                    rheap.decrement(e1[j]);
-                }
-                side[i] = 1;
-                degeneracy[i] = uIndex;
-                uIndex++;
-            } else {
-                vertex = v;
-                degVertex = degV;
-                if (!rheap.pop_min(v, degV)) printf("errorRheap\n");
-                labelsR[v] = vIndex;
-                for (uint32_t j = pV[v]; j < pV[v + 1]; j++) {
-                    lheap.decrement(e2[j]);
-                }
-                side[i] = 2;
-                degeneracy[i] = vIndex;
-                vIndex++;
-            }
-        }
-
-        for (uint32_t i = 0; i < m; i++) {
-            edges[i].u = labelsL[edges[i].u];
-            edges[i].v = labelsR[edges[i].v];
-        }
-
-        std::fill(d1.begin(), d1.begin() + n1, 0);
-        std::fill(d2.begin(), d2.begin() + n2, 0);
-        std::fill(pU.begin(), pU.begin() + n1 + 1, 0);
-        std::fill(pV.begin(), pV.begin() + n2 + 1, 0);
-
-        for (uint32_t i = 0; i < m; i++) {
-            ++d1[edges[i].u];
-            ++d2[edges[i].v];
-        }
-
-        for (uint32_t i = 0; i < n1; i++) {
-            pU[i + 1] = pU[i] + d1[i];
-        }
-        for (uint32_t i = 0; i < n2; i++) {
-            pV[i + 1] = pV[i] + d2[i];
-        }
-
-        for (uint32_t i = 0; i < m; i++) {
-            e1[pU[edges[i].u]++] = edges[i].v;
-        }
-        for (uint32_t i = 0; i < m; i++) {
-            e2[pV[edges[i].v]++] = edges[i].u;
-        }
-
-        pU[0] = pV[0] = 0;
-        for (uint32_t i = 0; i < n1; i++) {
-            pU[i + 1] = pU[i] + d1[i];
-        }
-        for (uint32_t i = 0; i < n2; i++) {
-            pV[i + 1] = pV[i] + d2[i];
-        }
-
-        for (uint32_t i = 0; i < n1; i++) {
-            std::sort(e1.begin() + pU[i], e1.begin() + pU[i + 1]);
-        }
-        for (uint32_t i = 0; i < n2; i++) {
-            std::sort(e2.begin() + pV[i], e2.begin() + pV[i + 1]);
-        }
-
-        // print();
-        // fflush(stdout);
-    }
-
     void rawOrder() {
         std::vector<uint32_t> d1, d2;
 
@@ -654,7 +603,7 @@ struct biGraph {
             std::sort(e2.begin() + pV[i], e2.begin() + pV[i + 1]);
         }
     }
-
+    // todo
     void changeToDegreeOrder() {
         std::vector<uint32_t> d1, d2;
         std::vector<uint32_t> label1, label2;
@@ -680,8 +629,14 @@ struct biGraph {
         }
 
         for (uint32_t i = 0; i < n1; i++) {
+            // printf("%u-%u-%u\n", i, d1[i] + 1, pU[d1[i] + 1]);
             pV[d1[i] + 1]++;
+            // printf("%u-%u-%u\n", i, d1[i] + 1, pU[d1[i] + 1]);
         }
+        // for(uint32_t i = 0; i <= maxDu; i++) {
+        //     printf("%d-%u\n", i, pU[i]);
+        // }
+        // -f data\exam2.txt -p 4 -q 4 -pm
         for (uint32_t i = 0; i < maxDu; i++) {
             pV[i + 1] += pV[i];
         }
@@ -689,6 +644,7 @@ struct biGraph {
         // printf("labels:");
         for (uint32_t i = 0; i < n1; i++) {
             label1[i] = pV[d1[i]]++;
+            // printf("%u-%u ", i,label1[i]);
         }
         // printf("\n");
         // printf("there\n");fflush(stdout);
@@ -769,6 +725,16 @@ struct biGraph {
     }
 
     bool connectUV(uint32_t u, uint32_t v) {
+        return std::binary_search(
+            e1.begin() + pU[u], e1.begin() + pU[u + 1],
+            v);
+    }
+    bool connectUV2(uint32_t u, uint32_t v) {
+        printf("u %u, v %u\n", u, v);
+        printf("pU[u] %u, pU[u + 1] %u\n", pU[u], pU[u + 1]);
+        for (int i = pU[u]; i < pU[u + 1]; i++) {
+            printf("%u ", e1[i]);
+        }
         return std::binary_search(
             e1.begin() + pU[u], e1.begin() + pU[u + 1],
             v);

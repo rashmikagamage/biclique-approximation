@@ -54,6 +54,8 @@ class accuracy {
     void approximateCountingAllVersion2(uint32_t T);
     void shadowBuilder1(int p, int q, double e);
     void shadowBuilderZStar(int p, int q, double e);
+    void shadowBuilderZStar2(int p, int q, double e);
+    void shadowBuilderZStar3(int p, int q, double e);
     void buildDP(int pL, int pR);
     void sampleOne(int length);
     void shadowBuilderAlias(int p, int q, double e);

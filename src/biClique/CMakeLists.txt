@@ -15,8 +15,8 @@ add_definitions(-U NDEBUG)
 include_directories(../biGraph ../tools)
 
 # Add libraries and link them as needed
-add_library(BCT BCT.h BCT.cpp)
-target_link_libraries(BCT biGraph linearSet)
+
+
 
 add_library(BCListPlusPlus BCListPlusPlus.h BCListPlusPlus.cpp)
 target_link_libraries(BCListPlusPlus biGraph linearSet)
@@ -57,5 +57,3 @@ target_link_libraries(colorPathSpecificPQ biGraph linearSet)
 add_library(accuracy accuracy.h accuracy.cpp)
 target_link_libraries(accuracy biGraph linearSet)
 
-add_library(BCTV2 BCTV2.h BCTV2.cpp)
-target_link_libraries(BCTV2 biGraph linearSet)

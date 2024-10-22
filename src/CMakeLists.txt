@@ -31,6 +31,6 @@ add_executable(${exName2} runner/densestSubgraph.cpp)
 add_executable(${exName3} runner/exactDensestSubgraph.cpp)
 
 # Link necessary libraries for each executable
-target_link_libraries(${exName1} getArgs biGraph BCT BCTV2 BCListPlusPlus BK rawEdgePivot fastEdgePivot edgePivotSpecificPQ colorPath accuracy pivotAndPath turan bcAndPath colorPathPequalsQ pivotAndPathPequalsQ colorPathSpecificPQ)
+target_link_libraries(${exName1} getArgs biGraph BCListPlusPlus BK rawEdgePivot fastEdgePivot edgePivotSpecificPQ colorPath accuracy pivotAndPath turan bcAndPath colorPathPequalsQ pivotAndPathPequalsQ colorPathSpecificPQ)
 target_link_libraries(${exName2} getArgs biGraph pqBicliqeDensest)
 target_link_libraries(${exName3} getArgs biGraph exactFlowAlgorithm)

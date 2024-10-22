@@ -13,8 +13,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/BCT.dir/DependInfo.cmake"
-  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/BCTV2.dir/DependInfo.cmake"
   "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/BCListPlusPlus.dir/DependInfo.cmake"
   "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/BK.dir/DependInfo.cmake"
   "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/CMakeFiles/rawEdgePivot.dir/DependInfo.cmake"

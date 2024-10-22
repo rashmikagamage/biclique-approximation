@@ -117,144 +117,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-biClique/CMakeFiles/BK.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BK.dir/rule
-.PHONY : biClique/CMakeFiles/BK.dir/rule
+biClique/CMakeFiles/colorPathSpecificPQ.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/colorPathSpecificPQ.dir/rule
+.PHONY : biClique/CMakeFiles/colorPathSpecificPQ.dir/rule
 
 # Convenience name for target.
-BK: biClique/CMakeFiles/BK.dir/rule
-.PHONY : BK
+colorPathSpecificPQ: biClique/CMakeFiles/colorPathSpecificPQ.dir/rule
+.PHONY : colorPathSpecificPQ
 
 # fast build rule for target.
-BK/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
-.PHONY : BK/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
-.PHONY : biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
-
-# Convenience name for target.
-edgePivotSpecificPQ: biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
-.PHONY : edgePivotSpecificPQ
-
-# fast build rule for target.
-edgePivotSpecificPQ/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/edgePivotSpecificPQ.dir/build.make biClique/CMakeFiles/edgePivotSpecificPQ.dir/build
-.PHONY : edgePivotSpecificPQ/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/turan.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/turan.dir/rule
-.PHONY : biClique/CMakeFiles/turan.dir/rule
-
-# Convenience name for target.
-turan: biClique/CMakeFiles/turan.dir/rule
-.PHONY : turan
-
-# fast build rule for target.
-turan/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/turan.dir/build.make biClique/CMakeFiles/turan.dir/build
-.PHONY : turan/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/BCT.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BCT.dir/rule
-.PHONY : biClique/CMakeFiles/BCT.dir/rule
-
-# Convenience name for target.
-BCT: biClique/CMakeFiles/BCT.dir/rule
-.PHONY : BCT
-
-# fast build rule for target.
-BCT/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/build
-.PHONY : BCT/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/colorPath.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/colorPath.dir/rule
-.PHONY : biClique/CMakeFiles/colorPath.dir/rule
-
-# Convenience name for target.
-colorPath: biClique/CMakeFiles/colorPath.dir/rule
-.PHONY : colorPath
-
-# fast build rule for target.
-colorPath/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPath.dir/build.make biClique/CMakeFiles/colorPath.dir/build
-.PHONY : colorPath/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/pivotAndPath.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/pivotAndPath.dir/rule
-.PHONY : biClique/CMakeFiles/pivotAndPath.dir/rule
-
-# Convenience name for target.
-pivotAndPath: biClique/CMakeFiles/pivotAndPath.dir/rule
-.PHONY : pivotAndPath
-
-# fast build rule for target.
-pivotAndPath/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPath.dir/build.make biClique/CMakeFiles/pivotAndPath.dir/build
-.PHONY : pivotAndPath/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/BCListPlusPlus.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BCListPlusPlus.dir/rule
-.PHONY : biClique/CMakeFiles/BCListPlusPlus.dir/rule
-
-# Convenience name for target.
-BCListPlusPlus: biClique/CMakeFiles/BCListPlusPlus.dir/rule
-.PHONY : BCListPlusPlus
-
-# fast build rule for target.
-BCListPlusPlus/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCListPlusPlus.dir/build.make biClique/CMakeFiles/BCListPlusPlus.dir/build
-.PHONY : BCListPlusPlus/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/bcAndPath.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/bcAndPath.dir/rule
-.PHONY : biClique/CMakeFiles/bcAndPath.dir/rule
-
-# Convenience name for target.
-bcAndPath: biClique/CMakeFiles/bcAndPath.dir/rule
-.PHONY : bcAndPath
-
-# fast build rule for target.
-bcAndPath/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/bcAndPath.dir/build.make biClique/CMakeFiles/bcAndPath.dir/build
-.PHONY : bcAndPath/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule
-.PHONY : biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule
-
-# Convenience name for target.
-pivotAndPathPequalsQ: biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule
-.PHONY : pivotAndPathPequalsQ
-
-# fast build rule for target.
-pivotAndPathPequalsQ/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build.make biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build
-.PHONY : pivotAndPathPequalsQ/fast
-
-# Convenience name for target.
-biClique/CMakeFiles/accuracy.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/accuracy.dir/rule
-.PHONY : biClique/CMakeFiles/accuracy.dir/rule
-
-# Convenience name for target.
-accuracy: biClique/CMakeFiles/accuracy.dir/rule
-.PHONY : accuracy
-
-# fast build rule for target.
-accuracy/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/accuracy.dir/build.make biClique/CMakeFiles/accuracy.dir/build
-.PHONY : accuracy/fast
+colorPathSpecificPQ/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPathSpecificPQ.dir/build.make biClique/CMakeFiles/colorPathSpecificPQ.dir/build
+.PHONY : colorPathSpecificPQ/fast
 
 # Convenience name for target.
 biClique/CMakeFiles/colorPathPequalsQ.dir/rule:
@@ -271,32 +145,74 @@ colorPathPequalsQ/fast:
 .PHONY : colorPathPequalsQ/fast
 
 # Convenience name for target.
-biClique/CMakeFiles/rawEdgePivot.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/rawEdgePivot.dir/rule
-.PHONY : biClique/CMakeFiles/rawEdgePivot.dir/rule
+biClique/CMakeFiles/accuracy.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/accuracy.dir/rule
+.PHONY : biClique/CMakeFiles/accuracy.dir/rule
 
 # Convenience name for target.
-rawEdgePivot: biClique/CMakeFiles/rawEdgePivot.dir/rule
-.PHONY : rawEdgePivot
+accuracy: biClique/CMakeFiles/accuracy.dir/rule
+.PHONY : accuracy
 
 # fast build rule for target.
-rawEdgePivot/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/rawEdgePivot.dir/build.make biClique/CMakeFiles/rawEdgePivot.dir/build
-.PHONY : rawEdgePivot/fast
+accuracy/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/accuracy.dir/build.make biClique/CMakeFiles/accuracy.dir/build
+.PHONY : accuracy/fast
 
 # Convenience name for target.
-biClique/CMakeFiles/colorPathSpecificPQ.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/colorPathSpecificPQ.dir/rule
-.PHONY : biClique/CMakeFiles/colorPathSpecificPQ.dir/rule
+biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule
+.PHONY : biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule
 
 # Convenience name for target.
-colorPathSpecificPQ: biClique/CMakeFiles/colorPathSpecificPQ.dir/rule
-.PHONY : colorPathSpecificPQ
+pivotAndPathPequalsQ: biClique/CMakeFiles/pivotAndPathPequalsQ.dir/rule
+.PHONY : pivotAndPathPequalsQ
 
 # fast build rule for target.
-colorPathSpecificPQ/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPathSpecificPQ.dir/build.make biClique/CMakeFiles/colorPathSpecificPQ.dir/build
-.PHONY : colorPathSpecificPQ/fast
+pivotAndPathPequalsQ/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build.make biClique/CMakeFiles/pivotAndPathPequalsQ.dir/build
+.PHONY : pivotAndPathPequalsQ/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/bcAndPath.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/bcAndPath.dir/rule
+.PHONY : biClique/CMakeFiles/bcAndPath.dir/rule
+
+# Convenience name for target.
+bcAndPath: biClique/CMakeFiles/bcAndPath.dir/rule
+.PHONY : bcAndPath
+
+# fast build rule for target.
+bcAndPath/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/bcAndPath.dir/build.make biClique/CMakeFiles/bcAndPath.dir/build
+.PHONY : bcAndPath/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/pivotAndPath.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/pivotAndPath.dir/rule
+.PHONY : biClique/CMakeFiles/pivotAndPath.dir/rule
+
+# Convenience name for target.
+pivotAndPath: biClique/CMakeFiles/pivotAndPath.dir/rule
+.PHONY : pivotAndPath
+
+# fast build rule for target.
+pivotAndPath/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/pivotAndPath.dir/build.make biClique/CMakeFiles/pivotAndPath.dir/build
+.PHONY : pivotAndPath/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/colorPath.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/colorPath.dir/rule
+.PHONY : biClique/CMakeFiles/colorPath.dir/rule
+
+# Convenience name for target.
+colorPath: biClique/CMakeFiles/colorPath.dir/rule
+.PHONY : colorPath
+
+# fast build rule for target.
+colorPath/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/colorPath.dir/build.make biClique/CMakeFiles/colorPath.dir/build
+.PHONY : colorPath/fast
 
 # Convenience name for target.
 biClique/CMakeFiles/fastEdgePivot.dir/rule:
@@ -313,18 +229,74 @@ fastEdgePivot/fast:
 .PHONY : fastEdgePivot/fast
 
 # Convenience name for target.
-biClique/CMakeFiles/BCTV2.dir/rule:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BCTV2.dir/rule
-.PHONY : biClique/CMakeFiles/BCTV2.dir/rule
+biClique/CMakeFiles/turan.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/turan.dir/rule
+.PHONY : biClique/CMakeFiles/turan.dir/rule
 
 # Convenience name for target.
-BCTV2: biClique/CMakeFiles/BCTV2.dir/rule
-.PHONY : BCTV2
+turan: biClique/CMakeFiles/turan.dir/rule
+.PHONY : turan
 
 # fast build rule for target.
-BCTV2/fast:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCTV2.dir/build.make biClique/CMakeFiles/BCTV2.dir/build
-.PHONY : BCTV2/fast
+turan/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/turan.dir/build.make biClique/CMakeFiles/turan.dir/build
+.PHONY : turan/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/BK.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BK.dir/rule
+.PHONY : biClique/CMakeFiles/BK.dir/rule
+
+# Convenience name for target.
+BK: biClique/CMakeFiles/BK.dir/rule
+.PHONY : BK
+
+# fast build rule for target.
+BK/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BK.dir/build.make biClique/CMakeFiles/BK.dir/build
+.PHONY : BK/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/BCListPlusPlus.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/BCListPlusPlus.dir/rule
+.PHONY : biClique/CMakeFiles/BCListPlusPlus.dir/rule
+
+# Convenience name for target.
+BCListPlusPlus: biClique/CMakeFiles/BCListPlusPlus.dir/rule
+.PHONY : BCListPlusPlus
+
+# fast build rule for target.
+BCListPlusPlus/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCListPlusPlus.dir/build.make biClique/CMakeFiles/BCListPlusPlus.dir/build
+.PHONY : BCListPlusPlus/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
+.PHONY : biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
+
+# Convenience name for target.
+edgePivotSpecificPQ: biClique/CMakeFiles/edgePivotSpecificPQ.dir/rule
+.PHONY : edgePivotSpecificPQ
+
+# fast build rule for target.
+edgePivotSpecificPQ/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/edgePivotSpecificPQ.dir/build.make biClique/CMakeFiles/edgePivotSpecificPQ.dir/build
+.PHONY : edgePivotSpecificPQ/fast
+
+# Convenience name for target.
+biClique/CMakeFiles/rawEdgePivot.dir/rule:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 biClique/CMakeFiles/rawEdgePivot.dir/rule
+.PHONY : biClique/CMakeFiles/rawEdgePivot.dir/rule
+
+# Convenience name for target.
+rawEdgePivot: biClique/CMakeFiles/rawEdgePivot.dir/rule
+.PHONY : rawEdgePivot
+
+# fast build rule for target.
+rawEdgePivot/fast:
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/rawEdgePivot.dir/build.make biClique/CMakeFiles/rawEdgePivot.dir/build
+.PHONY : rawEdgePivot/fast
 
 BCListPlusPlus.o: BCListPlusPlus.cpp.o
 .PHONY : BCListPlusPlus.o
@@ -349,54 +321,6 @@ BCListPlusPlus.s: BCListPlusPlus.cpp.s
 BCListPlusPlus.cpp.s:
 	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCListPlusPlus.dir/build.make biClique/CMakeFiles/BCListPlusPlus.dir/BCListPlusPlus.cpp.s
 .PHONY : BCListPlusPlus.cpp.s
-
-BCT.o: BCT.cpp.o
-.PHONY : BCT.o
-
-# target to build an object file
-BCT.cpp.o:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/BCT.cpp.o
-.PHONY : BCT.cpp.o
-
-BCT.i: BCT.cpp.i
-.PHONY : BCT.i
-
-# target to preprocess a source file
-BCT.cpp.i:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/BCT.cpp.i
-.PHONY : BCT.cpp.i
-
-BCT.s: BCT.cpp.s
-.PHONY : BCT.s
-
-# target to generate assembly for a file
-BCT.cpp.s:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCT.dir/build.make biClique/CMakeFiles/BCT.dir/BCT.cpp.s
-.PHONY : BCT.cpp.s
-
-BCTV2.o: BCTV2.cpp.o
-.PHONY : BCTV2.o
-
-# target to build an object file
-BCTV2.cpp.o:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCTV2.dir/build.make biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.o
-.PHONY : BCTV2.cpp.o
-
-BCTV2.i: BCTV2.cpp.i
-.PHONY : BCTV2.i
-
-# target to preprocess a source file
-BCTV2.cpp.i:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCTV2.dir/build.make biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.i
-.PHONY : BCTV2.cpp.i
-
-BCTV2.s: BCTV2.cpp.s
-.PHONY : BCTV2.s
-
-# target to generate assembly for a file
-BCTV2.cpp.s:
-	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(MAKE) $(MAKESILENT) -f biClique/CMakeFiles/BCTV2.dir/build.make biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.s
-.PHONY : BCTV2.cpp.s
 
 BK.o: BK.cpp.o
 .PHONY : BK.o
@@ -815,8 +739,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... BCListPlusPlus"
-	@echo "... BCT"
-	@echo "... BCTV2"
 	@echo "... BK"
 	@echo "... accuracy"
 	@echo "... bcAndPath"
@@ -832,12 +754,6 @@ help:
 	@echo "... BCListPlusPlus.o"
 	@echo "... BCListPlusPlus.i"
 	@echo "... BCListPlusPlus.s"
-	@echo "... BCT.o"
-	@echo "... BCT.i"
-	@echo "... BCT.s"
-	@echo "... BCTV2.o"
-	@echo "... BCTV2.i"
-	@echo "... BCTV2.s"
 	@echo "... BK.o"
 	@echo "... BK.i"
 	@echo "... BK.s"
