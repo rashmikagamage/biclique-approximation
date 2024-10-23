@@ -256,7 +256,7 @@ int main(int argc, char* argv[]) {
 
         // counter->shadowBuilder1(p, q, e);
     } else if (aC->exist("-zstar")) {
-        double e = 0.01;
+        double e = 0.05;
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());
         }
@@ -266,7 +266,7 @@ int main(int argc, char* argv[]) {
         counter->shadowBuilderZStar(p, q, e);
 
     } else if (aC->exist("-zstar2")) {
-        double e = 0.01;
+        double e = 0.05;
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());
         }

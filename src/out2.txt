@@ -1,32 +1,31 @@
-data/fjwiki.txt 
-graph size:n1: 612 n2:1898, m 5959
+./data/ucforum.txt 
+graph size:n1: 899 n2:522, m 7089
 load graph
-minPQ: 4
- Working on p q e: 4 - 6 - 0.01 
-totalZinShadow: 40231001897.000000
+minPQ: 3
+ Working on p q e: 3 - 10 - 0.05 
+totalZinShadow: 4650126.000000
 gamma: 4451.420533
-tTotal: 819337.000000
-auxTotalSamples: 22630.000000
-totalZinShadow: 40231001897.000000
-Biclique Density: 0.353905
-pqBicluqeEstAux: 14237967251.800013
-shadow size before the second refinement : 2163 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 455396.298881
-shadowDuration: 1043580.000000
-shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : 0
+tTotal: 92397.000000
+auxTotalSamples: 3490.000000
+totalZinShadow: 4650126.000000
+Biclique Density: 0.000000
+pqBicluqeEstAux: 1.000000
+shadow size before the second refinement : 249 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 548019218481.316589
+shadowDuration: 130289.000000
+shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : 1
 end the second phrase
-shadow size: 2163
-pqBicluqeEstAux: 14237967251.800013
-totalZinShadow: 40231001897.000000
-roughPQEstDens: 0.353905
-shadow.size(): 2163
-totalZinShadow: 40231001897.000000
-batchSize: 12577
-successSamples: 0
+shadow size: 80
+pqBicluqeEstAux: 8178.000000
+totalZinShadow: 9433.000000
+roughPQEstDens: 0.866956
+shadow.size(): 80
+totalZinShadow: 9433.000000
+batchSize: 5134
 pqBicluqeContainZ: 4451
-t: 12034
-totalZinShadow: 40231001897.000000
+t: 5168
+totalZinShadow: 9433.000000
 successSamples: 4451
-density of biclique: 0.369869
-biclique count: 14880188585.968672
-time: 1.460672
+density of biclique: 0.861262
+biclique count: 8124.280766
+time: 0.427599

@@ -1,32 +1,161 @@
-data/ucforum.txt 
-graph size:n1: 899 n2:522, m 7089
+/data/bipartite_graphs/pics_ti/pics_ti.txt 
+graph size:n1: 82035 n2:495402, m 1800330
 load graph
-minPQ: 4
-zsar2
- Working on p q e: 4 - 5 - 0.01 
-totalZinShadow: 80839.000000
+minPQ: 5
+ Working on p q e: 5 - 10 - 0.01 
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedL.size(): 3, minPQ - 1: 4
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+selectedR.size(): 8, q - 1: 9
+totalZinShadow: 5882436784484114536388139941888.000000
 gamma: 4451.420533
-tTotal: 304051.000000
-auxTotalSamples: 10420.000000
-totalZinShadow: 80839.000000
-Biclique Density: 0.005412
-pqBicluqeEstAux: 437.500000
-shadow size before the second refinement : 942 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 24000496.002135
-shadowDuration: 373924.000000
+tTotal: 1700864481.000000
+auxTotalSamples: 3576120.000000
+totalZinShadow: 5882436784484114536388139941888.000000
+Biclique Density: 0.000152
+pqBicluqeEstAux: 893010848868530623956910080.000000
+shadow size before the second refinement : 357512 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 13946228830.763870
+shadowDuration: 2400481233.000000
 shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : 1
 end the second phrase
-shadow size: 900
-pqBicluqeEstAux: 3505.660000
-totalZinShadow: 34940.000000
-roughPQEstDens: 0.100334
-shadow.size(): 900
-totalZinShadow: 34940.000000
-batchSize: 44366
+shadow size: 374996
+pqBicluqeEstAux: 893010854452805595652161536.000000
+totalZinShadow: 5882436782784703734998020128768.000000
+roughPQEstDens: 0.000152
+shadow.size(): 374996
+totalZinShadow: 5882436782784703734998020128768.000000
+batchSize: 29322375
 pqBicluqeContainZ: 4451
-t: 47833
-totalZinShadow: 34940.000000
+t: 741635
+totalZinShadow: 5882436782784703734998020128768.000000
 successSamples: 4451
-density of biclique: 0.093053
-biclique count: 3251.268789
-time: 2.227830
+density of biclique: 0.006002
+biclique count: 35304059436481175879344455680.000000
+time: 14348.455571
+./data/fjwiki.txt 
+graph size:n1: 612 n2:1898, m 5959
+load graph
+minPQ: 5
+ Working on p q e: 5 - 13 - 0.01 
+totalZinShadow: 115449645431253168.000000
+gamma: 4451.420533
+tTotal: 619685.000000
+auxTotalSamples: 15310.000000
+totalZinShadow: 115449645431253168.000000
+Biclique Density: 0.015967
+pqBicluqeEstAux: 1843436864275634.750000
+shadow size before the second refinement : 1431 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 11283887.646305
+shadowDuration: 813743.000000
+shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : 1
+end the second phrase
+shadow size: 5158
+pqBicluqeEstAux: 1857470955039748.250000
+totalZinShadow: 115337242654579568.000000
+roughPQEstDens: 0.016105
+shadow.size(): 5158
+totalZinShadow: 115337242654579568.000000
+batchSize: 276405
+pqBicluqeContainZ: 4451
+t: 296965
+totalZinShadow: 115337242654579568.000000
+successSamples: 4451
+density of biclique: 0.014988
+biclique count: 1728708996196634.750000
+time: 18.705382
