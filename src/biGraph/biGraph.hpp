@@ -50,9 +50,9 @@ struct biGraph {
         // printf("there\n");fflush(stdout);
         changeToDegreeOrder();
         // changeDegreeOrderRev();
-        //   printf("there\n");fflush(stdout);
-        //   changeToCoreOrder();
-        //  rawOrder();
+        //    printf("there\n");fflush(stdout);
+        //    changeToCoreOrder();
+        //   rawOrder();
     }
     // todo
     void changeDegreeOrderRev() {
@@ -170,6 +170,8 @@ struct biGraph {
         //     }
         // }
         // exit(0);
+        assert(pU[n1] == m);
+        assert(pV[n2] == m);
     }
 
     void coreReductionFast22() {

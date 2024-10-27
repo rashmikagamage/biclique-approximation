@@ -1585,7 +1585,10 @@ void colorPath::approximateCountingAllVersion2(uint64_t T) {
 
         for (uint32_t i = g->pU[u]; i < g->pU[u + 1]; i++) {
             uint32_t v = g->e1[i];
-
+            assert(v == candR[0]);
+            printf("u:%u v:%u", u, v);
+            fflush(stdout);
+            assert(candR[0] == v);
             int pL = 0;
             // auto st = g->e2.begin() + g->pV[v];
             // auto ed = g->e2.begin() + g->pV[v + 1];
@@ -1621,7 +1624,6 @@ void colorPath::approximateCountingAllVersion2(uint64_t T) {
     for (int i = 1; i < maxPLen && i < minPQ; i++) {
         printf("sumW:%.0f ", sumW[i]);
     }
-    printf("\n\n");
     fflush(stdout);
 
     std::random_device rd;
@@ -1745,7 +1747,6 @@ void colorPath::approximateCountingAllVersion2(uint64_t T) {
                         if (stackL.size() > 0) break;
                     }
 
-                    printf("\n");
                     assert(stackL.size() > 0);
 
                     for (int i = 1; i < len - 1; i++) {
