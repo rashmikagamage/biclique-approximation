@@ -3226,10 +3226,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             if (candLSize < p - 1)
                 continue;
 
-            std::pair<uint32_t, uint32_t> edge;
-            std::vector<std::pair<uint32_t, uint32_t>> edges;
-
-                       // adding to shadow
+            // adding to shadow
             // calculate mu here
             double mu = 0;
             // printf("candLSize: %d, candRSize: %d, p: %d, q: %d\n", candLSize,
