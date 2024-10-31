@@ -7,7 +7,7 @@ class accuracy {
    private:
     biGraph* g;
     int p, q;
-    LinearSet candL, candR;
+    LinearSet candL, candR, candRDP;
     std::vector<std::vector<double> > ansAll;
     int minPQ;
 
@@ -43,7 +43,12 @@ class accuracy {
         p = p_;
         q = q_;
         minPQ = std::min(p, q);
-        g = new biGraph(filePath);
+        if (p <= q) {
+            g = new biGraph(filePath);
+        } else {
+            g = new biGraph(filePath, p, q);
+        }
+
         std::printf("load graph\n");
         fflush(stdout);
 

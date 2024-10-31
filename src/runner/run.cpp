@@ -275,6 +275,16 @@ int main(int argc, char* argv[]) {
         accuracy* counter = new accuracy(filePath, outFilePath, p, q);
         counter->shadowBuilderZStar2(p, q, e);
 
+    } else if (aC->exist("-zstar3")) {
+        double e = 0.05;
+        if (aC->exist("-e")) {
+            e = atof(aC->get("-e").c_str());
+        }
+        if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        accuracy* counter = new accuracy(filePath, outFilePath, p, q);
+        counter->shadowBuilderZStar3(p, q, e);
+
     } else if (aC->exist("-bct")) {
         double e = 0.01;
         // BCT* counter = new BCT(filePath, outFilePath, p, q);

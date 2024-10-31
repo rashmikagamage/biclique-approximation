@@ -1,5 +1,7 @@
 #include "accuracy.h"
 #undef NDEBUG
+#include <../tools/robin_hood.h>
+
 #include <cassert>
 #include <cfloat>
 #include <chrono>
@@ -115,7 +117,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
             if (rSize < g->deg1(x)) {
                 for (int k = 0; k < rSize; k++) {
                     uint32_t y = candR[k];
-                    if (g->connectUV(x, y)) {
+                    if (g->connectUVRobin(x, y)) {
                         e1[pU[j + 1]++] = k;
                         pV[k + 1]++;
                     }
@@ -228,9 +230,6 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
     };
     auto buildDPTest = [&](int lSize, int rSize, int p, int q) -> int {
         int minPQ = min(p, q);
-        // todo
-        // todo
-
         std::fill(pV.begin(), pV.begin() + rSize + 1, 0);
 
         for (int j = 0; j < lSize; j++) {
@@ -239,7 +238,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
             if (rSize < g->deg1(x)) {
                 for (int k = 0; k < rSize; k++) {
                     uint32_t y = candR[k];
-                    if (g->connectUV(x, y)) {
+                    if (g->connectUVRobin(x, y)) {
                         e1[pU[j + 1]++] = k;
                         pV[k + 1]++;
                     }
@@ -665,7 +664,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
                             continue;
                         if (i > 0 && i == j + 1)
                             continue;
-                        if (!g->connectUV(candL[selectedL[i]], candR[selectedR[j]])) {
+                        if (!g->connectUVRobin(candL[selectedL[i]], candR[selectedR[j]])) {
                             connected = false;
                             break;
                         }
@@ -804,7 +803,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
             pUU[j + 1] = pUU[j];
             for (int k = 0; k < rrSize; k++) {
                 uint32_t y = candRR[k];
-                if (g->connectUV(x, y)) {
+                if (g->connectUVRobin(x, y)) {
                     e11[edgeIndex] = y;
                     edgeIndex++;
                     pUU[j + 1]++;
@@ -1099,7 +1098,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
                                 continue;
                             if (i > 0 && i == j + 1)
                                 continue;
-                            if (!g->connectUV(candL[selectedL[i]], candR[selectedR[j]])) {
+                            if (!g->connectUVRobin(candL[selectedL[i]], candR[selectedR[j]])) {
                                 connected = false;
                                 break;
                             }
@@ -1376,7 +1375,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
                             continue;
                         if (i > 0 && i == j + 1)
                             continue;
-                        if (!g->connectUV(candL[selectedL[i]], candR[selectedR[j]])) {
+                        if (!g->connectUVRobin(candL[selectedL[i]], candR[selectedR[j]])) {
                             connected = false;
                             break;
                         }
@@ -1386,6 +1385,7 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
                 }
                 if (!connected)
                     continue;
+                printf("successSamples: %d\n", successSamples);
                 pqBicluqeContainZ++;
                 successSamples++;
 
@@ -1425,6 +1425,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
     std::vector<uint32_t> outPosition(g->maxDu);
     vector<int> twoHopCount(g->n1);
     candL.resize(g->n1);
+    candR.resize(g->n2);
     candR.resize(g->n2);
     std::vector<uint32_t> candLVec, candRVec;
     double totalZinShadow = 0;
@@ -1469,6 +1470,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
 
     // DP Buidling
     auto buildDP = [&](int lSize, int rSize, int p, int q) -> int {
+        //    / printf("g->connectUVRobinFast(0, 0): %d\n", g->connectUVRobinFast(0, 0));
         int minPQ = min(p, q);
 
         std::fill(pV.begin(), pV.begin() + rSize + 1, 0);
@@ -1479,7 +1481,8 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
             if (rSize < g->deg1(x)) {
                 for (int k = 0; k < rSize; k++) {
                     uint32_t y = candR[k];
-                    if (g->connectUV(x, y)) {
+                    // assert(g->connectUVRobin(x, y) == g->connectUVRobinRobin(x, y));
+                    if (g->connectUVRobin(x, y)) {
                         e1[pU[j + 1]++] = k;
                         pV[k + 1]++;
                     }
@@ -1600,7 +1603,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
             pU[j + 1] = pU[j];
             for (int k = 0; k < rSize; k++) {
                 uint32_t y = candRVec[k];
-                if (g->connectUV(x, y)) {
+                if (g->connectUVRobin(x, y)) {
                     e1[pU[j + 1]++] = k;
                     pV[k + 1]++;
                 }
@@ -1762,6 +1765,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
             //         printf("candR[%d]: %d\n", i, candR[i]);
             //     }
             // }
+
             int candLSize = 0;
             // int outPosE = std::find(g->pV[v], g->pV[v + 1], u);
             // auto it = std::find(std::next(g->e2.begin(), g->pV[v]), std::next(g->e2.begin(), g->pV[v + 1]), u);
@@ -1782,6 +1786,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
             for (int i = 1; i < candRSize; i++) {
                 candR.changeToByPos(i, i - 1);
             }
+
             if (candRSize < q - 1)
                 break;
             if (candLSize < p - 1)
@@ -1989,11 +1994,13 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
                         }
                     }
                 }
-                if (selectedL.size() != minPQ - 1) {
+                if (selectedL.size() != minPQ - 1 || selectedR.size() != minPQ - 2) {
+                    printf("u: %d, v: %d\n", u, v);
                     printf("selectedL.size(): %d, minPQ - 1: %d\n", selectedL.size(), minPQ - 1);
+                    printf("selectedR.size(): %d, minPQ - 2: %d\n", selectedR.size(), minPQ - 2);
                     continue;
                 }
-                assert(selectedL.size() == minPQ - 1);
+                // assert(selectedL.size() == minPQ - 1);
                 int vCount = q - p + 1;
                 if (minPQ - 1 == 1) {
                     vCount = q - p;
@@ -2006,10 +2013,15 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
                     auto it = std::find(e1.begin() + pU[preU], e1.begin() + pU[preU + 1], preV);
                     index = std::distance(e1.begin(), it);
                 }
-
+                if (pU[preU + 1] - index < vCount) {
+                    printf("pU[preU + 1] - index: %d, vCount: %d\n", pU[preU + 1] - index, vCount);
+                    continue;
+                }
                 // assert(pU[preU + 1] - index >= vCount);
                 // assert(index >= pU[preU] && index < pU[preU + 1]);
-
+                if (pU[preU + 1] - index < vCount) {
+                    continue;
+                }
                 std::vector<uint32_t> selectedRStar = sampeleRest(vCount, preU, pU, index);
 
                 for (int i = 0; i < selectedRStar.size(); i++) {
@@ -2035,7 +2047,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
                             continue;
                         if (i > 0 && i == j + 1)
                             continue;
-                        if (!g->connectUV(candL[selectedL[i]], candR[selectedR[j]])) {
+                        if (!g->connectUVRobin(candL[selectedL[i]], candR[selectedR[j]])) {
                             connected = false;
                             break;
                         }
@@ -2104,6 +2116,14 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
         0.0, 1.0);  // Distribution for doubles between 0.0 and 1.0 (inclusive of
     // 0.0 and exclusive of 1.0)
     vector<uint32_t> selectedL(g->maxDv + 1), selectedR(g->maxDu + 1);
+
+    int count = 0;
+    double constructionStop = gamma * (tTotal / auxTotalSamples);
+
+    if (shadow.size() == 0) {
+        printf("No biclique found fopr p: %d, q: %d\n", p, q);
+        return;
+    }
     printf("gamma: %f\n", gamma);
     printf("tTotal: %f\n", tTotal);
     printf("auxTotalSamples: %f\n", auxTotalSamples);
@@ -2113,17 +2133,14 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
     fflush(stdout);
     printf("shadow size before the second refinement : %d \n", shadow.size());
     printf(" gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: %f\n", gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux);
-    int count = 0;
-    printf("shadowDuration: %f\n", shadowDuration);
-    printf("shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : %d\n", shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux);
+    printf("Stage 1 Shadow time: %f\n", shadowDuration);
     // /shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux
+    printf("constuction Stop : %d\n", constructionStop);
+    printf("time esitmation for the shadow stage II: %f\n", constructionStop - shadowDuration);
     fflush(stdout);
-    if (shadow.size() == 0) {
-        printf("No biclique found fopr p: %d, q: %d\n", p, q);
-        return;
-    }
 
-    while (shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux) {
+    while (shadowDuration < constructionStop) {
+        printf("inside shadow");
         Subspace min_space = shadow.top();
         if (min_space.mu > 0.5) break;
         shadow.pop();
@@ -2169,7 +2186,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
             pUU[j + 1] = pUU[j];
             for (int k = 0; k < rrSize; k++) {
                 uint32_t y = candRR[k];
-                if (g->connectUV(x, y)) {
+                if (g->connectUVRobin(x, y)) {
                     e11[edgeIndex++] = y;
                     pUU[j + 1]++;
                     pVV[k + 1]++;
@@ -2536,7 +2553,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
                                 continue;
                             if (i > 0 && i == j + 1)
                                 continue;
-                            if (!g->connectUV(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
+                            if (!g->connectUVRobin(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
                                 connected = false;
                                 break;
                             }
@@ -2576,17 +2593,11 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
         // twoHopCount2.clear();
     }
 
-    printf("end the second phrase\n");
-    printf("shadow size: %d\n", shadow.size());
-
-    printf("pqBicluqeEstAux: %f\n", pqBicluqeEstAux);
-    printf("totalZinShadow: %f\n", totalZinShadow);
     double roughPQEstDens = pqBicluqeEstAux / totalZinShadow;
     vector<Subspace> subs;
     uint32_t batchSize = gamma / roughPQEstDens;
     std::pair<uint32_t, uint32_t> edge;
     std::vector<std::pair<uint32_t, uint32_t>> edges;
-    printf("roughPQEstDens: %f\n", roughPQEstDens);
     vector<double> probabilities;
     vector<double> probabilitiesForFirstE;
     vector<Subspace> shadowVec;
@@ -2595,7 +2606,14 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
     std::mt19937 gen(rd());
     uint32_t pqBicluqeContainZ = 0;
 
+    printf("end the second phrase\n");
+    printf("shadow size: %d\n", shadow.size());
+    printf("pqBicluqeEstAux: %f\n", pqBicluqeEstAux);
+    printf("totalZinShadow: %f\n", totalZinShadow);
+    printf("roughPQEstDens: %f\n", roughPQEstDens);
     printf("shadow.size(): %d\n", shadow.size());
+    fflush(stdout);
+
     if (shadow.size() == 0) {
         printf("No biclique found fopr p: %d, q: %d\n", p, q);
         return;
@@ -2814,7 +2832,7 @@ void accuracy::shadowBuilderZStar2(int p, int q, double epsilon) {
                             continue;
                         if (i > 0 && i == j + 1)
                             continue;
-                        if (!g->connectUV(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
+                        if (!g->connectUVRobin(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
                             connected = false;
                             break;
                         }
@@ -2852,8 +2870,10 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     std::signal(SIGSEGV, segfault_handler);
     if (p > q) {
         swap(p, q);
+        printf(" Working on p q e: %d - %d - %.2f \n", q, p, epsilon);
+    } else {
+        printf(" Working on p q e: %d - %d - %.2f \n", p, q, epsilon);
     }
-    printf(" Working on p q e: %d - %d - %.2f \n", p, q, epsilon);
     auto start = chrono::high_resolution_clock::now();
     minPQ = min(p, q);
 
@@ -2867,6 +2887,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     candR.resize(g->n2);
     std::vector<uint32_t> candLVec, candRVec;
     double totalZinShadow = 0;
+    double totalZinShadowSort = 0;
     double totalZinShadowTest = 0;
 
     uint32_t maxE = std::min((1u << 21), g->maxDu * g->maxDv);
@@ -2918,7 +2939,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             if (rSize < g->deg1(x)) {
                 for (int k = 0; k < rSize; k++) {
                     uint32_t y = candR[k];
-                    if (g->connectUV(x, y)) {
+                    if (g->connectUVRobin(x, y)) {
                         e1[pU[j + 1]++] = k;
                         pV[k + 1]++;
                     }
@@ -3039,7 +3060,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             pU[j + 1] = pU[j];
             for (int k = 0; k < rSize; k++) {
                 uint32_t y = candRVec[k];
-                if (g->connectUV(x, y)) {
+                if (g->connectUVRobin(x, y)) {
                     e1[pU[j + 1]++] = k;
                     pV[k + 1]++;
                 }
@@ -3143,14 +3164,13 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             }
         }
 
-        return std::min(k, minLR);
+        return k;
     };
 
     for (uint32_t u = 0; u < g->n1; u++) {
         if (g->deg1(u) < q) {
             continue;
         }
-
         uint32_t candRSize = 0;
 
         // for (uint32_t i = g->pU[u]; i < g->pU[u + 1]; i++) {
@@ -3160,7 +3180,6 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
         // }
 
         candLtemp.clear();
-
         for (uint32_t i = g->pU[u]; i < g->pU[u + 1]; i++) {
             uint32_t v = g->e1[i];
             candR.changeTo(v, candRSize);
@@ -3179,6 +3198,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             }
         }
 
+        // std::reverse(candidateR.begin(), candidateR.end());
         int countCandLtemp = 0;
         for (auto w : candLtemp) {
             if (twoHopCount[w] > 1) {
@@ -3195,12 +3215,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
         for (uint32_t i = g->pU[u]; i < g->pU[u + 1]; i++) {
             uint32_t v = g->e1[i];
             assert(v == candR[0]);
-            // if (v != candR[0]) {
-            //     printf("v: %d\n", v);
-            //     for (int i = 0; i < candRSize; i++) {
-            //         printf("candR[%d]: %d\n", i, candR[i]);
-            //     }
-            // }
+
             int candLSize = 0;
             // int outPosE = std::find(g->pV[v], g->pV[v + 1], u);
             // auto it = std::find(std::next(g->e2.begin(), g->pV[v]), std::next(g->e2.begin(), g->pV[v + 1]), u);
@@ -3209,18 +3224,25 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             for (uint32_t j = outPosition[i - g->pU[u]] + 1; j < g->pV[v + 1]; j++) {
                 uint32_t w = g->e2[j];
                 // check whether the w is inside the candLTemp
-                if (candL.idx(w) < countCandLtemp) candL.changeTo(w, candLSize++);
+                if (candL.idx(w) < countCandLtemp) {
+                    candL.changeTo(w, candLSize);
+                    candLSize++;
+                }
             }
 
+            // for (int i = 0; i < candRSize; i++) {
+            //     printf("candR[%d]: %d\n", i, candR[i]);
+            // }
+            // printf("-----------------\n");
+            // for (int i = 0; i < candRSize; i++) {
+            //     printf("candidateR[%d]: %d\n", i, candidateR[i]);
+            // }
             candR.changeTo(v, --candRSize);
 
-            // if (candLSize < p - 1)
-            //     continue;
-            // if (candRSize < q - 1)
-            //     break;
             for (int i = 1; i < candRSize; i++) {
                 candR.changeToByPos(i, i - 1);
             }
+
             if (candRSize < q - 1)
                 break;
             if (candLSize < p - 1)
@@ -3231,7 +3253,19 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             double mu = 0;
             // printf("candLSize: %d, candRSize: %d, p: %d, q: %d\n", candLSize,
             // candRSize, p, q); sampling inside shadow to calcule mu
+
+            candL.reverse(candLSize);
+
             int maxPossibleLength = buildDP(candLSize, candRSize, p - 1, q - 1);
+            double z1 = 0, z2 = 0;
+            // if (z1 < z2) {
+            //     printf("success\n");
+            //     printf("z1: %f, z2: %f\n", z1, z2);
+            // } else {
+            //     printf("fail\n");
+            //     printf("z1: %f, z2: %f\n", z1, z2);
+            // }
+            // printf("maxPossibleLength: %d, maxPossibleLengthTest: %d\n", maxPossibleLength, maxPossibleLengthTest);
             if (maxPossibleLength < minPQ - 1) {
                 continue;
             }
@@ -3248,6 +3282,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                     zInSubSpace += dpU[minPQ - 1][i];
                 }
             }
+
             // if (candL[0] == 555 && candR[0] == 1773) {
             //     printf("success\n");
             //     printf("zInSubSpace: %f\n", zInSubSpace);
@@ -3277,6 +3312,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             if (zInSubSpace < 1)
                 continue;
             double pqBicluqeContainZ = 0;
+
             double auxSampleSize = 10;
             int auxSampleSize_temp = auxSampleSize;
             double t_sample = 0;
@@ -3474,7 +3510,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                             continue;
                         if (i > 0 && i == j + 1)
                             continue;
-                        if (!g->connectUV(candL[selectedL[i]], candR[selectedR[j]])) {
+                        if (!g->connectUVRobin(candL[selectedL[i]], candR[selectedR[j]])) {
                             connected = false;
                             break;
                         }
@@ -3501,14 +3537,16 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             // candRSize, pqBicluqeContainZ / auxSampleSize, zInSubSpace *
             // (pqBicluqeContainZ / auxSampleSize), zInSubSpace));
             std::vector<uint32_t> candLShadow;
-            std::vector<uint32_t> candRShadow;
-            for (int i = 0; i < candLSize; i++) {
+            std::vector<uint32_t> candRShadow(candR.begin(), candR.begin() + candRSize);
+
+            // for (int i = 0; i < candLSize; i++) {
+            //     candLShadow.push_back(candL[i]);
+            // }
+            for (int i = candLSize - 1; i >= 0; i--) {
                 candLShadow.push_back(candL[i]);
             }
-            for (int i = 0; i < candRSize; i++) {
-                candRShadow.push_back(candR[i]);
-            }
-
+            candLShadow.shrink_to_fit();
+            candRShadow.shrink_to_fit();
             if (zInSubSpace > 0.5) {
                 shadow.push(Subspace(p - 1, q - 1, candLShadow, candRShadow, candLSize, candRSize,
                                      pqBicluqeContainZ / auxSampleSize,
@@ -3533,7 +3571,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     /* ***Shadow Refinement stage I is done*** */
     ////////////////////////////////////////////
     ////////////////////////////////////////////
-    printf("totalZinShadow: %f\n", totalZinShadow);
+
     auto end = chrono::high_resolution_clock::now();
     double shadowDuration =
         chrono::duration_cast<chrono::microseconds>(end - start).count();
@@ -3553,16 +3591,18 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     printf("shadow size before the second refinement : %d \n", shadow.size());
     printf(" gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: %f\n", gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux);
     int count = 0;
-    printf("shadowDuration: %f\n", shadowDuration);
-    printf("shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux : %d\n", shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux);
+    printf("Stage 1 Shadow time: %f\n", shadowDuration / 1000000.0);
     // /shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux
+    double constructionStop = gamma * tTotal / auxTotalSamples * totalZinShadow / pqBicluqeEstAux;
+    printf("constuction Stop : %.2f\n", constructionStop / 1000000.0);
+    printf("time esitmation for the shadow stage II: %f\n", (constructionStop - shadowDuration) / 1000000.0);
     fflush(stdout);
     if (shadow.size() == 0) {
         printf("No biclique found fopr p: %d, q: %d\n", p, q);
         return;
     }
-
-    while (shadowDuration < gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux) {
+    // shadowDuration < constructionStop
+    while (shadowDuration < constructionStop) {
         Subspace min_space = shadow.top();
         if (min_space.mu > 0.5) break;
         shadow.pop();
@@ -3583,8 +3623,8 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
         vector<uint32_t> e22(g->m);
         // vector<uint32_t> candLtemp2(g->maxDv * g->maxDv);
         // vector<uint32_t> outPosition2(g->maxDu * g->maxDu);
-        std::vector<uint32_t> minSU = min_space.SU;
-        std::vector<uint32_t> minSV = min_space.SV;
+        std::vector<uint32_t> minSU = std::move(min_space.SU);
+        std::vector<uint32_t> minSV = std::move(min_space.SV);
         std::unordered_map<uint32_t, uint32_t> minSUMap;
         std::unordered_map<uint32_t, uint32_t> minSVMap;
         // vector<uint32_t> twoHopCount2(g->maxDu * g->maxDu);
@@ -3608,7 +3648,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             pUU[j + 1] = pUU[j];
             for (int k = 0; k < rrSize; k++) {
                 uint32_t y = candRR[k];
-                if (g->connectUV(x, y)) {
+                if (g->connectUVRobin(x, y)) {
                     e11[edgeIndex++] = y;
                     pUU[j + 1]++;
                     pVV[k + 1]++;
@@ -3704,13 +3744,13 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
 
         uint32_t totalZinThisSub = 0;
         for (uint32_t uIndex = 0; uIndex < llSize; uIndex++) {
-            candRR.clear();
+            candRVec.clear();
             uint32_t u = minSU[uIndex];
             uint32_t candRSize2 = 0;
 
             for (uint32_t i = pUU[uIndex]; i < pUU[uIndex + 1]; i++) {
                 uint32_t v = e11[i];
-                candRR.push_back(v);
+                candRVec.push_back(v);
                 candRSize2++;
             }
             // for (int i = 0; i < candRSize2; i++) {
@@ -3751,9 +3791,9 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             // }
 
             for (uint32_t i = pUU[uIndex]; i < pUU[uIndex + 1]; i++) {
-                candLL.clear();
+                candLVec.clear();
                 uint32_t v = e11[i];
-                assert(v == candRR[0]);
+                assert(v == candRVec[0]);
                 int candLSize2 = 0;
 
                 // uint32_t j = outPosition2[i - pUU[uIndex]] + 1;
@@ -3763,7 +3803,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 for (; j < pVV[vIndex + 1]; j++) {
                     uint32_t w = e22[j];
                     // check whether the w is inside the candL
-                    candLL.push_back(w);
+                    candLVec.push_back(w);
                     candLSize2++;
                 }
                 // fflush(stdout);
@@ -3783,7 +3823,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 //     printf("candRR[%d]: %d\n", i, candRR[i]);
                 // }
                 candRSize2--;
-                candRR.erase(candRR.begin());
+                candRVec.erase(candRVec.begin());
                 // printf("candR after: %d\n", candRSize2);
                 // for (int i = 0; i < candRSize2; i++) {
                 //     printf("candRR[%d]: %d\n", i, candRR[i]);
@@ -3799,11 +3839,9 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 //     candRR.changeToByPos(i, i - 1);
                 // }
 
-                candLVec = candLL;
-                candRVec = candRR;
-
+                std::reverse(candLVec.begin(), candLVec.end());
                 int maxPossibleLength = buildDP2Vec(candLSize2, candRSize2, min_space.p_prime - 1, min_space.q_prime - 1);
-
+                // candLL = std::move(candLVec);
                 if (maxPossibleLength < minPQ2 - 1) {
                     continue;
                 }
@@ -3978,7 +4016,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                                 continue;
                             if (i > 0 && i == j + 1)
                                 continue;
-                            if (!g->connectUV(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
+                            if (!g->connectUVRobin(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
                                 connected = false;
                                 break;
                             }
@@ -3990,7 +4028,8 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                         continue;
                     pqBicluqeContainZ++;
                 }
-                Subspace s = Subspace(min_space.p_prime - 1, min_space.q_prime - 1, candLL, candRR, candLSize2, candRSize2, pqBicluqeContainZ / auxSampleSize, zInMinSubSpace * (pqBicluqeContainZ / auxSampleSize), zInMinSubSpace);
+                std::reverse(candLVec.begin(), candLVec.end());
+                Subspace s = Subspace(min_space.p_prime - 1, min_space.q_prime - 1, candLVec, candRVec, candLSize2, candRSize2, pqBicluqeContainZ / auxSampleSize, zInMinSubSpace * (pqBicluqeContainZ / auxSampleSize), zInMinSubSpace);
                 s.subgraph = s.subgraph + 1;
                 shadow.push(s);
                 // shadow.push(Subspace(
@@ -4009,15 +4048,13 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             std::chrono::duration_cast<std::chrono::microseconds>(end - start)
                 .count();
 
-        candLL.clear();
-        candRR.clear();
         e11.clear();
         e22.clear();
         pVV.clear();
         // outPosition2.clear();
         // twoHopCount2.clear();
     }
-
+    auto statr = std::chrono::high_resolution_clock::now();
     printf("end the second phrase\n");
     printf("shadow size: %d\n", shadow.size());
 
@@ -4087,8 +4124,9 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             candRVec.clear();
             // candL.resize(g->n1 + 1);
             // candR.resize(g->n2 + 1);
-            candLVec = s.SU;
-            candRVec = s.SV;
+            candLVec = std::move(s.SU);
+            candRVec = std::move(s.SV);
+            std::reverse(candLVec.begin(), candLVec.end());
             // printf("s.SU.size(): %d\n", s.SU.size());
             // printf("s.SUSize: %d\n", s.SUSize);
             // for (int i = 0; i < s.SUSize; i++) {
@@ -4256,7 +4294,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                             continue;
                         if (i > 0 && i == j + 1)
                             continue;
-                        if (!g->connectUV(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
+                        if (!g->connectUVRobin(candLVec[selectedL[i]], candRVec[selectedR[j]])) {
                             connected = false;
                             break;
                         }

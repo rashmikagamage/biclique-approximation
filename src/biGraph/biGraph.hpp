@@ -7,10 +7,15 @@
 
 #include "../tools/fastIO.hpp"
 #include "../tools/hopstotchHash.hpp"
+#include "../tools/libcuckoo/cuckoohash_map.hh"
 #include "../tools/listLinearHeap.hpp"
+#include "../tools/robin_hood.h"
 
 struct biGraph {
     uint32_t n1, n2, m, maxDu, maxDv;
+    // robin_hood::unordered_flat_set<int> set;
+    std::vector<robin_hood::unordered_flat_set<uint32_t>> robin_map;
+
     uint32_t n[2];
     bool connect(uint32_t u, uint32_t v, int i) {
         if (i == 0)
@@ -33,7 +38,7 @@ struct biGraph {
         n1 = in.getUInt();
         n2 = in.getUInt();
         m = in.getUInt();
-
+        robin_map.resize(n1 + 5);
         printf("graph size:n1: %u n2:%u, m %u\n", n1, n2, m);
         fflush(stdout);
 
@@ -50,11 +55,49 @@ struct biGraph {
         // printf("there\n");fflush(stdout);
         changeToDegreeOrder();
         // changeDegreeOrderRev();
-        //    printf("there\n");fflush(stdout);
-        //    changeToCoreOrder();
-        //   rawOrder();
+        //     printf("there\n");fflush(stdout);
+        //     changeToCoreOrder();
+        //    rawOrder();
     }
+
+    biGraph(const std::string& filePath, int p, int q) {
+        fastIO in(filePath, "r");
+
+        n1 = in.getUInt();
+        n2 = in.getUInt();
+        m = in.getUInt();
+
+        printf("graph size:n1: %u n2:%u, m %u\n", n1, n2, m);
+        fflush(stdout);
+
+        edges.resize(m);
+        e1.resize(m);
+        e2.resize(m);
+
+        for (uint32_t i = 0; i < m; i++) {
+            edges[i].u = in.getUInt();
+            edges[i].v = in.getUInt();
+        }
+        if (p > q) {
+            std::swap(n1, n2);
+            for (int i = 0; i < m; i++) {
+                std::swap(edges[i].u, edges[i].v);
+            }
+        }
+        pU.resize(n1 + 5);
+        pV.resize(n2 + 5);
+        robin_map.resize(n1 + 5);
+        changeToDegreeOrder();
+    }
+
     // todo
+    void addToRobin(uint32_t index, uint32_t value) {
+        robin_map[index].insert(value);
+    }
+    bool connectUVRobin(uint32_t u, uint32_t v) {
+        return robin_map[u].contains(v);
+    }
+
     void changeDegreeOrderRev() {
         std::vector<uint32_t> d1, d2;
         std::vector<uint32_t> label1, label2;
@@ -174,6 +217,10 @@ struct biGraph {
         assert(pV[n2] == m);
     }
 
+    void createHashing() {
+        hopstotchHash hashTable;
+        hashTable.build(e1.data(), n1);
+    }
     void coreReductionFast22() {
         uint32_t n = n1 + n2;
         ListLinearHeap heap(n, std::max(maxDu, maxDv) + 1);
@@ -605,7 +652,7 @@ struct biGraph {
             std::sort(e2.begin() + pV[i], e2.begin() + pV[i + 1]);
         }
     }
-    // todo
+
     void changeToDegreeOrder() {
         std::vector<uint32_t> d1, d2;
         std::vector<uint32_t> label1, label2;
@@ -706,7 +753,16 @@ struct biGraph {
         for (uint32_t i = 0; i < n2; i++) {
             std::sort(e2.begin() + pV[i], e2.begin() + pV[i + 1]);
         }
+
+        for (int i = 0; i < n1; i++) {
+            for (int j = pU[i]; j < pU[i + 1]; j++) {
+                addToRobin(i, e1[j]);
+            }
+        }
+        // todo
+        // createHashTables();
         // printf("thereed\n");
+
         // print();
         // delete [] buffer;
     }

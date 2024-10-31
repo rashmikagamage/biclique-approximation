@@ -8,9 +8,9 @@ SET(CMAKE_CXX_COMPILER "g++")
 # Set C++11 standard and optimization flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native -mavx -O0 -g")
 
-# Ensure asserts are always enabled by undefining NDEBUG (even if defined in code)
-add_definitions(-U NDEBUG)
 
+add_definitions(-U NDEBUG)
+include_directories(${PROJECT_SOURCE_DIR}/tools/libcuckoo)
 # Set output directory for binaries
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 

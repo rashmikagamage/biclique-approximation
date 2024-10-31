@@ -91,6 +91,30 @@ class LinearSet {
             }
         }
     }
+    void reverse(uint32_t n) {
+        if (n > sz) n = sz;
+
+        uint32_t* left = vSet;
+        uint32_t* right = vSet + n - 1;
+
+        while (left < right) {
+            uint32_t u = *left;
+            uint32_t v = *right;
+
+            *left = v;
+            *right = u;
+            fIndex[u] = right - vSet;
+            fIndex[v] = left - vSet;
+
+            left++;
+            right--;
+        }
+        if (n % 2 != 0) {
+            uint32_t mid = left - vSet;
+            fIndex[vSet[mid]] = mid;
+        }
+    }
+
     void clear() {
         delete[] vSet;     // Deallocate memory for vSet
         delete[] fIndex;   // Deallocate memory for fIndex
