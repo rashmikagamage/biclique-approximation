@@ -1,0 +1,16 @@
+/data/bipartite_graphs/bookcrossing_full-rating/bookcrossing_full-rating.txt 
+graph size:n1: 105278 n2:340523, m 1149739
+load graph
+minPQ: 5
+ Working on p q e: 5 - 10 - 0.05 
+gamma: 4451.420533
+tTotal: 10317701.000000
+auxTotalSamples: 168640.000000
+totalZinShadow: 155190519066855840.000000
+Biclique Density: 0.013999
+pqBicluqeEstAux: 2172587376366771.000000
+shadow size before the second refinement : 167640 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 19453999.631716
+Stage 1 Shadow time: 55.592791
+constuction Stop : 9.73
+time esitmation for the shadow stage II: -45.865791

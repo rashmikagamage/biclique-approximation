@@ -51,7 +51,6 @@ void accuracy::shadowBuilderZStar(int p, int q, double e) {
     if (p > q) {
         swap(p, q);
     }
-
     printf(" Working on p q e: %d - %d - %.2f \n", p, q, e);
     auto start = chrono::high_resolution_clock::now();
     minPQ = min(p, q);
@@ -3216,7 +3215,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             uint32_t v = g->e1[i];
             assert(v == candR[0]);
 
-            int candLSize = 0;
+            uint32_t candLSize = 0;
             // int outPosE = std::find(g->pV[v], g->pV[v + 1], u);
             // auto it = std::find(std::next(g->e2.begin(), g->pV[v]), std::next(g->e2.begin(), g->pV[v + 1]), u);
             // int outPosE = std::distance(g->e2.begin(), it);
@@ -3314,39 +3313,40 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             double pqBicluqeContainZ = 0;
 
             double auxSampleSize = 10;
+            //    / printf("sameple size: %f\n", auxSampleSize);
             int auxSampleSize_temp = auxSampleSize;
             double t_sample = 0;
 
             auto auxSamplingStart = chrono::high_resolution_clock::now();
-            std::pair<uint32_t, uint32_t> edge;
-            std::vector<std::pair<uint32_t, uint32_t>> edges;
-            vector<double> probabilities;
-            vector<double> probabilitiesForFirstE;
-            vector<double> Prob, probForFirstE;
-            vector<uint32_t> Alias, aliasForFirstE;
+            // std::pair<uint32_t, uint32_t> edge;
+            // std::vector<std::pair<uint32_t, uint32_t>> edges;
+            // vector<double> probabilities;
+            // vector<double> probabilitiesForFirstE;
+            // vector<double> Prob, probForFirstE;
+            // vector<uint32_t> Alias, aliasForFirstE;
 
-            if (minPQ == 2) {
-                for (int v = 0; v < candRSize; v++) {
-                    for (uint32_t i = pV[v]; i < pV[v + 1]; i++) {
-                        edge.first = i;
-                        edge.second = v;
-                        edges.push_back(edge);
-                        probabilitiesForFirstE.push_back(dpV[minPQ - 1][mapVtoU[i]] / zInSubSpace);
-                    }
-                }
-            } else {
-                for (int u = 0; u < candLSize; u++) {
-                    for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
-                        edge.first = u;
-                        edge.second = i;
-                        edges.push_back(edge);
-                        probabilitiesForFirstE.push_back(dpU[minPQ - 1][mapUtoV[i]] / zInSubSpace);
-                    }
-                }
-            }
+            // if (minPQ == 2) {
+            //     for (int v = 0; v < candRSize; v++) {
+            //         for (uint32_t i = pV[v]; i < pV[v + 1]; i++) {
+            //             edge.first = i;
+            //             edge.second = v;
+            //             edges.push_back(edge);
+            //             probabilitiesForFirstE.push_back(dpV[minPQ - 1][mapVtoU[i]] / zInSubSpace);
+            //         }
+            //     }
+            // } else {
+            //     for (int u = 0; u < candLSize; u++) {
+            //         for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
+            //             edge.first = u;
+            //             edge.second = i;
+            //             edges.push_back(edge);
+            //             probabilitiesForFirstE.push_back(dpU[minPQ - 1][mapUtoV[i]] / zInSubSpace);
+            //         }
+            //     }
+            // }
 
-            initializeAliasMethod(probabilitiesForFirstE, probForFirstE, aliasForFirstE);
-
+            // initializeAliasMethod(probabilitiesForFirstE, probForFirstE, aliasForFirstE);
+            vector<uint32_t> selectedL(g->maxDv + 1), selectedR(g->maxDu + 1);
             while (auxSampleSize_temp--) {
                 // selecting the first edge
                 std::random_device rd;
@@ -3354,7 +3354,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 std::mt19937 eng(rd());  // Engine (Mersenne Twister)
                 std::uniform_real_distribution<> distribution(
                     0.0, 1.0);
-                vector<uint32_t> selectedL(g->maxDv + 1), selectedR(g->maxDu + 1);
+
                 selectedL.clear();
                 selectedR.clear();
                 double point = distribution(eng);
@@ -3362,61 +3362,61 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 uint32_t preU = 0, preV = 0, preE = 0;
                 bool selectedLEmpty = true;
 
-                // if (minPQ - 1 == 1) {
-                //     for (int v = 0; v < candRSize; v++) {
-                //         for (int i = pV[v]; i < pV[v + 1]; i++) {
-                //             temp += dpV[minPQ - 1][mapVtoU[i]];
-                //             if (temp + 1e-8 >= point * zInSubSpace) {
-                //                 selectedR.push_back(v);
-                //                 selectedL.push_back(e2[i]);
-                //                 preU = e2[i];
-                //                 preV = v;
-                //                 preE = i;
-                //                 selectedLEmpty = false;
-                //                 break;
-                //             }
-                //         }
-                //         if (!selectedLEmpty) {
-                //             break;
-                //         }
-                //     }
-                // } else {
-                //     double temp = 0.0;
-                //     for (int u = 0; u < candLSize; u++) {
-                //         for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
-                //             temp += dpU[minPQ - 1][mapUtoV[i]];
-                //             if (temp + 1e-8 >= point * zInSubSpace) {
-                //                 selectedR.push_back(e1[i]);
-                //                 selectedL.push_back(u);
-                //                 preU = u;
-                //                 preV = e1[i];
-                //                 preE = i;
-                //                 selectedLEmpty = false;
-                //                 break;
-                //             }
-                //         }
-                //         if (!selectedLEmpty) {
-                //             break;
-                //         }
-                //     }
-                // }
-
-                int sampledIndexForFirstE = getIndexAlias(eng, probForFirstE, aliasForFirstE);
-
-                edge = edges[sampledIndexForFirstE];
-                if (minPQ == 2) {
-                    selectedL.push_back(e2[edge.first]);
-                    selectedR.push_back(edge.second);
-                    preE = edge.first;
-                    preU = e2[edge.first];
-                    preV = edge.second;
+                if (minPQ - 1 == 1) {
+                    for (int v = 0; v < candRSize; v++) {
+                        for (int i = pV[v]; i < pV[v + 1]; i++) {
+                            temp += dpV[minPQ - 1][mapVtoU[i]];
+                            if (temp + 1e-8 >= point * zInSubSpace) {
+                                selectedR.push_back(v);
+                                selectedL.push_back(e2[i]);
+                                preU = e2[i];
+                                preV = v;
+                                preE = i;
+                                selectedLEmpty = false;
+                                break;
+                            }
+                        }
+                        if (!selectedLEmpty) {
+                            break;
+                        }
+                    }
                 } else {
-                    selectedR.push_back(e1[edge.second]);
-                    selectedL.push_back(edge.first);
-                    preE = edge.second;
-                    preU = edge.first;
-                    preV = e1[edge.second];
+                    double temp = 0.0;
+                    for (int u = 0; u < candLSize; u++) {
+                        for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
+                            temp += dpU[minPQ - 1][mapUtoV[i]];
+                            if (temp + 1e-8 >= point * zInSubSpace) {
+                                selectedR.push_back(e1[i]);
+                                selectedL.push_back(u);
+                                preU = u;
+                                preV = e1[i];
+                                preE = i;
+                                selectedLEmpty = false;
+                                break;
+                            }
+                        }
+                        if (!selectedLEmpty) {
+                            break;
+                        }
+                    }
                 }
+
+                // int sampledIndexForFirstE = getIndexAlias(eng, probForFirstE, aliasForFirstE);
+
+                // edge = edges[sampledIndexForFirstE];
+                // if (minPQ == 2) {
+                //     selectedL.push_back(e2[edge.first]);
+                //     selectedR.push_back(edge.second);
+                //     preE = edge.first;
+                //     preU = e2[edge.first];
+                //     preV = edge.second;
+                // } else {
+                //     selectedR.push_back(e1[edge.second]);
+                //     selectedL.push_back(edge.first);
+                //     preE = edge.second;
+                //     preU = edge.first;
+                //     preV = e1[edge.second];
+                // }
 
                 assert(selectedR.size() > 0);
                 assert(selectedL.size() > 0);
@@ -3547,12 +3547,11 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
             }
             candLShadow.shrink_to_fit();
             candRShadow.shrink_to_fit();
-            if (zInSubSpace > 0.5) {
-                shadow.push(Subspace(p - 1, q - 1, candLShadow, candRShadow, candLSize, candRSize,
-                                     pqBicluqeContainZ / auxSampleSize,
-                                     zInSubSpace * (pqBicluqeContainZ / auxSampleSize),
-                                     zInSubSpace));
-            }
+
+            shadow.push(Subspace(p - 1, q - 1, candLShadow, candRShadow, candLSize, candRSize,
+                                 pqBicluqeContainZ / auxSampleSize,
+                                 zInSubSpace * (pqBicluqeContainZ / auxSampleSize),
+                                 zInSubSpace));
 
             t_sample += auxSamplingDuration;
 
@@ -3601,6 +3600,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
         printf("No biclique found fopr p: %d, q: %d\n", p, q);
         return;
     }
+
     // shadowDuration < constructionStop
     while (shadowDuration < constructionStop) {
         Subspace min_space = shadow.top();
@@ -4063,6 +4063,8 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     double roughPQEstDens = pqBicluqeEstAux / totalZinShadow;
     vector<Subspace> subs;
     uint32_t batchSize = gamma / roughPQEstDens;
+    batchSize = std::min(batchSize, uint32_t(gamma / 0.2));
+    printf("uint32_t(gamma / 0.2): %d\n", uint32_t(gamma / 0.2));
     std::pair<uint32_t, uint32_t> edge;
     std::vector<std::pair<uint32_t, uint32_t>> edges;
     printf("roughPQEstDens: %f\n", roughPQEstDens);
@@ -4073,7 +4075,6 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     vector<uint32_t> Alias, aliasForFirstE;
     std::mt19937 gen(rd());
     uint32_t pqBicluqeContainZ = 0;
-
     printf("shadow.size(): %d\n", shadow.size());
     if (shadow.size() == 0) {
         printf("No biclique found fopr p: %d, q: %d\n", p, q);
@@ -4104,6 +4105,8 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
     int t = 0;
     bool gammaReached = false;
     double totalZFinal = 0;
+
+    fflush(stdout);
 
     while (successSamples < int(gamma)) {
         subSpaceAndC.clear();
@@ -4220,6 +4223,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 assert(selectedR.size() > 0);
                 assert(selectedL.size() > 0);
 
+                bool isBiclique = true;
                 // selecting the rest of the edge
                 for (int i = 1; i < minPQ2; i++) {
                     // TODO update to use binary search to find the vertex that start the
@@ -4238,6 +4242,15 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                             }
                         }
                     }
+                    // for (int i = 0; i < selectedR.size(); i++) {
+                    //     if (!g->connectUVRobin(candLVec[preU], candRVec[selectedR[i]])) {
+                    //         isBiclique = false;
+                    //         break;
+                    //     }
+                    // }
+                    // if (!isBiclique) {
+                    //     break;
+                    // }
 
                     // select v
                     if (i != minPQ2 - 1) {
@@ -4257,8 +4270,18 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                                 }
                             }
                         }
+                        // for (int i = 0; i < selectedL.size(); i++) {
+                        //     if (!g->connectUVRobin(candLVec[selectedL[i]], candRVec[preV])) {
+                        //         isBiclique = false;
+                        //         break;
+                        //     }
+                        // }
+                        // if (!isBiclique) {
+                        //     break;
+                        // }
                     }
                 }
+                // if (!isBiclique) continue;
                 int vCount = q - p + 1;
                 if (minPQ2 == 1) {
                     vCount = q - p;
@@ -4276,6 +4299,17 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
 
                 std::vector<uint32_t> selectedRStar = sampeleRest(vCount, preU, pU, index);
 
+                // for (int i = 0; i < selectedL.size(); i++) {
+                //     for (int j = 0; j < selectedRStar.size(); j++) {
+                //         if (!g->connectUVRobin(candLVec[selectedL[i]], candRVec[e1[selectedRStar[j]]])) {
+                //             isBiclique = false;
+                //             break;
+                //         }
+                //     }
+                //     if (!isBiclique) break;
+                // }
+                // if (!isBiclique) continue;
+
                 for (int i = 0; i < selectedRStar.size(); i++) {
                     selectedR.push_back(e1[selectedRStar[i]]);
                 }
@@ -4286,6 +4320,7 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 assert(selectedR.size() == s.q_prime);
                 assert(selectedL.size() == minPQ2);
                 // check whether the sample is a biclique
+
                 bool connected = true;
 
                 for (int i = 0; i < selectedL.size(); i++) {
@@ -4304,8 +4339,13 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
                 }
                 if (!connected)
                     continue;
+                // printf("successSamples: %d\n", successSamples);
+                // fflush(stdout);
                 pqBicluqeContainZ++;
                 successSamples++;
+                printf("successSamples: %d\n", successSamples);
+                printf("t: %d\n", t);
+                fflush(stdout);
 
                 if (successSamples >= (int)gamma) {
                     gammaReached = true;
@@ -4315,6 +4355,230 @@ void accuracy::shadowBuilderZStar3(int p, int q, double epsilon) {
 
             if (gammaReached) break;
         }
+    }
+
+    vector<uint32_t> selectedL(g->maxDv + 1), selectedR(g->maxDu + 1);
+    while (successSamples < int(gamma)) {
+        subSpaceAndC.clear();
+        t++;
+        // for (int i = 0; i < batchSize; i++) {
+        //     int sampledIndex = getIndexAlias(gen, Prob, Alias);
+        //     if (subSpaceAndC.count(sampledIndex) == 0) {
+        //         subSpaceAndC[sampledIndex] = 1;
+        //     } else {
+        //         subSpaceAndC[sampledIndex] = subSpaceAndC[sampledIndex] + 1;
+        //     }
+        // }
+
+        std::random_device rd;
+        std::mt19937 gen(rd());
+
+        // Define the distribution to produce numbers in the range [0.0, 1.0]
+        std::uniform_real_distribution<> dis(0.0, 1.0);
+
+        // Generate a random number between 0 and 1
+        double randomNumber = dis(gen);
+        double ranPos = randomNumber * totalZFinal;
+        double sum = 0;
+        uint32_t selectedIndex = 0;
+        for (int i = 0; i < shadowVec.size(); i++) {
+            sum += shadowVec[i].ZCount;
+            if (sum >= ranPos) {
+                selectedIndex = i;
+                break;
+            }
+        }
+        Subspace s = shadowVec[selectedIndex];
+        totalZFinal += s.ZCount;
+        candLVec.clear();
+        candRVec.clear();
+        // candL.resize(g->n1 + 1);
+        // candR.resize(g->n2 + 1);
+        candLVec = std::move(s.SU);
+        candRVec = std::move(s.SV);
+        std::reverse(candLVec.begin(), candLVec.end());
+        int maxLength = buildDP2Vec(s.SUSize, s.SVSize, s.p_prime, s.q_prime);
+        uint32_t candLSize = s.SUSize;
+        uint32_t candRSize = s.SVSize;
+        int minPQ2 = std::min(s.p_prime, s.q_prime);
+        double zInSubSpace = s.ZCount;
+
+        selectedL.clear();
+        selectedR.clear();
+
+        std::random_device rd;
+
+        std::mt19937 eng(rd());  // Engine (Mersenne Twister)
+        std::uniform_real_distribution<> distribution(
+            0.0, 1.0);
+
+        selectedL.clear();
+        selectedR.clear();
+        double point = distribution(eng);
+        double temp = 0.0;
+        uint32_t preU = 0, preV = 0, preE = 0;
+        bool selectedLEmpty = true;
+
+        if (minPQ - 1 == 1) {
+            for (int v = 0; v < candRSize; v++) {
+                for (int i = pV[v]; i < pV[v + 1]; i++) {
+                    temp += dpV[minPQ - 1][mapVtoU[i]];
+                    if (temp + 1e-8 >= point * zInSubSpace) {
+                        selectedR.push_back(v);
+                        selectedL.push_back(e2[i]);
+                        preU = e2[i];
+                        preV = v;
+                        preE = i;
+                        selectedLEmpty = false;
+                        break;
+                    }
+                }
+                if (!selectedLEmpty) {
+                    break;
+                }
+            }
+        } else {
+            double temp = 0.0;
+            for (int u = 0; u < candLSize; u++) {
+                for (uint32_t i = pU[u]; i < pU[u + 1]; i++) {
+                    temp += dpU[minPQ - 1][mapUtoV[i]];
+                    if (temp + 1e-8 >= point * zInSubSpace) {
+                        selectedR.push_back(e1[i]);
+                        selectedL.push_back(u);
+                        preU = u;
+                        preV = e1[i];
+                        preE = i;
+                        selectedLEmpty = false;
+                        break;
+                    }
+                }
+                if (!selectedLEmpty) {
+                    break;
+                }
+            }
+        }
+
+        // int sampledIndexForFirstE = getIndexAlias(eng, probForFirstE, aliasForFirstE);
+
+        // edge = edges[sampledIndexForFirstE];
+        // if (minPQ == 2) {
+        //     selectedL.push_back(e2[edge.first]);
+        //     selectedR.push_back(edge.second);
+        //     preE = edge.first;
+        //     preU = e2[edge.first];
+        //     preV = edge.second;
+        // } else {
+        //     selectedR.push_back(e1[edge.second]);
+        //     selectedL.push_back(edge.first);
+        //     preE = edge.second;
+        //     preU = edge.first;
+        //     preV = e1[edge.second];
+        // }
+
+        assert(selectedR.size() > 0);
+        assert(selectedL.size() > 0);
+
+        // selecting the rest of the edge
+        // printf("minPQ: %d\n", minPQ);
+        // printf("---------------------\n");
+        // printf("preV: %d, preU: %d\n", preV, preU);
+        for (int i = 1; i < minPQ - 1; i++) {
+            // out neighborhood select u
+            temp = 0.0;
+            point = distribution(eng);
+            for (uint32_t j = pV[preV]; j < pV[preV + 1]; j++) {
+                if (e2[j] > preU) {
+                    temp += dpV[minPQ - i - 1][mapVtoU[j]];
+                    if (temp + 1e-8 >= point * dpU[minPQ - i][mapUtoV[preE]]) {
+                        uint32_t u = e2[j];
+                        selectedL.push_back(u);
+                        preU = u;
+                        preE = j;
+                        break;
+                    }
+                }
+            }
+            // select v
+            if (i != minPQ - 2) {
+                // printf("dpV[%d][%d]: %f\n", minPQ - i - 1, mapVtoU[preE], dpV[minPQ - i - 1][mapVtoU[preE]]);
+                // printf("pU[preU]: %d, pU[preU + 1]: %d\n", pU[preU], pU[preU + 1]);
+                // printf("preV: %d\n", preV);
+                temp = 0.0;
+                point = distribution(eng);
+                for (uint32_t j = pU[preU]; j < pU[preU + 1]; j++) {
+                    if (e1[j] > preV) {
+                        temp += dpU[minPQ - i - 1][mapUtoV[j]];
+                        // printf("temp: %f\n", temp);
+                        // printf("point * dpV[minPQ - i - 1][mapVtoU[preE]]: %f\n", point * dpV[minPQ - i - 1][mapVtoU[preE]]);
+                        if (temp + 1e-8 >= point * dpV[minPQ - i - 1][mapVtoU[preE]]) {
+                            uint32_t v = e1[j];
+                            selectedR.push_back(v);
+                            preV = v;
+                            preE = j;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if (selectedL.size() != minPQ - 1) {
+            printf("selectedL.size(): %d, minPQ - 1: %d\n", selectedL.size(), minPQ - 1);
+            continue;
+        }
+        assert(selectedL.size() == minPQ - 1);
+        int vCount = q - p + 1;
+        if (minPQ - 1 == 1) {
+            vCount = q - p;
+        }
+
+        uint32_t index = 0;
+        if (minPQ == 2) {
+            index = pU[preU];
+        } else {
+            auto it = std::find(e1.begin() + pU[preU], e1.begin() + pU[preU + 1], preV);
+            index = std::distance(e1.begin(), it);
+        }
+
+        // assert(pU[preU + 1] - index >= vCount);
+        // assert(index >= pU[preU] && index < pU[preU + 1]);
+
+        std::vector<uint32_t> selectedRStar = sampeleRest(vCount, preU, pU, index);
+
+        for (int i = 0; i < selectedRStar.size(); i++) {
+            selectedR.push_back(e1[selectedRStar[i]]);
+        }
+        // if (selectedR.size() != q - 1) {
+        //     printf("selectedR.size(): %d, q - 1: %d\n", selectedR.size(), q - 1);
+        //     printf("selectedL.size(): %d, p - 1: %d\n", selectedL.size(), p - 1);
+        //     exit(0);
+        // }
+        if (selectedR.size() != q - 1) {
+            printf("selectedR.size(): %d, q - 1: %d\n", selectedR.size(), q - 1);
+            continue;
+        }
+        assert(selectedR.size() == q - 1);
+        assert(selectedL.size() == minPQ - 1);
+
+        // check whether the sampled zstar is a biclique
+        bool connected = true;
+        for (int i = 0; i < selectedL.size(); i++) {
+            for (int j = 0; j < selectedR.size(); j++) {
+                if (i == j)
+                    continue;
+                if (i > 0 && i == j + 1)
+                    continue;
+                if (!g->connectUVRobin(candL[selectedL[i]], candR[selectedR[j]])) {
+                    connected = false;
+                    break;
+                }
+            }
+            if (!connected)
+                break;
+        }
+        if (!connected)
+            continue;
+        pqBicluqeContainZ++;
+        successSamples++;
     }
 
     printf("pqBicluqeContainZ: %d\n", pqBicluqeContainZ);
@@ -4408,29 +4672,60 @@ std::vector<uint32_t> accuracy::reservoirSample(std::vector<uint32_t>& vec, int 
     return reservoir;
 }
 
+// std::vector<uint32_t> accuracy::sampeleRest(int r, int preU, std::vector<uint32_t>& pU, uint32_t outIndex) {
+//     std::unordered_set<uint32_t> selectedIndices;
+//     std::vector<uint32_t> result;
+//     result.reserve(r);
+//     std::random_device rd;
+//     std::mt19937 gen(rd());
+
+//     if (outIndex + 1 > pU[preU + 1] - 1) {
+//         printf("outIndex: %d\n", outIndex + 1);
+//         printf("pU[preU + 1]: %d\n", pU[preU + 1] - 1);
+//         exit(0);
+//     }
+//     std::uniform_int_distribution<> dis(outIndex + 1, pU[preU + 1] - 1);
+//     uint32_t selectedIndicesSize = 0;
+//     // /assert(outIndex + 1 < pU[preU + 1] - 1);
+//     while (selectedIndicesSize < r) {
+//         uint32_t index = dis(gen);
+//         if (selectedIndices.find(index) == selectedIndices.end()) {
+//             selectedIndices.insert(index);
+//             result.push_back(index);
+//             selectedIndicesSize++;
+//         }
+//     }
+
+//     return result;
+// }
+
 std::vector<uint32_t> accuracy::sampeleRest(int r, int preU, std::vector<uint32_t>& pU, uint32_t outIndex) {
+    uint32_t Start = outIndex + 1;
+    uint32_t End = pU[preU + 1] - 1;
+    uint32_t N = End - Start + 1;
+
+    if (Start > End) {
+        printf("Start: %u\n", Start);
+        printf("End: %u\n", End);
+        exit(0);
+    }
+
     std::unordered_set<uint32_t> selectedIndices;
     std::vector<uint32_t> result;
     result.reserve(r);
     std::random_device rd;
     std::mt19937 gen(rd());
 
-    if (outIndex + 1 > pU[preU + 1] - 1) {
-        printf("outIndex: %d\n", outIndex + 1);
-        printf("pU[preU + 1]: %d\n", pU[preU + 1] - 1);
-        exit(0);
-    }
-    std::uniform_int_distribution<> dis(outIndex + 1, pU[preU + 1] - 1);
-    uint32_t selectedIndicesSize = 0;
-    // /assert(outIndex + 1 < pU[preU + 1] - 1);
-    while (selectedIndicesSize < r) {
-        uint32_t index = dis(gen);
-        if (selectedIndices.find(index) == selectedIndices.end()) {
-            selectedIndices.insert(index);
-            result.push_back(index);
-            selectedIndicesSize++;
+    for (uint32_t i = N - r + 1; i <= N; ++i) {
+        std::uniform_int_distribution<uint32_t> dis(Start, Start + i - 1);
+        uint32_t t = dis(gen);
+        if (selectedIndices.find(t) != selectedIndices.end()) {
+            selectedIndices.insert(Start + i - 1);
+        } else {
+            selectedIndices.insert(t);
         }
     }
 
+    result.assign(selectedIndices.begin(), selectedIndices.end());
     return result;
 }

@@ -52,6 +52,7 @@
         "set": "cpp",
         "cassert": "cpp",
         "queue": "cpp",
-        "cfloat": "cpp"
+        "cfloat": "cpp",
+        "csignal": "cpp"
     }
 }
