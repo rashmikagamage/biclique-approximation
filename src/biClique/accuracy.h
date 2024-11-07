@@ -15,7 +15,7 @@ class accuracy {
     void computeC() {
         printf("minPQ: %d\n", minPQ);
         int maxPQ = std::max(minPQ, q - p) + 2;
-        int maxD = std::max(g->maxDu, g->maxDv) + 1;
+        int maxD = 5 * std::max(g->maxDu, g->maxDv) + 1;
         C = new double*[maxD];
         bf3 = new double[maxD * maxPQ];
         for (int i = 0; i < maxD; i++) {
@@ -61,6 +61,7 @@ class accuracy {
     void shadowBuilderZStar(int p, int q, double e);
     void shadowBuilderZStar2(int p, int q, double e);
     void shadowBuilderZStar3(int p, int q, double e);
+    void shadowBuilderZStar4(int p, int q, double e);
     void buildDP(int pL, int pR);
     void sampleOne(int length);
     void shadowBuilderAlias(int p, int q, double e);
