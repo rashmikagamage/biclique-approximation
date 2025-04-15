@@ -112,8 +112,12 @@ void rawEdgePivot::exactCountMaximalPivotV2() {
     }
     fflush(stdout);
 }
-
-void rawEdgePivot::exactCountMaximalPivot() {
+uint32_t ansFinal = 0;
+int p = 0, q = 0;
+void rawEdgePivot::exactCountMaximalPivot(int p_,int q_) {
+    p = p_-1;
+    q = q_-1;
+    printf("p:%d, q:%d\n", p_, q_);
     auto t1 = std::chrono::steady_clock::now();
     u_int totalCount = 0;
 #ifdef DEBUG
@@ -188,25 +192,30 @@ void rawEdgePivot::exactCountMaximalPivot() {
             sumDegHr = g->deg2(v);
             sumDegPl = 0.0;
             sumDegPr = 0.0;
-#endif
-            pivotCount(1, pL, pR, treePath{0, 1, 0, 1});
+#endif     
+                if(pL >= p && pR >= q) {
+                
+                    pivotCount(1, pL, pR, treePath{0, 1, 0, 1});
+                }
+            
         }
     }
     auto t2 = std::chrono::steady_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
     std::cout << "time:" << duration.count() << "ms" << std::endl;
-    for (int i = 2; i < (int)ansAll.size(); i++) {
-        for (int j = 2; j < (int)ansAll[i].size(); j++) {
-            if (ansAll[i][j] > 0.0) {
-#ifdef PQWEDGE
-                printf("%d-%d:%.8f\n", i, j, ansAll[i][j] * i * j / ansWedge[i][j]);
-#else
-                printf("%d-%d:%.0f\n", i, j, ansAll[i][j]);
-                totalCount++;
-#endif
-            }
-        }
-    }
+//     for (int i = 2; i < (int)ansAll.size(); i++) {
+//         for (int j = 2; j < (int)ansAll[i].size(); j++) {
+//             if (ansAll[i][j] > 0.0) {
+// #ifdef PQWEDGE
+//                 printf("%d-%d:%.8f\n", i, j, ansAll[i][j] * i * j / ansWedge[i][j]);
+// #else
+//                 printf("%d-%d:%.0f\n", i, j, ansAll[i][j]);
+//                 totalCount++;
+// #endif
+//             }
+//         }
+//     }
+    printf("Count %.0f\n", ansAll[p_][q_]);
 
     fflush(stdout);
 
@@ -292,10 +301,23 @@ void rawEdgePivot::exactCountMaximalPivot() {
     printf("alg_cluster_%d_%d:%f\n", ls, rs, ansAll[ls][rs] / ansWedge[ls][rs]);
 
 #endif
-    printf("total count : %u \n", totalCount);
+    // printf("total count : %u \n", totalCount);
+    // printf("ansFinal : %u \n", ansFinal);
 }
 
 void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
+
+    int currentLeftMin = t.h1;
+    int currentLeftMax = t.h1 + pL + t.p1;
+    int currentRightMin = t.h2;
+    int currentRightMax = t.h2 + pR + t.p2  ;
+
+       
+        if( currentLeftMax < p || currentRightMax < q || p < currentLeftMin || q < currentRightMin) {
+            return;
+        }
+
+
 // printf("l:%d, pL:%d, pR:%d, %d :%d :%d :%d\n",
 //     l, pL, pR, t.p1, t.h1, t.p2, t.h2);
 // fflush(stdout);
@@ -323,7 +345,7 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
 #ifdef DEBUG
         printf("adding %d %d %d %d\n", t.p1, t.h1, t.p2, t.h2);
 #endif
-        for (int ll = 0; ll <= t.p1 && ll < maxD2; ll++) {
+        for (int ll = 0; ll <= t.p1 && ll < maxD2; ll++) { 
             for (int r = 0; r <= t.p2 && r < maxD2; r++) {
                 if (r + t.h2 >= (int)ansAll[ll + t.h1].size()) {
                     ansAll[ll + t.h1].resize(r + t.h2 + 4);
@@ -344,6 +366,8 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
 #endif
             }
         }
+
+        ansFinal += C[t.p1][p] * C[t.p2][q];
 
 #ifdef PQWEDGE
         // for each v in p1, when it is selected, dv-(r+t.h2)
@@ -412,7 +436,9 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
         for (int j = 0; j < pL; j++) tmpSumDegPl += g->deg1(candL[j]);
         sumDegPl += tmpSumDegPl;
 #endif
-        pivotCount(l + 1, 0, 0, {t.p1 + pL, t.h1, t.p2, t.h2});
+       
+            pivotCount(l + 1, 0, 0, {t.p1 + pL, t.h1, t.p2, t.h2});
+        
 #ifdef PQWEDGE
         sumDegPl -= tmpSumDegPl;
 #endif
@@ -432,6 +458,7 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
                     ansAll[l + t.h1][r + t.h2] += C[t.p1][l] * C[t.p2][r] * C[pR][i];
                 }
             }
+            ansFinal+= C[t.p1][p] * C[t.p2][q] * C[pR][i];
 
 #ifdef DEBUG
             if ((int)ansAll[x].size() > y)
@@ -561,7 +588,7 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
     sumDegPl += g->deg1(pivotL);
     sumDegPr += g->deg2(pivotR);
 #endif
-    pivotCount(l + 1, pLL, pRR,
+   pivotCount(l + 1, pLL, pRR,
                treePath{t.p1 + 1, t.h1, t.p2 + 1, t.h2});
 #ifdef PQWEDGE
     sumDegPl -= g->deg1(pivotL);
@@ -633,6 +660,7 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
 #endif
             }
         }
+        ansFinal += C[t.p1][p] * C[t.p2][q];
 #ifdef PQWEDGE
         // for each v in p1, when it is selected, dv-(r+t.h2)
         for (int ll = 0; ll < t.p1 && ll < maxD2; ll++) {
@@ -735,6 +763,7 @@ void rawEdgePivot::pivotCount(int l, int pL, int pR, treePath t) {
 #endif
             }
         }
+        ansFinal += C[t.p1][p] * C[t.p2][q];
 #ifdef PQWEDGE
         // for each v in p1, when it is selected, dv-(r+t.h2)
         for (int ll = 0; ll < t.p1 && ll < maxD2; ll++) {

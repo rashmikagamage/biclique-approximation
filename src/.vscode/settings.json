@@ -51,6 +51,15 @@
         "typeinfo": "cpp",
         "set": "cpp",
         "cassert": "cpp",
-        "queue": "cpp"
-    }
+        "queue": "cpp",
+        "cfloat": "cpp",
+        "csignal": "cpp",
+        "list": "cpp",
+        "bitset": "cpp",
+        "condition_variable": "cpp",
+        "mutex": "cpp",
+        "thread": "cpp",
+        "cinttypes": "cpp"
+    },
+    "makefile.configureOnOpen": false
 }

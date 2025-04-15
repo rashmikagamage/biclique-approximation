@@ -1,1 +1,1 @@
-g++  -std=c++11 -march=native -mavx -O3 -g CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o -o bin/exdensest  densestSubgraph/libexactFlowAlgorithm.a 
+g++  -std=c++11 -march=native -mavx -O3 CMakeFiles/exdensest.dir/runner/exactDensestSubgraph.cpp.o -o bin/exdensest  densestSubgraph/libexactFlowAlgorithm.a 

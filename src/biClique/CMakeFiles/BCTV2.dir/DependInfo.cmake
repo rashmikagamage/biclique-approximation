@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/BCTV2.cpp" "biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.o" "gcc" "biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/BCTV2.cpp" "biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.o" "gcc" "biClique/CMakeFiles/BCTV2.dir/BCTV2.cpp.o.d"
   )
 
 # Targets to which this target links.

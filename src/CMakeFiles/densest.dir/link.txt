@@ -1,1 +1,1 @@
-g++  -std=c++11 -march=native -mavx -O3 -g CMakeFiles/densest.dir/runner/densestSubgraph.cpp.o -o bin/densest  densestSubgraph/libpqBicliqeDensest.a 
+g++  -std=c++11 -march=native -mavx -O3 CMakeFiles/densest.dir/runner/densestSubgraph.cpp.o -o bin/densest  densestSubgraph/libpqBicliqeDensest.a 

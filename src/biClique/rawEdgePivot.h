@@ -71,7 +71,7 @@ public:
         printf("load graph\n");fflush(stdout);
     }
     
-    void exactCountMaximalPivot();
+    void exactCountMaximalPivot(int p,int q);
     void approximateCountMaximalPivot(double rate);
 
     void exactCountMaximalPivotV2();

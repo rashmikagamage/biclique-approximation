@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_SOURCE_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src
+CMAKE_BINARY_DIR = /home/rashmika/biclique/sigmod_new/biclique-approximation/src
 
 # Include any dependencies generated for this target.
 include densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/depend.make
@@ -72,30 +72,30 @@ include densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/flags.make
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/flags.make
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o: densestSubgraph/pqBicliqeDensest.cpp
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o -MF CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o.d -o CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/pqBicliqeDensest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o -MF CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o.d -o CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/pqBicliqeDensest.cpp
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/pqBicliqeDensest.cpp > CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/pqBicliqeDensest.cpp > CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.i
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/pqBicliqeDensest.cpp -o CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/pqBicliqeDensest.cpp -o CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.s
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/flags.make
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o: densestSubgraph/rawEdgePivot.cpp
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o -MF CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o.d -o CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o -MF CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o.d -o CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o -c /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.i"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp > CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.i
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp > CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.i
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.s"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp -o CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.s
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp -o CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.s
 
 # Object files for target pqBicliqeDensest
 pqBicliqeDensest_OBJECTS = \
@@ -109,19 +109,19 @@ densestSubgraph/libpqBicliqeDensest.a: densestSubgraph/CMakeFiles/pqBicliqeDense
 densestSubgraph/libpqBicliqeDensest.a: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o
 densestSubgraph/libpqBicliqeDensest.a: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build.make
 densestSubgraph/libpqBicliqeDensest.a: densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libpqBicliqeDensest.a"
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/pqBicliqeDensest.dir/cmake_clean_target.cmake
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pqBicliqeDensest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rashmika/biclique/sigmod_new/biclique-approximation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libpqBicliqeDensest.a"
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/pqBicliqeDensest.dir/cmake_clean_target.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pqBicliqeDensest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build: densestSubgraph/libpqBicliqeDensest.a
 .PHONY : densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/build
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/clean:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/pqBicliqeDensest.dir/cmake_clean.cmake
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph && $(CMAKE_COMMAND) -P CMakeFiles/pqBicliqeDensest.dir/cmake_clean.cmake
 .PHONY : densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/clean
 
 densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/depend:
-	cd /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph /home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rashmika/biclique/sigmod_new/biclique-approximation/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph /home/rashmika/biclique/sigmod_new/biclique-approximation/src /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph /home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/depend
 

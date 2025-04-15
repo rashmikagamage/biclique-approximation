@@ -4,7 +4,7 @@
 # compile CXX with g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/rashmika/biclique/sigmod_new/biclique-approximation/src/tools/libcuckoo
 
-CXX_FLAGS =  -std=c++11 -march=native -mavx -O3 -g
+CXX_FLAGS =  -std=c++11 -march=native -mavx -O3   -U NDEBUG
 

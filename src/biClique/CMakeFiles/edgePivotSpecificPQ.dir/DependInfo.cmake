@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/edgePivotSpecificPQ.cpp" "biClique/CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o" "gcc" "biClique/CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/edgePivotSpecificPQ.cpp" "biClique/CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o" "gcc" "biClique/CMakeFiles/edgePivotSpecificPQ.dir/edgePivotSpecificPQ.cpp.o.d"
   )
 
 # Targets to which this target links.

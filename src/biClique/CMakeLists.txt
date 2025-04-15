@@ -1,14 +1,22 @@
 cmake_minimum_required(VERSION 3.16)
 
+# Set the C++ compiler and standard
 set(CMAKE_CXX_COMPILER "g++")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mavx -mavx2 -O3")
 
+# Set compiler flags for optimizations and hardware features
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mavx -mavx2 -O0 -g")
+
+# Always enable assertions by undefining NDEBUG in all build types
+add_definitions(-U NDEBUG)
+
+# Include necessary directories
 include_directories(../biGraph ../tools)
 
-add_library(BCT BCT.h BCT.cpp)
-target_link_libraries(BCT biGraph linearSet)
+# Add libraries and link them as needed
+
+
 
 add_library(BCListPlusPlus BCListPlusPlus.h BCListPlusPlus.cpp)
 target_link_libraries(BCListPlusPlus biGraph linearSet)
@@ -49,5 +57,3 @@ target_link_libraries(colorPathSpecificPQ biGraph linearSet)
 add_library(accuracy accuracy.h accuracy.cpp)
 target_link_libraries(accuracy biGraph linearSet)
 
-add_library(BCTV2 BCTV2.h BCTV2.cpp)
-target_link_libraries(BCTV2 biGraph linearSet)

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/pqBicliqeDensest.cpp" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o" "gcc" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o.d"
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/densestSubgraph/rawEdgePivot.cpp" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o" "gcc" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/pqBicliqeDensest.cpp" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o" "gcc" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/pqBicliqeDensest.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/densestSubgraph/rawEdgePivot.cpp" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o" "gcc" "densestSubgraph/CMakeFiles/pqBicliqeDensest.dir/rawEdgePivot.cpp.o.d"
   )
 
 # Targets to which this target links.

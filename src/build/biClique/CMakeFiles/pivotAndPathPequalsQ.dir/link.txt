@@ -1,2 +1,0 @@
-/usr/bin/ar qc libpivotAndPathPequalsQ.a CMakeFiles/pivotAndPathPequalsQ.dir/pivotAndPathPequalsQ.cpp.o CMakeFiles/pivotAndPathPequalsQ.dir/pivotAndPathSamplev5PequalsQ.cpp.o
-/usr/bin/ranlib libpivotAndPathPequalsQ.a

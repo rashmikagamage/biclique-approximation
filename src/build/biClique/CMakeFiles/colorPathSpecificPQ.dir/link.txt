@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcolorPathSpecificPQ.a CMakeFiles/colorPathSpecificPQ.dir/colorPathSpecificPQ.cpp.o
-/usr/bin/ranlib libcolorPathSpecificPQ.a

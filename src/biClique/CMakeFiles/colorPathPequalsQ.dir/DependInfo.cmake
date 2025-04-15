@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathAV5PequalsQ.cpp" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o" "gcc" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o.d"
-  "/home/rashmika/biclique/edge_pivoting_bilcique/biclique/src/biClique/colorPathPequalsQ.cpp" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o" "gcc" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPathAV5PequalsQ.cpp" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o" "gcc" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathAV5PequalsQ.cpp.o.d"
+  "/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/colorPathPequalsQ.cpp" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o" "gcc" "biClique/CMakeFiles/colorPathPequalsQ.dir/colorPathPequalsQ.cpp.o.d"
   )
 
 # Targets to which this target links.
