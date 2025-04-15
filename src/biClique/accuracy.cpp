@@ -5915,7 +5915,7 @@ void accuracy::shadowBuilderZStar5(int p, int q, double epsilon,double delta) {
     std::vector<uint32_t> pU(g->maxDv);
     std::vector<uint32_t> e1(maxE);  // Assuming maximum possible size
     std::vector<uint32_t> e2(
-        maxE);  // Assuming maximum possible sizmaxPossibleLengthe
+        maxE);  
     std::vector<double> ddp(maxE, 0.0);
     std::vector<std::vector<double>> dpU(minPQ + 1,
                                          std::vector<double>(maxE, 0.0));
