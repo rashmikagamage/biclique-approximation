@@ -48,7 +48,8 @@ int main(int argc, char* argv[]) {
     std::cout << filePath << ' ' << outFilePath << std::endl;
 
     // double t1 = clock();
-
+    double e = 0.05;
+    double delta = 0.05;
     if (aC->exist("-m")) {
         BK* counter = new BK(filePath, outFilePath);
         auto t1 = std::chrono::steady_clock::now();
@@ -62,13 +63,14 @@ int main(int argc, char* argv[]) {
         delete counter;
     } else if (aC->exist("-pm")) {
         rawEdgePivot* counter = new rawEdgePivot(filePath, outFilePath);
-
+        
         auto t1 = std::chrono::steady_clock::now();
-
+        if (aC->exist("p")) int p = atoi(aC->get("p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("q").c_str());
         if (aC->exist("-v5"))
             counter->exactCountMaximalPivotV2();
         else
-            counter->exactCountMaximalPivot();
+            counter->exactCountMaximalPivot(p,q);
 
         auto t2 = std::chrono::steady_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
@@ -256,7 +258,7 @@ int main(int argc, char* argv[]) {
 
         // counter->shadowBuilder1(p, q, e);
     } else if (aC->exist("-zstar")) {
-        double e = 0.05;
+     
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());
         }
@@ -266,7 +268,7 @@ int main(int argc, char* argv[]) {
         counter->shadowBuilderZStar(p, q, e);
 
     } else if (aC->exist("-zstar2")) {
-        double e = 0.05;
+
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());
         }
@@ -276,24 +278,44 @@ int main(int argc, char* argv[]) {
         counter->shadowBuilderZStar2(p, q, e);
 
     } else if (aC->exist("-zstar3")) {
-        double e = 0.05;
+        
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());
         }
+        if (aC->exist("-d")) {
+            delta = atof(aC->get("-d").c_str());
+        }
         if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
         if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        if (aC->exist("delta")) int q = atoi(aC->get("-q").c_str());
         accuracy* counter = new accuracy(filePath, outFilePath, p, q);
-        counter->shadowBuilderZStar3(p, q, e);
+        counter->shadowBuilderZStar3(p, q, e,delta);
 
     } else if (aC->exist("-zstar4")) {
         double e = 0.05;
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());
         }
+        if (aC->exist("-d")) {
+            delta = atof(aC->get("-d").c_str());
+        }
         if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
         if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
-        accuracy* counter = new accuracy(filePath, outFilePath, p, q);
-        counter->shadowBuilderZStar4(p, q, e);
+        accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar4");
+        counter->shadowBuilderZStar4(p, q, e,delta);
+
+    } else if (aC->exist("-zstar5")) {
+        double e = 0.05;
+        if (aC->exist("-e")) {
+            e = atof(aC->get("-e").c_str());
+        }
+        if (aC->exist("-d")) {
+            delta = atof(aC->get("-d").c_str());
+        }
+        if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
+        counter->shadowBuilderZStar5(p, q, e,delta);
 
     } else if (aC->exist("-bct")) {
         double e = 0.01;

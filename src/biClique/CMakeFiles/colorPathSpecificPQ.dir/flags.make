@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/rashmika/biclique/sigmod_new/biclique-approximation/src/tools/libcuckoo -I/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../biGraph -I/home/rashmika/biclique/sigmod_new/biclique-approximation/src/biClique/../tools
 
-CXX_FLAGS =  -std=c++11 -march=native -mavx -O0 -g -march=native -mavx -mavx2 -O0 -g   -U NDEBUG -U NDEBUG -std=gnu++11
+CXX_FLAGS =  -std=c++11 -march=native -mavx -O3 -march=native -mavx -mavx2 -O0 -g   -U NDEBUG -U NDEBUG -std=gnu++11
 

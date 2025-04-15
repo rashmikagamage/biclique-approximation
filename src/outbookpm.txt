@@ -1,4 +1,0 @@
-/data/bipartite_graphs/bookcrossing_full-rating/bookcrossing_full-rating.txt 
-graph size:n1: 105278 n2:340523, m 1149739
-load graph
-R side 340523maxD:13601
