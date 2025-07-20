@@ -53,6 +53,8 @@ struct biGraph {
             edges[i].v = in.getUInt();
         }
         // printf("there\n");fflush(stdout);
+        printf("calling degree Ordering \n");
+        fflush(stdout);
         changeToDegreeOrder();
         // changeDegreeOrderRev();
         //     printf("there\n");fflush(stdout);

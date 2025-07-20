@@ -59,7 +59,11 @@
         "condition_variable": "cpp",
         "mutex": "cpp",
         "thread": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "strstream": "cpp",
+        "complex": "cpp",
+        "iomanip": "cpp",
+        "cfenv": "cpp"
     },
     "makefile.configureOnOpen": false
 }

@@ -1,0 +1,34 @@
+./data/fjwiki.txt 
+graph size:n1: 612 n2:1898, m 5959
+calling degree Ordering 
+load graph
+minPQ: 5
+ Working on p q e: 5 - 7 - 0.05 
+gamma: 4451.420533
+tTotal: 750001.000000
+auxTotalSamples: 25183.010476
+totalZinShadow: 154722377311.000000
+Biclique Density: 0.211123
+pqBicluqeEstAux: 32665507319.437439
+shadow size before the second refinement : 1784 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 627937.678853
+Stage I Shadow time: 0.882734
+Constuction Stop : 0.63
+Time esitmation for the shadow stage II: -0.254796
+end the second phrase
+shadow size: 1784
+pqBicluqeEstAux: 32665507319.437439
+totalZinShadow: 154722377311.000000
+uint32_t(gamma / 0.2): 22257
+roughPQEstDens: 0.211123
+shadow.size(): 1784
+shadowTotal: 882793.000000
+totalZinShadow: 154722377311.000000
+batchSize: 21084
+pqBicluqeContainZ: 4451
+t: 20282
+successSamples: 4451
+density of biclique: 0.219456
+totalZinShadow final: 154722377311.000000
+biclique count final: 33954703747.720196
+time: 1.188300

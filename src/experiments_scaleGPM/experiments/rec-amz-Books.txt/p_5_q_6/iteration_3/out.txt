@@ -1,0 +1,31 @@
+/data/bipartite_graphs/rec-amz-Books/rec-amz-Books.txt 
+graph size:n1: 8026324 n2:2330066, m 22507155
+calling degree Ordering 
+load graph
+minPQ: 5
+ Working on p q e: 5 - 6 - 0.05 
+gamma: 4451.420533
+tTotal: 324939986.000000
+auxTotalSamples: 7634540.039874
+totalZinShadow: 9075886332572.000000
+Biclique Density: 0.064638
+pqBicluqeEstAux: 586650689537.255981
+shadow size before the second refinement : 945949 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 2931084.694434
+Stage I Shadow time: 514.315863
+Constuction Stop : 2.93
+Time esitmation for the shadow stage II: -511.384778
+end the second phrase
+shadow size: 945949
+pqBicluqeEstAux: 586650689537.255981
+totalZinShadow: 9075886332572.000000
+uint32_t(gamma / 0.2): 22257
+roughPQEstDens: 0.064638
+shadow.size(): 945949
+shadowTotal: 514316040.000000
+totalZinShadow: 9075886332572.000000
+batchSize: 22257
+successSamples: 1431: total samples: 20220
+totalZFinal: 6213629621623.000000
+biclique count final: 642314210776.979858
+time: 528.173853

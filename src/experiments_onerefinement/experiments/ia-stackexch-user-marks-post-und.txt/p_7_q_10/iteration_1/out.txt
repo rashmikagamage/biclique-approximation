@@ -1,0 +1,28 @@
+/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt 
+graph size:n1: 545196 n2:96680, m 1302040
+calling degree Ordering 
+load graph
+minPQ: 7
+ Working on p q e: 7 - 10 - 0.05 
+gamma: 6793.550944
+tTotal: 5870960.000000
+auxTotalSamples: 176635.749704
+totalZinShadow: 153442622648097.000000
+Biclique Density: 0.000000
+pqBicluqeEstAux: 1.000000
+shadow size before the second refinement : 16342 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 34647616588827095040.000000
+Stage I Shadow time: 10.850920
+Constuction Stop : 34647616588827.09
+Time esitmation for the shadow stage II: 34647616588816.246094
+end the second phrase
+shadow size: 16342
+pqBicluqeEstAux: 1.000000
+totalZinShadow: 153442622648097.000000
+uint32_t(gamma / 0.2): 33967
+roughPQEstDens: 0.000000
+shadow.size(): 16342
+shadowTotal: 10850998.000000
+totalZinShadow: 153442622648097.000000
+batchSize: 33967
+timed out

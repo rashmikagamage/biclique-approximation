@@ -20,6 +20,7 @@
 #include "../biClique/rawEdgePivot.h"
 #include "../biClique/turan.h"
 #include "../tools/getArgs.hpp"
+#include "../biClique/BCT.h"
 using std::string;
 
 int main(int argc, char* argv[]) {
@@ -317,7 +318,35 @@ int main(int argc, char* argv[]) {
         accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
         counter->shadowBuilderZStar5(p, q, e,delta);
 
-    } else if (aC->exist("-bct")) {
+    }else if (aC->exist("-GPM")) {
+        double e = 0.05;
+        if (aC->exist("-e")) {
+            e = atof(aC->get("-e").c_str());
+        }
+        if (aC->exist("-d")) {
+            delta = atof(aC->get("-d").c_str());
+        }
+        if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
+        counter->scalGPM(p, q, e,delta);
+
+    }else if (aC->exist("hybrid")) {
+
+        // double e = 0.05;
+        // if (aC->exist("-e")) {
+        //     e = atof(aC->get("-e").c_str());
+        // }
+        // if (aC->exist("-d")) {
+        //     delta = atof(aC->get("-d").c_str());
+        // }
+        // if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        // if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        // BCT *bct = new BCT(filePath, outFilePath, p, q);
+        // accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
+        // counter->hybridCounting(p, q, e,delta,bct);
+
+    }  else if (aC->exist("-bct")) {
         double e = 0.01;
         // BCT* counter = new BCT(filePath, outFilePath, p, q);
         // counter->buildTree();
@@ -326,14 +355,41 @@ int main(int argc, char* argv[]) {
         double e = 0.01;
         if (aC->exist("p")) int p = atoi(aC->get("p").c_str());
         if (aC->exist("q")) int q = atoi(aC->get("q").c_str());
-        // BCT* counter = new BCT(filePath, outFilePath, p, q);
+        //BCT* counter = new BCT(filePath, outFilePath, p, q);
         // counter->buildTreeV2(p, q);
 
-    } else if (aC->exist("-bct3")) {
-        double e = 0.01;
+    
+    } //one refineent only 
+    else if (aC->exist("-oneref")) {
+        
+        double e = 0.05;
+        double delta = 0.05;
+        if (aC->exist("-e")) {
+            e = atof(aC->get("-e").c_str());
+        }
+        if (aC->exist("-d")) {
+            delta = atof(aC->get("-d").c_str());
+        }
+        if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
+        counter->shadowBuilder_onerefinement(p, q, e,delta);
 
-        // BCTV2* counter = new BCTV2(filePath, outFilePath, p, q);
-        // counter->buildTree();
+    } //one refineent only 
+    else if (aC->exist("-noref")) {
+        
+        double e = 0.05;
+        double delta = 0.05;
+        if (aC->exist("-e")) {
+            e = atof(aC->get("-e").c_str());
+        }
+        if (aC->exist("-d")) {
+            delta = atof(aC->get("-d").c_str());
+        }
+        if (aC->exist("p")) int p = atoi(aC->get("-p").c_str());
+        if (aC->exist("q")) int q = atoi(aC->get("-q").c_str());
+        accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
+        counter->shadowBuilder_noRefinement(p, q, e,delta);
 
     }
 

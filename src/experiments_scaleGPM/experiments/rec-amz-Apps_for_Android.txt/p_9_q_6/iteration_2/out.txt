@@ -1,0 +1,30 @@
+/data/bipartite_graphs/rec-amz-Apps_for_Android/rec-amz-Apps_for_Android.txt 
+graph size:n1: 1323884 n2:61275, m 2638172
+load graph
+minPQ: 6
+ Working on p q e: 9 - 6 - 0.05 
+gamma: 4451.420533
+tTotal: 2247692.000000
+auxTotalSamples: 63989.876302
+totalZinShadow: 662742488936.000000
+Biclique Density: 0.013582
+pqBicluqeEstAux: 9001303819.560656
+shadow size before the second refinement : 8126 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 11512338.420114
+Stage I Shadow time: 12.200445
+Constuction Stop : 11.51
+Time esitmation for the shadow stage II: -0.688107
+end the second phrase
+shadow size: 8126
+pqBicluqeEstAux: 9001303819.560656
+totalZinShadow: 662742488936.000000
+uint32_t(gamma / 0.2): 22257
+roughPQEstDens: 0.013582
+shadow.size(): 8126
+shadowTotal: 12200560.000000
+totalZinShadow: 662742488936.000000
+batchSize: 22257
+successSamples: 1527: total samples: 115410
+totalZFinal: 3412175361500.000000
+biclique count final: 8768804961.487497
+time: 18.670373

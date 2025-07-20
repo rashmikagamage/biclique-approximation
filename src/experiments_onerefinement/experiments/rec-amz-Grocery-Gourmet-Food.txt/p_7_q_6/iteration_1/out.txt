@@ -1,0 +1,33 @@
+/data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt 
+graph size:n1: 768438 n2:166049, m 1297156
+load graph
+minPQ: 6
+ Working on p q e: 7 - 6 - 0.05 
+gamma: 6793.550944
+tTotal: 4677549.000000
+auxTotalSamples: 154005.467120
+totalZinShadow: 581490896909.000000
+Biclique Density: 0.001469
+pqBicluqeEstAux: 854357173.726289
+shadow size before the second refinement : 16458 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 140437307.270310
+Stage I Shadow time: 7.199705
+Constuction Stop : 140.44
+Time esitmation for the shadow stage II: 133.237602
+end the second phrase
+shadow size: 16458
+pqBicluqeEstAux: 854357173.726289
+totalZinShadow: 581490896909.000000
+uint32_t(gamma / 0.2): 33967
+roughPQEstDens: 0.001469
+shadow.size(): 16458
+shadowTotal: 7199778.000000
+totalZinShadow: 581490896909.000000
+batchSize: 33967
+pqBicluqeContainZ: 6793
+t: 4110359
+successSamples: 6793
+density of biclique: 0.001653
+totalZinShadow final: 581490896909.000000
+biclique count final: 961003080.923792
+time: 139.816038

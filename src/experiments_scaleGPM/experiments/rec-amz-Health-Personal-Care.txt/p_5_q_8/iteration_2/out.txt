@@ -1,0 +1,31 @@
+/data/bipartite_graphs/rec-amz-Health-Personal-Care/rec-amz-Health-Personal-Care.txt 
+graph size:n1: 1851132 n2:252331, m 2982326
+calling degree Ordering 
+load graph
+minPQ: 5
+ Working on p q e: 5 - 8 - 0.05 
+gamma: 4451.420533
+tTotal: 5095098.000000
+auxTotalSamples: 159677.642872
+totalZinShadow: 6091237919530.000000
+Biclique Density: 0.009980
+pqBicluqeEstAux: 60787662012.421402
+shadow size before the second refinement : 13178 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 14233023.828824
+Stage I Shadow time: 7.385647
+Constuction Stop : 14.23
+Time esitmation for the shadow stage II: 6.847377
+end the second phrase
+shadow size: 13178
+pqBicluqeEstAux: 60787662012.421402
+totalZinShadow: 6091237919530.000000
+uint32_t(gamma / 0.2): 22257
+roughPQEstDens: 0.009980
+shadow.size(): 13178
+shadowTotal: 7385723.000000
+totalZinShadow: 6091237919530.000000
+batchSize: 22257
+successSamples: 1521: total samples: 136700
+totalZFinal: 36420324666225.000000
+biclique count final: 67774490677.433281
+time: 14.736275

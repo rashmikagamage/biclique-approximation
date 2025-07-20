@@ -6,8 +6,8 @@ project(run)
 SET(CMAKE_CXX_COMPILER "g++")
 
 # Set C++11 standard and optimization flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native -mavx -O3")
-
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native -mavx -O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mavx -mavx2 -O0 -g")
 add_definitions(-U NDEBUG)
 include_directories(${PROJECT_SOURCE_DIR}/tools/libcuckoo)
 # Set output directory for binaries

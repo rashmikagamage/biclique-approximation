@@ -3,6 +3,7 @@
 
 #include "../biGraph/biGraph.hpp"
 #include "../tools/linearSet.hpp"
+#include "BCT.h"
 class accuracy {
    private:
     biGraph* g;
@@ -87,6 +88,11 @@ class accuracy {
     void shadowBuilderZStar3(int p, int q, double e,double delta);
     void shadowBuilderZStar4(int p, int q, double e,double delta);
     void shadowBuilderZStar5(int p, int q, double e,double delta);
+
+    void scalGPM(int p, int q, double epsilon, double delta);
+
+    void shadowBuilder_onerefinement(int p, int q, double epsilon, double delta);
+    void shadowBuilder_noRefinement(int p, int q, double epsilon, double delta);
     void buildDP(int pL, int pR);
     void sampleOne(int length);
     void shadowBuilderAlias(int p, int q, double e);
