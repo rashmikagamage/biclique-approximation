@@ -1,28 +1,32 @@
 /data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt 
 graph size:n1: 56519 n2:120867, m 440237
-calling degree Ordering 
 load graph
 minPQ: 7
  Working on p q e: 7 - 10 - 0.05 
-gamma: 4451.420533
-tTotal: 29250793.000000
+gamma: 6393.550944
+tTotal: 29537789.000000
 auxTotalSamples: 920101.225532
 totalZinShadow: 199546624400897.000000
-Biclique Density: 0.000004
-pqBicluqeEstAux: 828095349.085440
+Biclique Density: 0.000003
+pqBicluqeEstAux: 598639873.203
 shadow size before the second refinement : 67810 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 34100810402.459587
-Stage I Shadow time: 45.407588
-Constuction Stop : 34100.81
-Time esitmation for the shadow stage II: 34055.402814
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 48072705104.780724
+Stage I Shadow time: 48.354554
+Constuction Stop : 48072.71
+Time esitmation for the shadow stage II: 876655.5646
 end the second phrase
-shadow size: 67810
-pqBicluqeEstAux: 828095349.085440
-totalZinShadow: 199546624400897.000000
-uint32_t(gamma / 0.2): 22257
-roughPQEstDens: 0.000004
-shadow.size(): 67810
-shadowTotal: 45407653.000000
-totalZinShadow: 199546624400897.000000
-batchSize: 22257
-timed out
+shadow size: 1184668
+pqBicluqeEstAux: 932340720.347900
+totalZinShadow: 27858827603227.000000
+uint32_t(gamma / 0.2): 31967
+roughPQEstDens: 0.000033
+shadow.size(): 1194553
+totalZinShadow: 27858827603227.000000
+batchSize: 31967
+pqBicluqeContainZ: 6393
+t: 202730951
+successSamples: 6393
+density of biclique: 0.000032
+totalZinShadow final: 27858827603227.000000
+biclique count final: 884097433.44343
+time: 14310.12

@@ -1,3 +1,16 @@
 Datafile,p,q,Average Count,Variance,Average Time
-rec-amz-Grocery-Gourmet-Food.txt,5,8,1645861585.796044,0.0,98.012258
-rec-amz-Grocery-Gourmet-Food.txt,5,10,4276982351.075803,0.0,526.91584
+rec-amz-Grocery-Gourmet-Food.txt,5,8,1612400920.017347,0.0,78.619047
+rec-amz-Grocery-Gourmet-Food.txt,5,10,4266334055.614739,0.0,401.535973
+rec-amz-Grocery-Gourmet-Food.txt,7,10,110457765.199704,0.0,34274.946143
+rec-amz-Grocery-Gourmet-Food.txt,9,6,5250248416.45621,0.0,11149.446605
+rec-amz-Grocery-Gourmet-Food.txt,9,10,-1,-1,-1
+aff-github-user2project.txt,5,8,6978611898.053065,0.0,827.705185
+aff-github-user2project.txt,5,10,21336006551.812763,0.0,3409.956974
+aff-github-user2project.txt,7,10,-1,-1,-1
+aff-github-user2project.txt,9,6,2831175678750.2856,0.0,9847.944209
+aff-github-user2project.txt,9,10,-1,-1,-1
+ia-stackexch-user-marks-post-und.txt,5,8,2817809738.384271,0.0,20864.236565
+ia-stackexch-user-marks-post-und.txt,5,10,-1,-1,-1
+ia-stackexch-user-marks-post-und.txt,7,10,-1,-1,-1
+ia-stackexch-user-marks-post-und.txt,9,6,261249.638082,0.0,30478.191389
+ia-stackexch-user-marks-post-und.txt,9,10,-1,-1,-1

@@ -5,34 +5,33 @@ import csv
 import signal
 import subprocess
 # Base paths
-data_base_path = '/data/bipartite_graphs'  # Adjust this to your actual base data path
-output_base_path = 'experiments'  # Directory to store outputs
+data_base_path = '/data/bipartite_graphs'
+output_base_path = 'experiments/GPM_one_ref'  
 os.makedirs(output_base_path, exist_ok=True)
 
-# Command template
-command_template = '../bin/run -f "{data_file}" -p {p} -q {q} -GPM'
+
+command_template = '../bin/run -f "{data_file}" -p {p} -q {q} -gpm'
 
 
-# Timeout in seconds (e.g., 4 hours)
-timeout_seconds = 4 * 60 * 60
 
-# p and q combinations
+timeout_seconds = 24 * 60 * 60
+
 combinations = [(5, 6), (5, 8), (5, 10), (7, 6), (7, 10), (9, 6), (9, 10)]
 
-# Number of runs per combination
-num_runs = 3
+
+num_runs = 1
 
 # Summary CSV file
-summary_csv = 'summary_oneref.csv'
+summary_csv = 'GPM_oneref.csv'
 
-# Specific file names to process
+
 specific_file_names = [
-    "rec-amz-Books.txt",
+
     "rec-amz-CDs-and-Vinyl.txt",
     "aff-github-user2project.txt",
-    "rec-amz-Apps_for_Android.txt",
+
     "ia-stackexch-user-marks-post-und.txt",
-    "rec-amz-Health-Personal-Care.txt",
+
     "rec-amz-Grocery-Gourmet-Food.txt"
 ]
 

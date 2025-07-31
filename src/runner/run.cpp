@@ -318,7 +318,7 @@ int main(int argc, char* argv[]) {
         accuracy* counter = new accuracy(filePath, outFilePath, p, q, "zstar5");
         counter->shadowBuilderZStar5(p, q, e,delta);
 
-    }else if (aC->exist("-GPM")) {
+    }else if (aC->exist("-gpm")) {
         double e = 0.05;
         if (aC->exist("-e")) {
             e = atof(aC->get("-e").c_str());

@@ -4,25 +4,25 @@ calling degree Ordering
 load graph
 minPQ: 5
  Working on p q e: 5 - 10 - 0.05 
-gamma: 6793.550944
-tTotal: 11629273.000000
+gamma: 4851.420533
+tTotal: 11614241.000000
 auxTotalSamples: 349500.317694
 totalZinShadow: 94917232002359360.000000
 Biclique Density: 0.000000
-pqBicluqeEstAux: 799372.134233
+pqBicluqeEstAux: 54142562.906259
 shadow size before the second refinement : 28304 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 26840950262801972.000000
-Stage I Shadow time: 17.457493
-Constuction Stop : 26840950262.80
-Time esitmation for the shadow stage II: 26840950245.344479
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 282630115268534.187500
+Stage I Shadow time: 17.502916
+Constuction Stop : 282630115.27
+Time esitmation for the shadow stage II: 282630097.765618
 end the second phrase
 shadow size: 28304
-pqBicluqeEstAux: 799372.134233
+pqBicluqeEstAux: 54142562.906259
 totalZinShadow: 94917232002359360.000000
-uint32_t(gamma / 0.2): 33967
+uint32_t(gamma / 0.2): 24257
 roughPQEstDens: 0.000000
 shadow.size(): 28304
-shadowTotal: 17457570.000000
+shadowTotal: 17502992.000000
 totalZinShadow: 94917232002359360.000000
-batchSize: 33967
+batchSize: 24257
 timed out

@@ -1,0 +1,31 @@
+/data/bipartite_graphs/rec-amz-CDs-and-Vinyl/rec-amz-CDs-and-Vinyl.txt 
+graph size:n1: 1578597 n2:486360, m 3749004
+calling degree Ordering 
+load graph
+minPQ: 9
+ Working on p q e: 9 - 10 - 0.05 
+gamma: 4451.420533
+tTotal: 8036249.000000
+auxTotalSamples: 255005.817566
+totalZinShadow: 8637450232471.000000
+Biclique Density: 0.001421
+pqBicluqeEstAux: 12269770754.832581
+shadow size before the second refinement : 25247 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 98753166.632282
+Stage I Shadow time: 16.751058
+Constuction Stop : 98.75
+Time esitmation for the shadow stage II: 82.002109
+end the second phrase
+shadow size: 25247
+pqBicluqeEstAux: 12269770754.832581
+totalZinShadow: 8637450232471.000000
+uint32_t(gamma / 0.2): 22257
+roughPQEstDens: 0.001421
+shadow.size(): 25247
+shadowTotal: 16751140.000000
+totalZinShadow: 8637450232471.000000
+batchSize: 22257
+successSamples: 1535: total samples: 930770
+totalZFinal: 352388602067353.000000
+biclique count final: 14244642722.523272
+time: 60.959011

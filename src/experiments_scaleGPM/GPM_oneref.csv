@@ -1,0 +1,19 @@
+Datafile,p,q,Average Count,Variance,Average Time
+rec-amz-Grocery-Gourmet-Food.txt,5,6,656850710.334139,0.0,10.711711
+rec-amz-Grocery-Gourmet-Food.txt,5,8,1656924929.305007,0.0,26.956487
+rec-amz-Grocery-Gourmet-Food.txt,5,10,4410603647.038346,0.0,121.819688
+rec-amz-Grocery-Gourmet-Food.txt,7,6,977087011.510766,0.0,43.024465
+rec-amz-Grocery-Gourmet-Food.txt,7,10,110476446.266193,0.0,7446.958049
+rec-amz-Grocery-Gourmet-Food.txt,9,6,5111372756.740707,0.0,165.614305
+rec-amz-Grocery-Gourmet-Food.txt,9,10,-1,-1,-1
+rec-amz-CDs-and-Vinyl.txt,5,6,2463962901.554816,0.0,50.122055
+rec-amz-CDs-and-Vinyl.txt,5,8,2545618827.970431,0.0,644.120748
+rec-amz-CDs-and-Vinyl.txt,5,10,7993379828.569049,0.0,53754.658027
+rec-amz-CDs-and-Vinyl.txt,7,6,72481426978.34879,0.0,30.99214
+rec-amz-CDs-and-Vinyl.txt,7,10,1638669537.202379,0.0,1816.000829
+rec-amz-CDs-and-Vinyl.txt,9,6,1487259779523.5747,0.0,27.057704
+rec-amz-CDs-and-Vinyl.txt,9,10,14244642722.523272,0.0,60.959011
+aff-github-user2project.txt,5,6,7075651580.500454,0.0,118.334678
+aff-github-user2project.txt,5,8,6616296708.689985,0.0,316.745411
+aff-github-user2project.txt,5,10,21708403279.250107,0.0,1114.649036
+aff-github-user2project.txt,7,6,82357825578.05615,0.0,670.099589

@@ -25,4 +25,11 @@ shadow.size(): 67463
 shadowTotal: 36317428.000000
 totalZinShadow: 9161333380325602.000000
 batchSize: 22257
-timed out
+pqBicluqeContainZ: 4451
+t: 2034475792
+successSamples: 4451
+density of biclique: 0.000003
+totalZinShadow final: 2613973859131469.000000
+biclique count final: 8122977855.4665
+time: 10451.414741
+

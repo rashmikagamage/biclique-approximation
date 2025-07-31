@@ -1,0 +1,31 @@
+/data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt 
+graph size:n1: 56519 n2:120867, m 440237
+calling degree Ordering 
+load graph
+minPQ: 5
+ Working on p q e: 5 - 8 - 0.05 
+gamma: 4451.420533
+tTotal: 34971904.000000
+auxTotalSamples: 1111194.339388
+totalZinShadow: 8486003576772.000000
+Biclique Density: 0.000740
+pqBicluqeEstAux: 6279163891.038066
+shadow size before the second refinement : 94826 
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 189334289.299752
+Stage I Shadow time: 50.856648
+Constuction Stop : 189.33
+Time esitmation for the shadow stage II: 138.477641
+end the second phrase
+shadow size: 94826
+pqBicluqeEstAux: 6279163891.038066
+totalZinShadow: 8486003576772.000000
+uint32_t(gamma / 0.2): 22257
+roughPQEstDens: 0.000740
+shadow.size(): 94826
+shadowTotal: 50856719.000000
+totalZinShadow: 8486003576772.000000
+batchSize: 22257
+successSamples: 1536: total samples: 1970060
+totalZFinal: 635402396292217.000000
+biclique count final: 6616296708.689985
+time: 316.745411

@@ -95,3 +95,22 @@ Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-p
 Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 9 -q 6 -oneref
 Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 9 -q 10 -oneref
 Processing complete. Summary saved to summary_oneref.csv
+Processing data file: /data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt
+Running command: ../bin/run -f "/data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt" -p 5 -q 8 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt" -p 5 -q 10 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt" -p 7 -q 10 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt" -p 9 -q 6 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/rec-amz-Grocery-Gourmet-Food/rec-amz-Grocery-Gourmet-Food.txt" -p 9 -q 10 -oneref
+Processing data file: /data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt
+Running command: ../bin/run -f "/data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt" -p 5 -q 8 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt" -p 5 -q 10 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt" -p 7 -q 10 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt" -p 9 -q 6 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/aff-github-user2project/aff-github-user2project.txt" -p 9 -q 10 -oneref
+Processing data file: /data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt
+Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 5 -q 8 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 5 -q 10 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 7 -q 10 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 9 -q 6 -oneref
+Running command: ../bin/run -f "/data/bipartite_graphs/ia-stackexch-user-marks-post-und/ia-stackexch-user-marks-post-und.txt" -p 9 -q 10 -oneref
+Processing complete. Summary saved to summary_oneref_24h.csv

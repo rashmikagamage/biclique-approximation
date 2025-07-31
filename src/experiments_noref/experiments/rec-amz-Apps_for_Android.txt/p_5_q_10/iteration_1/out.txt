@@ -25,3 +25,4 @@ shadow.size(): 1
 shadowTotal: 3311140318.000000
 totalZinShadow: 287295395393188889886720.000000
 batchSize: 24257
+Terminated

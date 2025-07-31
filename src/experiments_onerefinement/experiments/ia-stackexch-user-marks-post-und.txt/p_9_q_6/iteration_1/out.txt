@@ -3,25 +3,31 @@ graph size:n1: 545196 n2:96680, m 1302040
 load graph
 minPQ: 6
  Working on p q e: 9 - 6 - 0.05 
-gamma: 6793.550944
-tTotal: 3909265.000000
+gamma: 4851.420533
+tTotal: 3895540.000000
 auxTotalSamples: 118881.566491
 totalZinShadow: 45191271145.000000
 Biclique Density: 0.000000
 pqBicluqeEstAux: 1.000000
 shadow size before the second refinement : 15792 
- gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 10095596537250816.000000
-Stage I Shadow time: 7.777599
-Constuction Stop : 10095596537.25
-Time esitmation for the shadow stage II: 10095596529.473215
+ gamma * (tTotal / auxTotalSamples) * totalZinShadow / pqBicluqeEstAux: 7184170460141938.000000
+Stage I Shadow time: 7.816586
+Constuction Stop : 7184170460.14
+Time esitmation for the shadow stage II: 7184170452.325352
 end the second phrase
 shadow size: 15792
 pqBicluqeEstAux: 1.000000
 totalZinShadow: 45191271145.000000
-uint32_t(gamma / 0.2): 33967
+uint32_t(gamma / 0.2): 24257
 roughPQEstDens: 0.000000
 shadow.size(): 15792
-shadowTotal: 7777688.000000
+shadowTotal: 7816666.000000
 totalZinShadow: 45191271145.000000
-batchSize: 33967
-timed out
+batchSize: 24257
+pqBicluqeContainZ: 4851
+t: 839131713
+successSamples: 4851
+density of biclique: 0.000006
+totalZinShadow final: 45191271145.000000
+biclique count final: 261249.638082
+time: 30478.191389
